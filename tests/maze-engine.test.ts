@@ -20,6 +20,11 @@ describe("maze-engine", () => {
     const maze: Maze = { id: "manual", config: { columns: 3, rows: 3, seed: "x", entranceCount: 3 }, cells, entrances: [{ column: 0, row: 0 }, { column: 2, row: 0 }, { column: 1, row: 0 }], kevin: { column: 1, row: 2 } };
     expect(hasSharedBottleneck(maze, maze.entrances, maze.kevin)).toBe(true); expect(calculateMazeMetrics(maze).articulationPoints.length).toBeGreaterThan(0);
   });
+  it("mide ciclos y evita marcar como cuello una red con rutas alternativas", () => {
+    const cells = [["floor", "floor", "floor"], ["floor", "floor", "floor"], ["floor", "floor", "floor"]] as const;
+    const maze: Maze = { id: "cycle", config: { columns: 3, rows: 3, seed: "y", entranceCount: 3 }, cells, entrances: [{ column: 0, row: 0 }, { column: 2, row: 0 }, { column: 0, row: 2 }], kevin: { column: 2, row: 2 } };
+    const metrics = calculateMazeMetrics(maze); expect(metrics.independentCycles).toBeGreaterThan(0); expect(metrics.articulationPoints).toHaveLength(0); expect(metrics.hasSharedBottleneck).toBe(false);
+  });
   it("rechaza configuraciones inválidas", () => { expect(generateMaze({ ...config, columns: 6 })).toMatchObject({ code: "INVALID_CONFIG" }); });
   it("valida 100 semillas estándar reproducibles", () => {
     for (let i = 0; i < 100; i += 1) { const value = result(`integration-${i}`); expect(value.metrics.isConnected).toBe(true); expect(value.metrics.hasSharedBottleneck).toBe(false); expect(value.metrics.distance.relativeDifference).toBeLessThanOrEqual(0.15); }
