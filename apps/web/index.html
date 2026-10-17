@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEVIN EN SU LABERINTO — Laboratorio de laberintos</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand-group">
+          <div class="brand-titles">
+            <h1 class="app-title">KEVIN EN SU LABERINTO</h1>
+            <span class="app-subtitle">Laboratorio de laberintos</span>
+          </div>
+          <span
+            class="dev-badge"
+            title="Herramienta interna de validación e inspección de mapas"
+          >
+            HERRAMIENTA DE DESARROLLO · KEL-003
+          </span>
+        </div>
+
+        <div class="header-toolbar">
+          <div
+            class="mode-switcher"
+            role="group"
+            aria-label="Modo de visualización"
+          >
+            <button type="button" id="btn-mode-full" class="mode-btn active">
+              Modo A: Mapa completo
+            </button>
+            <button type="button" id="btn-mode-lantern" class="mode-btn">
+              Modo B: Linterna (radio 4)
+            </button>
+          </div>
+
+          <div
+            class="camera-controls"
+            role="group"
+            aria-label="Controles de cámara"
+          >
+            <button
+              type="button"
+              id="btn-zoom-out"
+              class="icon-btn"
+              title="Alejar mapa"
+            >
+              −
+            </button>
+            <span id="zoom-indicator" class="zoom-badge">100 %</span>
+            <button
+              type="button"
+              id="btn-zoom-in"
+              class="icon-btn"
+              title="Acercar mapa"
+            >
+              +
+            </button>
+            <button type="button" id="btn-reset-view" class="secondary-btn">
+              Vista inicial
+            </button>
+          </div>
+
+          <div id="validation-pill" class="validation-pill valid">
+            MAPA VÁLIDO
+          </div>
+        </div>
+      </header>
+
+      <div class="app-workspace">
+        <main class="canvas-panel">
+          <div id="error-banner" class="alert-banner error-banner" hidden>
+            <div class="alert-title" id="error-title">Error de generación</div>
+            <p class="alert-desc" id="error-message"></p>
+            <ul class="alert-reasons" id="error-reasons"></ul>
+          </div>
+
+          <div
+            id="kevin-reached-banner"
+            class="alert-banner kevin-banner"
+            hidden
+          >
+            <strong>¡Casilla de Kevin alcanzada en modo de prueba!</strong>
+            <span>
+              Este hallazgo es solo una simulación visual de exploración; no
+              declara un ganador oficial.
+            </span>
+          </div>
+
+          <div class="canvas-stage-wrapper">
+            <div
+              id="phaser-container"
+              class="phaser-container"
+              aria-label="Lienzo interactivo del laberinto"
+            ></div>
+          </div>
+
+          <footer class="canvas-statusbar">
+            <div class="status-item">
+              <span class="status-label">Semilla activa:</span>
+              <code id="status-seed" class="status-code">integration-0</code>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Participante:</span>
+              <strong id="status-player">J1</strong>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Entrada inicial:</span>
+              <code id="status-entrance" class="status-code">(0, 0)</code>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Posición de prueba:</span>
+              <code id="status-explorer-pos" class="status-code">(0, 0)</code>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Kevin:</span>
+              <code id="status-kevin-visibility" class="status-code"
+                >Visible</code
+              >
+            </div>
+            <div class="status-item">
+              <span class="status-label">Cursor:</span>
+              <code id="status-hover-cell" class="status-code">—</code>
+            </div>
+          </footer>
+        </main>
+
+        <aside
+          class="sidebar-panel"
+          aria-label="Controles y estadísticas del laboratorio"
+        >
+          <!-- 1. Generación interactiva -->
+          <section class="panel-card">
+            <div class="card-header">
+              <h2>1. Generación interactiva</h2>
+              <span class="card-tag">@kevin/maze-engine</span>
+            </div>
+
+            <form id="generation-form" class="control-form" novalidate>
+              <div class="field-group">
+                <label for="input-seed">Semilla reproducible</label>
+                <div class="seed-input-row">
+                  <input
+                    id="input-seed"
+                    type="text"
+                    value="integration-0"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="button" id="btn-new-seed" class="secondary-btn">
+                    Nueva semilla
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-grid-3">
+                <div class="field-group">
+                  <label for="input-columns">Columnas</label>
+                  <input
+                    id="input-columns"
+                    type="number"
+                    min="7"
+                    max="160"
+                    step="1"
+                    value="80"
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="input-rows">Filas</label>
+                  <input
+                    id="input-rows"
+                    type="number"
+                    min="7"
+                    max="120"
+                    step="1"
+                    value="45"
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="input-entrances">Participantes</label>
+                  <select id="input-entrances">
+                    <option value="3">3 (J1–J3)</option>
+                    <option value="4">4 (J1–J4)</option>
+                    <option value="5">5 (J1–J5)</option>
+                    <option value="6" selected>6 (J1–J6)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <div class="slider-header">
+                  <label for="input-extra-rate"
+                    >Densidad de conexiones adicionales</label
+                  >
+                  <output id="output-extra-rate" for="input-extra-rate"
+                    >14 %</output
+                  >
+                </div>
+                <input
+                  id="input-extra-rate"
+                  type="range"
+                  min="0"
+                  max="50"
+                  step="1"
+                  value="14"
+                />
+              </div>
+
+              <div class="field-group">
+                <div class="slider-header">
+                  <label for="input-tolerance">Tolerancia de distancias</label>
+                  <output id="output-tolerance" for="input-tolerance"
+                    >15 %</output
+                  >
+                </div>
+                <input
+                  id="input-tolerance"
+                  type="range"
+                  min="1"
+                  max="45"
+                  step="1"
+                  value="15"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="btn-generate"
+                class="primary-btn full-width"
+              >
+                Generar laberinto
+              </button>
+            </form>
+          </section>
+
+          <!-- 2. Selección de participante y rutas óptimas -->
+          <section class="panel-card">
+            <div class="card-header">
+              <h2>2. Participantes y rutas óptimas</h2>
+              <span class="card-tag">BFS</span>
+            </div>
+
+            <p class="helper-note">
+              Pulsa un participante aquí o directamente sobre su entrada en el
+              mapa.
+            </p>
+
+            <div
+              id="player-selector-grid"
+              class="player-grid"
+              role="radiogroup"
+              aria-label="Selección de participante"
+            ></div>
+
+            <div
+              class="selected-player-summary"
+              id="selected-player-summary"
+            ></div>
+
+            <div class="toggle-list">
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-selected-path" checked />
+                <span>Mostrar camino óptimo del jugador seleccionado</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-all-paths" />
+                <span>Mostrar simultáneamente los 6 caminos óptimos</span>
+              </label>
+            </div>
+
+            <p class="disclaimer-note">
+              Referencia matemática calculada con <code>findShortestPath</code>;
+              no representa la ruta que elegiría un jugador real con visión
+              limitada.
+            </p>
+          </section>
+
+          <!-- 3. Modo linterna y movimiento de prueba -->
+          <section class="panel-card">
+            <div class="card-header">
+              <h2>3. Exploración y modo linterna</h2>
+              <span class="card-tag">Radio 4 · Euclidiano</span>
+            </div>
+
+            <div class="exploration-stats">
+              <div class="mini-stat">
+                <span class="mini-label">Entrada real</span>
+                <strong id="exp-entrance-coord">(0, 0)</strong>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-label">Posición prueba</span>
+                <strong id="exp-current-coord">(0, 0)</strong>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-label">Pasos / Memoria</span>
+                <strong id="exp-steps-memory">0 pasos · 0 casillas</strong>
+              </div>
+            </div>
+
+            <div class="movement-controls">
+              <div
+                class="dpad"
+                role="group"
+                aria-label="Movimiento ortogonal de prueba"
+              >
+                <button
+                  type="button"
+                  data-move="up"
+                  class="dpad-btn up"
+                  title="Mover arriba (W / ↑)"
+                >
+                  ↑
+                </button>
+                <button
+                  type="button"
+                  data-move="left"
+                  class="dpad-btn left"
+                  title="Mover izquierda (A / ←)"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  data-move="down"
+                  class="dpad-btn down"
+                  title="Mover abajo (S / ↓)"
+                >
+                  ↓
+                </button>
+                <button
+                  type="button"
+                  data-move="right"
+                  class="dpad-btn right"
+                  title="Mover derecha (D / →)"
+                >
+                  →
+                </button>
+              </div>
+              <div class="movement-actions">
+                <p class="helper-note">
+                  Usa <strong>WASD</strong> o las <strong>flechas</strong> para
+                  mover 1 casilla ortogonal.
+                </p>
+                <button
+                  type="button"
+                  id="btn-reset-exploration"
+                  class="secondary-btn full-width"
+                >
+                  Reiniciar exploración
+                </button>
+              </div>
+            </div>
+
+            <p class="disclaimer-note">
+              Simulación local y visual con memoria individual por jugador. No
+              reemplaza la futura lógica autoritativa del servidor.
+            </p>
+          </section>
+
+          <!-- 4. Herramientas de inspección y exportación -->
+          <section class="panel-card">
+            <div class="card-header">
+              <h2>4. Inspección y exportación</h2>
+              <span class="card-tag">Capas · PNG</span>
+            </div>
+
+            <div class="toggle-list">
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-grid" />
+                <span>Mostrar cuadrícula de casillas</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-entrance-labels" checked />
+                <span>Mostrar etiquetas de entradas (J1–J6)</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-articulation" />
+                <span>Mostrar puntos de articulación</span>
+              </label>
+              <label class="checkbox-row">
+                <input type="checkbox" id="chk-export-paths" checked />
+                <span>Incluir rutas activas al exportar PNG</span>
+              </label>
+            </div>
+
+            <div class="button-row-2">
+              <button
+                type="button"
+                id="btn-sidebar-reset-view"
+                class="secondary-btn"
+              >
+                Vista inicial
+              </button>
+              <button type="button" id="btn-export-png" class="primary-btn">
+                Exportar PNG
+              </button>
+            </div>
+          </section>
+
+          <!-- 5. Estadísticas reales del motor -->
+          <section class="panel-card">
+            <div class="card-header">
+              <h2>5. Estadísticas del laberinto</h2>
+              <span class="card-tag" id="stats-valid-tag">Validado</span>
+            </div>
+
+            <div class="distance-chart-section">
+              <div class="chart-title">
+                Distancias BFS por entrada hacia Kevin
+              </div>
+              <div id="distance-bars" class="distance-bars"></div>
+            </div>
+
+            <dl class="metrics-grid" id="metrics-list"></dl>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script type="module" src="./src/index.ts"></script>
+  </body>
+</html>

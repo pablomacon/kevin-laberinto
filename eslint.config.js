@@ -4,9 +4,9 @@ import tseslint from "typescript-eslint";
 import prettier from "eslint-config-prettier";
 
 export default tseslint.config(
-  { ignores: ["node_modules/", "dist/", "coverage/"] },
+  { ignores: ["node_modules/", "dist/", "**/dist/", "coverage/"] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  { languageOptions: { globals: globals.node } },
+  { languageOptions: { globals: { ...globals.node, ...globals.browser } } },
   prettier,
 );
