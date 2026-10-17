@@ -1,6 +1,7 @@
 import type { PlayerIdentity } from "@kevin/identity";
 import type { Maze } from "@kevin/maze-engine";
 import type { MatchId, ParticipantId, Position } from "@kevin/shared";
+export * from "./engine.js";
 
 export interface MatchParticipant {
   readonly id: ParticipantId;
