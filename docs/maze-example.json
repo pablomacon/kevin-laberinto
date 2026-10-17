@@ -1,0 +1,60 @@
+{
+  "seed": "integration-0",
+  "kevin": {
+    "column": 57,
+    "row": 9
+  },
+  "entrances": [
+    {
+      "column": 75,
+      "row": 44
+    },
+    {
+      "column": 79,
+      "row": 37
+    },
+    {
+      "column": 5,
+      "row": 0
+    },
+    {
+      "column": 0,
+      "row": 1
+    },
+    {
+      "column": 19,
+      "row": 44
+    },
+    {
+      "column": 0,
+      "row": 7
+    }
+  ],
+  "metrics": {
+    "isConnected": true,
+    "entranceDistanceTolerance": 0.15,
+    "distance": {
+      "byEntrance": [73, 74, 77, 81, 81, 83],
+      "minimum": 73,
+      "maximum": 83,
+      "average": 78.16666666666667,
+      "relativeDifference": 0.12048192771084337
+    },
+    "traversableCells": 1838,
+    "wallCells": 1762,
+    "traversablePercentage": 0.5105555555555555,
+    "junctions": 265,
+    "deadEnds": 54,
+    "independentCycles": 116,
+    "articulationPoints": 215,
+    "hasSharedBottleneck": false,
+    "kevinRegionEntrances": 3,
+    "corridors": {
+      "maximum": 30,
+      "average": 4.5,
+      "longestStraightRun": 33,
+      "horizontalRun": 33,
+      "verticalRun": 15
+    }
+  }
+}

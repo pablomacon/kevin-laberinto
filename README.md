@@ -4,7 +4,7 @@ Monorepositorio de **Kevin en su laberinto**, un juego competitivo de exploraci�
 
 ## Estado actual
 
-KEL-001 deja preparada la arquitectura, los contratos y la documentación. No existe aún juego, servidor WebSocket, generador de laberintos ni interfaz visual.
+KEL-001 deja preparada la arquitectura, los contratos y la documentación. KEL-002 incorpora el [motor de laberintos](packages/maze-engine/README.md), con DFS determinista, BFS, validación y métricas. El [informe de diagnóstico](docs/MAZE_DIAGNOSTIC.md) incluye 100 semillas y un mapa completo. No existe aún juego, servidor WebSocket ni interfaz visual.
 
 ## Arquitectura y estructura
 
@@ -22,4 +22,4 @@ Ejecute `npm install`, `npm run typecheck`, `npm run lint`, `npm test` y `npm ru
 
 ## Pendiente
 
-Las reglas, el generador, BFS, visibilidad, red, reconexión, OBS, autenticación y servicios Cloudflare están deliberadamente fuera de esta entrega.
+Las reglas de partida, visibilidad, red, reconexión, OBS, autenticación y servicios Cloudflare están deliberadamente fuera de esta entrega.
