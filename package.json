@@ -12,11 +12,13 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "npm --workspace @kevin/web run dev",
+    "preview": "npm --workspace @kevin/web run preview",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "build": "npm run typecheck",
+    "build": "npm run typecheck && npm --workspace @kevin/web run build",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
