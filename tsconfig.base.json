@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@kevin/shared": ["packages/shared/src/index.ts"],
+      "@kevin/identity": ["packages/identity/src/index.ts"],
+      "@kevin/maze-engine": ["packages/maze-engine/src/index.ts"],
+      "@kevin/game-core": ["packages/game-core/src/index.ts"],
+      "@kevin/protocol": ["packages/protocol/src/index.ts"]
+    }
+  },
+  "include": ["apps/**/*.ts", "packages/**/*.ts", "tests/**/*.ts"]
+}
