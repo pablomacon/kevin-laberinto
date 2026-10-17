@@ -89,7 +89,11 @@ export async function startLocalServer(options: ServerOptions = {}) {
     res.setHeader("Referrer-Policy", "no-referrer");
     res.setHeader(
       "Content-Security-Policy",
-      "default-src 'self'; script-src 'self'; connect-src 'self'; style-src 'self'",
+      "default-src 'self'; script-src 'self'; connect-src 'self' ws://" +
+        (validHost(req.headers.host)
+          ? new URL("http://" + req.headers.host).host
+          : "localhost") +
+        "; style-src 'self'",
     );
     if (!validHost(req.headers.host)) {
       res.writeHead(403).end();

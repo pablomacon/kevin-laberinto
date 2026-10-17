@@ -4,13 +4,15 @@ Monorepositorio de **Kevin en su laberinto**, un juego competitivo de exploraci�
 
 ## Estado actual
 
-KEL-001 deja preparada la arquitectura, los contratos y la documentación. KEL-002 incorpora el [motor de laberintos](packages/maze-engine/README.md), con DFS determinista, BFS, validación y métricas, junto con el [informe de diagnóstico](docs/MAZE_DIAGNOSTIC.md). KEL-003 añade el [laboratorio visual de laberintos](docs/MAZE_VIEWER.md) en `apps/web` (Vite + Phaser 3) para inspeccionar, validar, visualizar rutas óptimas y simular exploración con linterna circular. No existe aún servidor WebSocket ni partida multijugador en red.
+Beta 0.1 local (KEL-004): ejecutar `npm run build` y `npm run start:local`. Rutas /play, /admin y /broadcast; [guía LAN](docs/LOCAL_BETA.md) y [contrato para Antigravity](docs/BETA_PROTOCOL.md).
+
+KEL-001 prepara la arquitectura; KEL-002 incorpora el [motor de laberintos](packages/maze-engine/README.md) y KEL-003 el [laboratorio visual](docs/MAZE_VIEWER.md). KEL-004 añade el motor autoritativo y servidor multijugador local, con páginas provisionales de jugador, dirección y transmisión.
 
 ## Arquitectura y estructura
 
 El dominio se mantiene independiente de Node.js, Cloudflare, Phaser, WebSocket y almacenamiento. `packages/game-core` expresa la partida, `maze-engine` sus contratos de mapa, `protocol` el transporte, `identity` las identidades y `shared` los tipos transversales. `apps/web` contiene el laboratorio visual interactivo de laberintos.
 
-Las carpetas principales son `apps/` (`apps/web` con el laboratorio visual y `apps/server-local` reservado), `packages/` (contratos y motor), `docs/` (diseño, guía del visor y ADR) y `tests/` (pruebas automatizadas).
+Las carpetas principales son `apps/` (laboratorio y servidor local), `packages/` (dominio y protocolo), `docs/` (contratos, guías y ADR) y `tests/` (pruebas automatizadas).
 
 ## Entorno local
 
@@ -22,4 +24,4 @@ Consulte [DEVELOPMENT.md](docs/DEVELOPMENT.md) para el flujo de trabajo y [MAZE_
 
 ## Pendiente
 
-Las reglas de partida en red, servidor autoritativo WebSocket, reconexión, OBS, autenticación y servicios Cloudflare están deliberadamente fuera de esta entrega.
+La interfaz final de Antigravity, cuentas, persistencia, Cloudflare, rankings y torneos permanecen pendientes. La transmisión actual usa una página provisional autorizada para OBS.

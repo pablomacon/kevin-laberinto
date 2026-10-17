@@ -436,6 +436,16 @@ function evaluateCandidate(
         continue;
       }
       last = openEntries(base, chosen);
+      // Evita calcular todas las métricas de corredores para cada combinación que Tarjan ya rechaza.
+      if (hasSharedBottleneck(last, last.entrances, last.kevin)) {
+        reject("Existe un cuello de botella común.");
+        evaluations.push({
+          entrances: last.entrances,
+          reasons: ["Existe un cuello de botella común."],
+          distances: chosen.map((e) => e.distance),
+        });
+        continue;
+      }
       const validation = validateMaze(last, last.entrances, last.kevin);
       evaluations.push({
         entrances: last.entrances,

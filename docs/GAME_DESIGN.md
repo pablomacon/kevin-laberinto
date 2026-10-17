@@ -1,5 +1,7 @@
 # Diseño de juego
 
+Beta 0.1 (KEL-004): el motor de selección usa mínimo de 40 pasos desde cada entrada y diferencia relativa máxima del 30 %, según la nueva especificación. La configuración explícita del 15 % sigue soportada. Véase [LOCAL_BETA.md](LOCAL_BETA.md) y el diagnóstico de 200 semillas.
+
 ## Requisitos aprobados: ¿Dónde está Kevin?
 
 Entre 3 y 6 participantes comienzan en entradas distintas de un laberinto configurable (inicialmente 80 × 45). Todos buscan el mismo Kevin, seleccionado antes de la carrera en una posición válida y equilibrada. Cada participante se mueve simultáneamente con flechas o WASD, con referencia inicial de un movimiento cada 150 ms. Puede compartir casilla con otros jugadores.

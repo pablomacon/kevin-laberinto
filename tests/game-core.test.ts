@@ -33,6 +33,19 @@ function setup(count = 3, override: Partial<Maze> = {}) {
   };
 }
 describe("motor autoritativo", () => {
+  it("rechaza mapas con entradas repetidas", () => {
+    expect(
+      () =>
+        new MatchEngine(
+          "invalid",
+          {
+            ...maze,
+            entrances: Array.from({ length: 6 }, () => ({ column: 0, row: 0 })),
+          },
+          { now: () => 0 },
+        ),
+    ).toThrow("INVALID_MAZE");
+  });
   it.each([3, 6])(
     "inicia simultáneamente %i participantes tras tres segundos",
     (count) => {

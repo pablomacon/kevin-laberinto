@@ -17,7 +17,7 @@
         "average": 86.5,
         "relativeDifference": 0.2755102040816326
       },
-      "ms": 69.9913
+      "ms": 69.6814
     },
     {
       "seed": "beta-distribution-1",
@@ -33,7 +33,7 @@
         "average": 72.5,
         "relativeDifference": 0.3
       },
-      "ms": 738.8404
+      "ms": 143.73149999999998
     },
     {
       "seed": "beta-distribution-2",
@@ -49,7 +49,7 @@
         "average": 53.666666666666664,
         "relativeDifference": 0.2833333333333333
       },
-      "ms": 37.10239999999999
+      "ms": 40.16539999999998
     },
     {
       "seed": "beta-distribution-3",
@@ -65,7 +65,7 @@
         "average": 78.16666666666667,
         "relativeDifference": 0.2988505747126437
       },
-      "ms": 34.94709999999998
+      "ms": 41.1395
     },
     {
       "seed": "beta-distribution-4",
@@ -81,7 +81,7 @@
         "average": 77,
         "relativeDifference": 0.1686746987951807
       },
-      "ms": 35.884500000000116
+      "ms": 48.605399999999975
     },
     {
       "seed": "beta-distribution-5",
@@ -97,7 +97,7 @@
         "average": 68.5,
         "relativeDifference": 0.27848101265822783
       },
-      "ms": 32.649000000000115
+      "ms": 47.276700000000005
     },
     {
       "seed": "beta-distribution-6",
@@ -113,7 +113,7 @@
         "average": 113.16666666666667,
         "relativeDifference": 0.27611940298507465
       },
-      "ms": 608.134
+      "ms": 101.60010000000011
     },
     {
       "seed": "beta-distribution-7",
@@ -129,7 +129,7 @@
         "average": 63.5,
         "relativeDifference": 0.28169014084507044
       },
-      "ms": 258.77369999999996
+      "ms": 66.26529999999991
     },
     {
       "seed": "beta-distribution-8",
@@ -145,7 +145,7 @@
         "average": 60.166666666666664,
         "relativeDifference": 0.2898550724637681
       },
-      "ms": 526.2554
+      "ms": 86.13749999999993
     },
     {
       "seed": "beta-distribution-9",
@@ -161,7 +161,7 @@
         "average": 72.83333333333333,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 293.07169999999996
+      "ms": 61.05449999999996
     },
     {
       "seed": "beta-distribution-10",
@@ -177,7 +177,7 @@
         "average": 76.33333333333333,
         "relativeDifference": 0.25842696629213485
       },
-      "ms": 521.3256000000001
+      "ms": 88.04420000000005
     },
     {
       "seed": "beta-distribution-11",
@@ -193,7 +193,7 @@
         "average": 65.33333333333333,
         "relativeDifference": 0.29577464788732394
       },
-      "ms": 182.8720999999996
+      "ms": 52.77170000000001
     },
     {
       "seed": "beta-distribution-12",
@@ -209,7 +209,7 @@
         "average": 71.33333333333333,
         "relativeDifference": 0.24096385542168675
       },
-      "ms": 33.17990000000009
+      "ms": 34.54790000000003
     },
     {
       "seed": "beta-distribution-13",
@@ -225,7 +225,7 @@
         "average": 67.16666666666667,
         "relativeDifference": 0.26666666666666666
       },
-      "ms": 1581.1915000000004
+      "ms": 219.08190000000013
     },
     {
       "seed": "beta-distribution-14",
@@ -241,7 +241,7 @@
         "average": 84.66666666666667,
         "relativeDifference": 0.25263157894736843
       },
-      "ms": 449.0124999999998
+      "ms": 86.78950000000009
     },
     {
       "seed": "beta-distribution-15",
@@ -257,7 +257,7 @@
         "average": 63.5,
         "relativeDifference": 0.2361111111111111
       },
-      "ms": 180.59569999999985
+      "ms": 52.73029999999994
     },
     {
       "seed": "beta-distribution-16",
@@ -273,7 +273,7 @@
         "average": 69.83333333333333,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 298.8077000000003
+      "ms": 74.29299999999989
     },
     {
       "seed": "beta-distribution-17",
@@ -289,7 +289,7 @@
         "average": 74.16666666666667,
         "relativeDifference": 0.2441860465116279
       },
-      "ms": 36.44710000000032
+      "ms": 39.86799999999994
     },
     {
       "seed": "beta-distribution-18",
@@ -305,7 +305,7 @@
         "average": 64.5,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 39.3757999999998
+      "ms": 45.079099999999926
     },
     {
       "seed": "beta-distribution-19",
@@ -321,7 +321,7 @@
         "average": 80.5,
         "relativeDifference": 0.24468085106382978
       },
-      "ms": 370.38840000000073
+      "ms": 84.80490000000009
     },
     {
       "seed": "beta-distribution-20",
@@ -337,7 +337,7 @@
         "average": 74.5,
         "relativeDifference": 0.2857142857142857
       },
-      "ms": 339.6328000000003
+      "ms": 72.25060000000008
     },
     {
       "seed": "beta-distribution-21",
@@ -353,7 +353,7 @@
         "average": 68.83333333333333,
         "relativeDifference": 0.22784810126582278
       },
-      "ms": 31.748499999999694
+      "ms": 33.484899999999925
     },
     {
       "seed": "beta-distribution-22",
@@ -369,7 +369,7 @@
         "average": 122.5,
         "relativeDifference": 0.26811594202898553
       },
-      "ms": 519.6378000000004
+      "ms": 99.67419999999993
     },
     {
       "seed": "beta-distribution-23",
@@ -385,7 +385,7 @@
         "average": 65.5,
         "relativeDifference": 0.21333333333333335
       },
-      "ms": 476.26510000000053
+      "ms": 87.08740000000012
     },
     {
       "seed": "beta-distribution-24",
@@ -401,7 +401,7 @@
         "average": 83.83333333333333,
         "relativeDifference": 0.29292929292929293
       },
-      "ms": 174.79439999999977
+      "ms": 50.924600000000055
     },
     {
       "seed": "beta-distribution-25",
@@ -417,7 +417,7 @@
         "average": 54.5,
         "relativeDifference": 0.21666666666666667
       },
-      "ms": 543.3717999999999
+      "ms": 105.40710000000013
     },
     {
       "seed": "beta-distribution-26",
@@ -433,7 +433,7 @@
         "average": 76.83333333333333,
         "relativeDifference": 0.3
       },
-      "ms": 33.0572000000011
+      "ms": 32.03879999999981
     },
     {
       "seed": "beta-distribution-27",
@@ -449,7 +449,7 @@
         "average": 63.5,
         "relativeDifference": 0.2714285714285714
       },
-      "ms": 31.967200000000958
+      "ms": 41.11860000000024
     },
     {
       "seed": "beta-distribution-28",
@@ -465,7 +465,7 @@
         "average": 62.833333333333336,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 332.98699999999917
+      "ms": 78.35609999999997
     },
     {
       "seed": "beta-distribution-29",
@@ -481,7 +481,7 @@
         "average": 81.5,
         "relativeDifference": 0.26373626373626374
       },
-      "ms": 128.48279999999977
+      "ms": 46.37049999999999
     },
     {
       "seed": "beta-distribution-30",
@@ -497,7 +497,7 @@
         "average": 71.66666666666667,
         "relativeDifference": 0.26506024096385544
       },
-      "ms": 33.10699999999997
+      "ms": 34.060399999999845
     },
     {
       "seed": "beta-distribution-31",
@@ -513,7 +513,7 @@
         "average": 71.16666666666667,
         "relativeDifference": 0.29069767441860467
       },
-      "ms": 31.28989999999976
+      "ms": 32.05919999999969
     },
     {
       "seed": "beta-distribution-32",
@@ -529,7 +529,7 @@
         "average": 74.5,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 30.99909999999909
+      "ms": 33.7837999999997
     },
     {
       "seed": "beta-distribution-33",
@@ -545,7 +545,7 @@
         "average": 77.5,
         "relativeDifference": 0.3
       },
-      "ms": 32.168799999999464
+      "ms": 32.96340000000009
     },
     {
       "seed": "beta-distribution-34",
@@ -561,7 +561,7 @@
         "average": 55.5,
         "relativeDifference": 0.27419354838709675
       },
-      "ms": 489.3783999999996
+      "ms": 85.63869999999997
     },
     {
       "seed": "beta-distribution-35",
@@ -577,7 +577,7 @@
         "average": 74.33333333333333,
         "relativeDifference": 0.21686746987951808
       },
-      "ms": 31.408400000000256
+      "ms": 32.09659999999985
     },
     {
       "seed": "beta-distribution-36",
@@ -593,7 +593,7 @@
         "average": 83.5,
         "relativeDifference": 0.297029702970297
       },
-      "ms": 31.979600000000573
+      "ms": 33.4994999999999
     },
     {
       "seed": "beta-distribution-37",
@@ -609,7 +609,7 @@
         "average": 64.83333333333333,
         "relativeDifference": 0.27631578947368424
       },
-      "ms": 497.01630000000114
+      "ms": 88.35410000000002
     },
     {
       "seed": "beta-distribution-38",
@@ -625,7 +625,7 @@
         "average": 101,
         "relativeDifference": 0.2882882882882883
       },
-      "ms": 149.36689999999908
+      "ms": 49.158800000000156
     },
     {
       "seed": "beta-distribution-39",
@@ -641,7 +641,7 @@
         "average": 60.166666666666664,
         "relativeDifference": 0.2714285714285714
       },
-      "ms": 602.4609
+      "ms": 101.26220000000012
     },
     {
       "seed": "beta-distribution-40",
@@ -657,7 +657,7 @@
         "average": 143.83333333333334,
         "relativeDifference": 0.29878048780487804
       },
-      "ms": 217.17300000000068
+      "ms": 57.117699999999786
     },
     {
       "seed": "beta-distribution-41",
@@ -673,7 +673,7 @@
         "average": 76.16666666666667,
         "relativeDifference": 0.29896907216494845
       },
-      "ms": 31.017499999999927
+      "ms": 31.853399999999965
     },
     {
       "seed": "beta-distribution-42",
@@ -689,7 +689,7 @@
         "average": 64.66666666666667,
         "relativeDifference": 0.2911392405063291
       },
-      "ms": 542.1442999999999
+      "ms": 98.41630000000032
     },
     {
       "seed": "beta-distribution-43",
@@ -705,7 +705,7 @@
         "average": 61.833333333333336,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 347.9984000000004
+      "ms": 72.9010000000003
     },
     {
       "seed": "beta-distribution-44",
@@ -721,7 +721,7 @@
         "average": 71.5,
         "relativeDifference": 0.25
       },
-      "ms": 31.59150000000045
+      "ms": 33.25540000000001
     },
     {
       "seed": "beta-distribution-45",
@@ -737,7 +737,7 @@
         "average": 74.16666666666667,
         "relativeDifference": 0.2625
       },
-      "ms": 172.8150999999998
+      "ms": 54.3435999999997
     },
     {
       "seed": "beta-distribution-46",
@@ -753,7 +753,7 @@
         "average": 66.5,
         "relativeDifference": 0.26666666666666666
       },
-      "ms": 32.81390000000101
+      "ms": 33.596700000000055
     },
     {
       "seed": "beta-distribution-47",
@@ -769,7 +769,7 @@
         "average": 100.33333333333333,
         "relativeDifference": 0.2956521739130435
       },
-      "ms": 1093.517899999999
+      "ms": 156.4955
     },
     {
       "seed": "beta-distribution-48",
@@ -785,7 +785,7 @@
         "average": 64.83333333333333,
         "relativeDifference": 0.2948717948717949
       },
-      "ms": 32.32879999999932
+      "ms": 33.94990000000007
     },
     {
       "seed": "beta-distribution-49",
@@ -801,7 +801,7 @@
         "average": 83.5,
         "relativeDifference": 0.2736842105263158
       },
-      "ms": 32.199000000000524
+      "ms": 33.98690000000033
     },
     {
       "seed": "beta-distribution-50",
@@ -817,7 +817,7 @@
         "average": 89.5,
         "relativeDifference": 0.23300970873786409
       },
-      "ms": 915.2888999999996
+      "ms": 143.6322
     },
     {
       "seed": "beta-distribution-51",
@@ -833,7 +833,7 @@
         "average": 80.83333333333333,
         "relativeDifference": 0.23157894736842105
       },
-      "ms": 432.9134000000013
+      "ms": 86.59079999999994
     },
     {
       "seed": "beta-distribution-52",
@@ -849,7 +849,7 @@
         "average": 74.5,
         "relativeDifference": 0.29069767441860467
       },
-      "ms": 122.22960000000057
+      "ms": 53.911299999999756
     },
     {
       "seed": "beta-distribution-53",
@@ -865,7 +865,7 @@
         "average": 89.83333333333333,
         "relativeDifference": 0.2647058823529412
       },
-      "ms": 546.2759999999998
+      "ms": 95.66269999999986
     },
     {
       "seed": "beta-distribution-54",
@@ -881,7 +881,7 @@
         "average": 71.83333333333333,
         "relativeDifference": 0.29069767441860467
       },
-      "ms": 31.396899999999732
+      "ms": 34.08809999999994
     },
     {
       "seed": "beta-distribution-55",
@@ -897,7 +897,7 @@
         "average": 82.33333333333333,
         "relativeDifference": 0.29473684210526313
       },
-      "ms": 901.4546000000009
+      "ms": 131.18880000000036
     },
     {
       "seed": "beta-distribution-56",
@@ -913,7 +913,7 @@
         "average": 89.83333333333333,
         "relativeDifference": 0.2815533980582524
       },
-      "ms": 124.84019999999873
+      "ms": 44.5639000000001
     },
     {
       "seed": "beta-distribution-57",
@@ -929,7 +929,7 @@
         "average": 59,
         "relativeDifference": 0.29850746268656714
       },
-      "ms": 85.47039999999834
+      "ms": 43.01290000000017
     },
     {
       "seed": "beta-distribution-58",
@@ -945,7 +945,7 @@
         "average": 75.5,
         "relativeDifference": 0.2872340425531915
       },
-      "ms": 34.080799999999726
+      "ms": 36.46609999999964
     },
     {
       "seed": "beta-distribution-59",
@@ -961,7 +961,7 @@
         "average": 81.16666666666667,
         "relativeDifference": 0.28865979381443296
       },
-      "ms": 41.298399999999674
+      "ms": 41.47099999999955
     },
     {
       "seed": "beta-distribution-60",
@@ -977,7 +977,7 @@
         "average": 60.166666666666664,
         "relativeDifference": 0.26865671641791045
       },
-      "ms": 33.47530000000188
+      "ms": 35.498999999999796
     },
     {
       "seed": "beta-distribution-61",
@@ -993,7 +993,7 @@
         "average": 66.83333333333333,
         "relativeDifference": 0.27848101265822783
       },
-      "ms": 34.63539999999921
+      "ms": 35.43260000000009
     },
     {
       "seed": "beta-distribution-62",
@@ -1009,7 +1009,7 @@
         "average": 63.5,
         "relativeDifference": 0.3
       },
-      "ms": 31.029599999998027
+      "ms": 32.71839999999975
     },
     {
       "seed": "beta-distribution-63",
@@ -1025,7 +1025,7 @@
         "average": 60.5,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 33.4320000000007
+      "ms": 46.139000000000124
     },
     {
       "seed": "beta-distribution-64",
@@ -1041,7 +1041,7 @@
         "average": 98.5,
         "relativeDifference": 0.28695652173913044
       },
-      "ms": 32.76530000000275
+      "ms": 37.916699999999764
     },
     {
       "seed": "beta-distribution-65",
@@ -1057,7 +1057,7 @@
         "average": 54.5,
         "relativeDifference": 0.22950819672131148
       },
-      "ms": 32.497299999999086
+      "ms": 37.40810000000056
     },
     {
       "seed": "beta-distribution-66",
@@ -1073,7 +1073,7 @@
         "average": 62.166666666666664,
         "relativeDifference": 0.29850746268656714
       },
-      "ms": 263.3917000000001
+      "ms": 68.90570000000025
     },
     {
       "seed": "beta-distribution-67",
@@ -1089,7 +1089,7 @@
         "average": 94.5,
         "relativeDifference": 0.25688073394495414
       },
-      "ms": 398.33820000000196
+      "ms": 81.08719999999994
     },
     {
       "seed": "beta-distribution-68",
@@ -1105,7 +1105,7 @@
         "average": 84.16666666666667,
         "relativeDifference": 0.26262626262626265
       },
-      "ms": 31.051400000000285
+      "ms": 34.99699999999939
     },
     {
       "seed": "beta-distribution-69",
@@ -1121,7 +1121,7 @@
         "average": 80.16666666666667,
         "relativeDifference": 0.2872340425531915
       },
-      "ms": 31.751200000002427
+      "ms": 33.82210000000032
     },
     {
       "seed": "beta-distribution-70",
@@ -1137,7 +1137,7 @@
         "average": 63.166666666666664,
         "relativeDifference": 0.29333333333333333
       },
-      "ms": 30.73110000000088
+      "ms": 32.22060000000056
     },
     {
       "seed": "beta-distribution-71",
@@ -1153,7 +1153,7 @@
         "average": 67.5,
         "relativeDifference": 0.2987012987012987
       },
-      "ms": 35.45259999999689
+      "ms": 33.29389999999967
     },
     {
       "seed": "beta-distribution-72",
@@ -1169,7 +1169,7 @@
         "average": 77.5,
         "relativeDifference": 0.2857142857142857
       },
-      "ms": 31.431899999999587
+      "ms": 33.8728000000001
     },
     {
       "seed": "beta-distribution-73",
@@ -1185,7 +1185,7 @@
         "average": 97.16666666666667,
         "relativeDifference": 0.19444444444444445
       },
-      "ms": 31.207299999998213
+      "ms": 33.722099999999955
     },
     {
       "seed": "beta-distribution-74",
@@ -1201,7 +1201,7 @@
         "average": 68.66666666666667,
         "relativeDifference": 0.2911392405063291
       },
-      "ms": 569.0656000000017
+      "ms": 99.67309999999998
     },
     {
       "seed": "beta-distribution-75",
@@ -1217,7 +1217,7 @@
         "average": 68.83333333333333,
         "relativeDifference": 0.3
       },
-      "ms": 491.3676999999989
+      "ms": 89.1240000000007
     },
     {
       "seed": "beta-distribution-76",
@@ -1233,7 +1233,7 @@
         "average": 57.166666666666664,
         "relativeDifference": 0.265625
       },
-      "ms": 33.28929999999673
+      "ms": 35.1900999999998
     },
     {
       "seed": "beta-distribution-77",
@@ -1249,7 +1249,7 @@
         "average": 70.33333333333333,
         "relativeDifference": 0.24358974358974358
       },
-      "ms": 34.79030000000057
+      "ms": 44.4380000000001
     },
     {
       "seed": "beta-distribution-78",
@@ -1265,7 +1265,7 @@
         "average": 59.5,
         "relativeDifference": 0.29850746268656714
       },
-      "ms": 229.84809999999925
+      "ms": 59.43149999999969
     },
     {
       "seed": "beta-distribution-79",
@@ -1281,7 +1281,7 @@
         "average": 58.833333333333336,
         "relativeDifference": 0.23880597014925373
       },
-      "ms": 34.89140000000043
+      "ms": 35.99030000000039
     },
     {
       "seed": "beta-distribution-80",
@@ -1297,7 +1297,7 @@
         "average": 75.5,
         "relativeDifference": 0.14814814814814814
       },
-      "ms": 31.20759999999791
+      "ms": 32.53900000000067
     },
     {
       "seed": "beta-distribution-81",
@@ -1313,7 +1313,7 @@
         "average": 56.166666666666664,
         "relativeDifference": 0.2857142857142857
       },
-      "ms": 170.2515999999996
+      "ms": 48.70550000000003
     },
     {
       "seed": "beta-distribution-82",
@@ -1329,7 +1329,7 @@
         "average": 77.16666666666667,
         "relativeDifference": 0.3
       },
-      "ms": 32.10199999999895
+      "ms": 33.30549999999948
     },
     {
       "seed": "beta-distribution-83",
@@ -1345,7 +1345,7 @@
         "average": 102.16666666666667,
         "relativeDifference": 0.2608695652173913
       },
-      "ms": 471.6792999999998
+      "ms": 83.46750000000065
     },
     {
       "seed": "beta-distribution-84",
@@ -1361,7 +1361,7 @@
         "average": 88.16666666666667,
         "relativeDifference": 0.2604166666666667
       },
-      "ms": 34.1765000000014
+      "ms": 35.35109999999986
     },
     {
       "seed": "beta-distribution-85",
@@ -1377,7 +1377,7 @@
         "average": 68.5,
         "relativeDifference": 0.26666666666666666
       },
-      "ms": 117.53109999999651
+      "ms": 45.84389999999985
     },
     {
       "seed": "beta-distribution-86",
@@ -1393,7 +1393,7 @@
         "average": 83.5,
         "relativeDifference": 0.297029702970297
       },
-      "ms": 32.8637000000017
+      "ms": 35.13300000000072
     },
     {
       "seed": "beta-distribution-87",
@@ -1409,7 +1409,7 @@
         "average": 93.5,
         "relativeDifference": 0.27102803738317754
       },
-      "ms": 30.202499999999418
+      "ms": 31.772399999999834
     },
     {
       "seed": "beta-distribution-88",
@@ -1425,7 +1425,7 @@
         "average": 85.33333333333333,
         "relativeDifference": 0.29591836734693877
       },
-      "ms": 122.47040000000197
+      "ms": 42.33770000000004
     },
     {
       "seed": "beta-distribution-89",
@@ -1441,7 +1441,7 @@
         "average": 71.83333333333333,
         "relativeDifference": 0.14102564102564102
       },
-      "ms": 33.59430000000066
+      "ms": 35.60400000000027
     },
     {
       "seed": "beta-distribution-90",
@@ -1457,7 +1457,7 @@
         "average": 72.16666666666667,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 30.477100000000064
+      "ms": 31.82340000000022
     },
     {
       "seed": "beta-distribution-91",
@@ -1473,7 +1473,7 @@
         "average": 96.33333333333333,
         "relativeDifference": 0.25688073394495414
       },
-      "ms": 450.3898999999983
+      "ms": 83.21400000000085
     },
     {
       "seed": "beta-distribution-92",
@@ -1489,7 +1489,7 @@
         "average": 90.66666666666667,
         "relativeDifference": 0.29591836734693877
       },
-      "ms": 108.6714000000029
+      "ms": 44.49719999999979
     },
     {
       "seed": "beta-distribution-93",
@@ -1505,7 +1505,7 @@
         "average": 103.16666666666667,
         "relativeDifference": 0.27049180327868855
       },
-      "ms": 573.8329000000012
+      "ms": 94.92799999999988
     },
     {
       "seed": "beta-distribution-94",
@@ -1521,7 +1521,7 @@
         "average": 72.33333333333333,
         "relativeDifference": 0.27058823529411763
       },
-      "ms": 31.236799999998766
+      "ms": 33.710799999999836
     },
     {
       "seed": "beta-distribution-95",
@@ -1537,7 +1537,7 @@
         "average": 70.83333333333333,
         "relativeDifference": 0.11842105263157894
       },
-      "ms": 31.518599999999424
+      "ms": 32.070699999999306
     },
     {
       "seed": "beta-distribution-96",
@@ -1553,7 +1553,7 @@
         "average": 74.16666666666667,
         "relativeDifference": 0.25555555555555554
       },
-      "ms": 33.14689999999973
+      "ms": 34.40779999999995
     },
     {
       "seed": "beta-distribution-97",
@@ -1569,7 +1569,7 @@
         "average": 85.33333333333333,
         "relativeDifference": 0.2912621359223301
       },
-      "ms": 37.29820000000109
+      "ms": 37.468400000000656
     },
     {
       "seed": "beta-distribution-98",
@@ -1585,7 +1585,7 @@
         "average": 80.83333333333333,
         "relativeDifference": 0.2872340425531915
       },
-      "ms": 194.5434000000023
+      "ms": 53.23660000000018
     },
     {
       "seed": "beta-distribution-99",
@@ -1601,7 +1601,7 @@
         "average": 87,
         "relativeDifference": 0.27722772277227725
       },
-      "ms": 31.650500000003376
+      "ms": 31.902799999999843
     },
     {
       "seed": "beta-distribution-100",
@@ -1617,7 +1617,7 @@
         "average": 62.166666666666664,
         "relativeDifference": 0.1791044776119403
       },
-      "ms": 41.541699999997945
+      "ms": 32.457800000000134
     },
     {
       "seed": "beta-distribution-101",
@@ -1633,7 +1633,7 @@
         "average": 62.166666666666664,
         "relativeDifference": 0.23880597014925373
       },
-      "ms": 390.27330000000075
+      "ms": 75.3734000000004
     },
     {
       "seed": "beta-distribution-102",
@@ -1649,7 +1649,7 @@
         "average": 60.833333333333336,
         "relativeDifference": 0.3
       },
-      "ms": 254.23530000000028
+      "ms": 59.82440000000042
     },
     {
       "seed": "beta-distribution-103",
@@ -1665,7 +1665,7 @@
         "average": 85,
         "relativeDifference": 0.2980769230769231
       },
-      "ms": 31.312799999999697
+      "ms": 32.63369999999941
     },
     {
       "seed": "beta-distribution-104",
@@ -1681,7 +1681,7 @@
         "average": 71,
         "relativeDifference": 0.25301204819277107
       },
-      "ms": 33.368500000000495
+      "ms": 32.93880000000081
     },
     {
       "seed": "beta-distribution-105",
@@ -1697,7 +1697,7 @@
         "average": 59.166666666666664,
         "relativeDifference": 0.23880597014925373
       },
-      "ms": 35.2602999999981
+      "ms": 35.630699999999706
     },
     {
       "seed": "beta-distribution-106",
@@ -1713,7 +1713,7 @@
         "average": 66,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 258.40040000000226
+      "ms": 61.064000000000306
     },
     {
       "seed": "beta-distribution-107",
@@ -1729,7 +1729,7 @@
         "average": 75.33333333333333,
         "relativeDifference": 0.3
       },
-      "ms": 41.13480000000345
+      "ms": 41.229700000000776
     },
     {
       "seed": "beta-distribution-108",
@@ -1745,7 +1745,7 @@
         "average": 88.83333333333333,
         "relativeDifference": 0.18556701030927836
       },
-      "ms": 33.47500000000218
+      "ms": 33.33470000000034
     },
     {
       "seed": "beta-distribution-109",
@@ -1761,7 +1761,7 @@
         "average": 65.5,
         "relativeDifference": 0.29333333333333333
       },
-      "ms": 93.16460000000006
+      "ms": 41.38909999999942
     },
     {
       "seed": "beta-distribution-110",
@@ -1777,7 +1777,7 @@
         "average": 66.83333333333333,
         "relativeDifference": 0.2375
       },
-      "ms": 110.51740000000063
+      "ms": 42.3113000000003
     },
     {
       "seed": "beta-distribution-111",
@@ -1793,7 +1793,7 @@
         "average": 81.16666666666667,
         "relativeDifference": 0.28865979381443296
       },
-      "ms": 33.98120000000199
+      "ms": 32.46890000000076
     },
     {
       "seed": "beta-distribution-112",
@@ -1809,7 +1809,7 @@
         "average": 72,
         "relativeDifference": 0.29213483146067415
       },
-      "ms": 32.79309999999896
+      "ms": 32.656700000000455
     },
     {
       "seed": "beta-distribution-113",
@@ -1825,7 +1825,7 @@
         "average": 78.83333333333333,
         "relativeDifference": 0.29473684210526313
       },
-      "ms": 674.6921000000002
+      "ms": 106.48750000000018
     },
     {
       "seed": "beta-distribution-114",
@@ -1841,7 +1841,7 @@
         "average": 52.5,
         "relativeDifference": 0.2833333333333333
       },
-      "ms": 31.963299999999435
+      "ms": 32.926800000000185
     },
     {
       "seed": "beta-distribution-115",
@@ -1857,7 +1857,7 @@
         "average": 61.166666666666664,
         "relativeDifference": 0.2898550724637681
       },
-      "ms": 31.726699999999255
+      "ms": 32.80420000000049
     },
     {
       "seed": "beta-distribution-116",
@@ -1873,7 +1873,7 @@
         "average": 63.666666666666664,
         "relativeDifference": 0.07462686567164178
       },
-      "ms": 32.027900000000955
+      "ms": 32.9979000000003
     },
     {
       "seed": "beta-distribution-117",
@@ -1889,7 +1889,7 @@
         "average": 58.833333333333336,
         "relativeDifference": 0.29850746268656714
       },
-      "ms": 32.02059999999983
+      "ms": 35.363499999999476
     },
     {
       "seed": "beta-distribution-118",
@@ -1905,7 +1905,7 @@
         "average": 56.5,
         "relativeDifference": 0.20634920634920634
       },
-      "ms": 452.1896000000015
+      "ms": 76.50579999999991
     },
     {
       "seed": "beta-distribution-119",
@@ -1921,7 +1921,7 @@
         "average": 70.16666666666667,
         "relativeDifference": 0.2875
       },
-      "ms": 869.977899999998
+      "ms": 135.26209999999992
     },
     {
       "seed": "beta-distribution-120",
@@ -1937,7 +1937,7 @@
         "average": 66.5,
         "relativeDifference": 0.29333333333333333
       },
-      "ms": 33.998100000000704
+      "ms": 34.6247000000003
     },
     {
       "seed": "beta-distribution-121",
@@ -1953,7 +1953,7 @@
         "average": 63.5,
         "relativeDifference": 0.2318840579710145
       },
-      "ms": 45.676400000000285
+      "ms": 37.46110000000044
     },
     {
       "seed": "beta-distribution-122",
@@ -1969,7 +1969,7 @@
         "average": 81.33333333333333,
         "relativeDifference": 0.29591836734693877
       },
-      "ms": 34.10479999999734
+      "ms": 33.588299999999435
     },
     {
       "seed": "beta-distribution-123",
@@ -1985,7 +1985,7 @@
         "average": 88.33333333333333,
         "relativeDifference": 0.25510204081632654
       },
-      "ms": 31.53479999999763
+      "ms": 32.76800000000003
     },
     {
       "seed": "beta-distribution-124",
@@ -2001,7 +2001,7 @@
         "average": 69.66666666666667,
         "relativeDifference": 0.2727272727272727
       },
-      "ms": 32.88730000000214
+      "ms": 32.64469999999983
     },
     {
       "seed": "beta-distribution-125",
@@ -2017,7 +2017,7 @@
         "average": 73.16666666666667,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 792.6314999999995
+      "ms": 120.1203000000005
     },
     {
       "seed": "beta-distribution-126",
@@ -2033,7 +2033,7 @@
         "average": 66.83333333333333,
         "relativeDifference": 0.136986301369863
       },
-      "ms": 32.733100000001286
+      "ms": 33.28269999999975
     },
     {
       "seed": "beta-distribution-127",
@@ -2049,7 +2049,7 @@
         "average": 59.5,
         "relativeDifference": 0.12698412698412698
       },
-      "ms": 227.68139999999767
+      "ms": 56.226700000000164
     },
     {
       "seed": "beta-distribution-128",
@@ -2065,7 +2065,7 @@
         "average": 78.83333333333333,
         "relativeDifference": 0.2872340425531915
       },
-      "ms": 409.137999999999
+      "ms": 77.16170000000056
     },
     {
       "seed": "beta-distribution-129",
@@ -2081,7 +2081,7 @@
         "average": 79.5,
         "relativeDifference": 0.22988505747126436
       },
-      "ms": 298.22829999999885
+      "ms": 63.223800000000665
     },
     {
       "seed": "beta-distribution-130",
@@ -2097,7 +2097,7 @@
         "average": 95.5,
         "relativeDifference": 0.2972972972972973
       },
-      "ms": 33.90860000000248
+      "ms": 35.14040000000023
     },
     {
       "seed": "beta-distribution-131",
@@ -2113,7 +2113,7 @@
         "average": 76.83333333333333,
         "relativeDifference": 0.29473684210526313
       },
-      "ms": 436.2664999999979
+      "ms": 81.95809999999983
     },
     {
       "seed": "beta-distribution-132",
@@ -2129,7 +2129,7 @@
         "average": 63.166666666666664,
         "relativeDifference": 0.10606060606060606
       },
-      "ms": 32.03190000000177
+      "ms": 33.09589999999935
     },
     {
       "seed": "beta-distribution-133",
@@ -2145,7 +2145,7 @@
         "average": 78.16666666666667,
         "relativeDifference": 0.3
       },
-      "ms": 102.76820000000225
+      "ms": 41.38180000000011
     },
     {
       "seed": "beta-distribution-134",
@@ -2161,7 +2161,7 @@
         "average": 77.83333333333333,
         "relativeDifference": 0.27586206896551724
       },
-      "ms": 119.40300000000207
+      "ms": 44.27819999999974
     },
     {
       "seed": "beta-distribution-135",
@@ -2177,7 +2177,7 @@
         "average": 65.83333333333333,
         "relativeDifference": 0.15714285714285714
       },
-      "ms": 31.11859999999797
+      "ms": 33.612599999999475
     },
     {
       "seed": "beta-distribution-136",
@@ -2193,7 +2193,7 @@
         "average": 71.83333333333333,
         "relativeDifference": 0.2716049382716049
       },
-      "ms": 295.1396999999997
+      "ms": 62.81800000000021
     },
     {
       "seed": "beta-distribution-137",
@@ -2209,7 +2209,7 @@
         "average": 64.16666666666667,
         "relativeDifference": 0.3
       },
-      "ms": 817.2338999999993
+      "ms": 135.84990000000016
     },
     {
       "seed": "beta-distribution-138",
@@ -2225,7 +2225,7 @@
         "average": 83.5,
         "relativeDifference": 0.14606741573033707
       },
-      "ms": 32.227600000001985
+      "ms": 37.9991
     },
     {
       "seed": "beta-distribution-139",
@@ -2241,7 +2241,7 @@
         "average": 70.33333333333333,
         "relativeDifference": 0.22077922077922077
       },
-      "ms": 147.10389999999825
+      "ms": 48.38429999999971
     },
     {
       "seed": "beta-distribution-140",
@@ -2257,7 +2257,7 @@
         "average": 74.66666666666667,
         "relativeDifference": 0.2808988764044944
       },
-      "ms": 32.549699999999575
+      "ms": 33.64539999999943
     },
     {
       "seed": "beta-distribution-141",
@@ -2273,7 +2273,7 @@
         "average": 71.33333333333333,
         "relativeDifference": 0.25316455696202533
       },
-      "ms": 30.945700000000215
+      "ms": 34.196500000000015
     },
     {
       "seed": "beta-distribution-142",
@@ -2289,7 +2289,7 @@
         "average": 62.666666666666664,
         "relativeDifference": 0.2898550724637681
       },
-      "ms": 50.764799999997194
+      "ms": 44.2532999999994
     },
     {
       "seed": "beta-distribution-143",
@@ -2305,7 +2305,7 @@
         "average": 96.5,
         "relativeDifference": 0.2767857142857143
       },
-      "ms": 32.46379999999772
+      "ms": 33.13909999999942
     },
     {
       "seed": "beta-distribution-144",
@@ -2321,7 +2321,7 @@
         "average": 79.66666666666667,
         "relativeDifference": 0.2857142857142857
       },
-      "ms": 32.756900000000314
+      "ms": 36.23750000000018
     },
     {
       "seed": "beta-distribution-145",
@@ -2337,7 +2337,7 @@
         "average": 75.5,
         "relativeDifference": 0.1728395061728395
       },
-      "ms": 34.115200000000186
+      "ms": 35.756499999999505
     },
     {
       "seed": "beta-distribution-146",
@@ -2353,7 +2353,7 @@
         "average": 62.5,
         "relativeDifference": 0.3
       },
-      "ms": 34.35180000000037
+      "ms": 34.426800000001094
     },
     {
       "seed": "beta-distribution-147",
@@ -2369,7 +2369,7 @@
         "average": 71.16666666666667,
         "relativeDifference": 0.2988505747126437
       },
-      "ms": 677.2161999999989
+      "ms": 105.63379999999961
     },
     {
       "seed": "beta-distribution-148",
@@ -2385,7 +2385,7 @@
         "average": 62.5,
         "relativeDifference": 0.2916666666666667
       },
-      "ms": 33.5557000000008
+      "ms": 34.87670000000071
     },
     {
       "seed": "beta-distribution-149",
@@ -2401,7 +2401,7 @@
         "average": 76.83333333333333,
         "relativeDifference": 0.21176470588235294
       },
-      "ms": 158.8286999999982
+      "ms": 48.04069999999956
     },
     {
       "seed": "beta-distribution-150",
@@ -2417,7 +2417,7 @@
         "average": 72.5,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 1118.3344999999972
+      "ms": 142.90200000000004
     },
     {
       "seed": "beta-distribution-151",
@@ -2433,7 +2433,7 @@
         "average": 74.5,
         "relativeDifference": 0.2696629213483146
       },
-      "ms": 34.68220000000292
+      "ms": 33.149200000001656
     },
     {
       "seed": "beta-distribution-152",
@@ -2449,7 +2449,7 @@
         "average": 68.16666666666667,
         "relativeDifference": 0.20270270270270271
       },
-      "ms": 33.88849999999729
+      "ms": 34.36569999999847
     },
     {
       "seed": "beta-distribution-153",
@@ -2465,7 +2465,7 @@
         "average": 70.16666666666667,
         "relativeDifference": 0.16666666666666666
       },
-      "ms": 35.93500000000131
+      "ms": 36.01629999999932
     },
     {
       "seed": "beta-distribution-154",
@@ -2481,7 +2481,7 @@
         "average": 76.16666666666667,
         "relativeDifference": 0.29213483146067415
       },
-      "ms": 77.27460000000065
+      "ms": 40.1317999999992
     },
     {
       "seed": "beta-distribution-155",
@@ -2497,7 +2497,7 @@
         "average": 63.833333333333336,
         "relativeDifference": 0.2916666666666667
       },
-      "ms": 593.3646000000008
+      "ms": 94.36150000000089
     },
     {
       "seed": "beta-distribution-156",
@@ -2513,7 +2513,7 @@
         "average": 85.5,
         "relativeDifference": 0.2912621359223301
       },
-      "ms": 36.70339999999851
+      "ms": 34.1841000000004
     },
     {
       "seed": "beta-distribution-157",
@@ -2529,7 +2529,7 @@
         "average": 68.16666666666667,
         "relativeDifference": 0.2875
       },
-      "ms": 371.6171000000031
+      "ms": 70.01519999999982
     },
     {
       "seed": "beta-distribution-158",
@@ -2545,7 +2545,7 @@
         "average": 84.16666666666667,
         "relativeDifference": 0.24742268041237114
       },
-      "ms": 37.204900000000634
+      "ms": 35.19540000000052
     },
     {
       "seed": "beta-distribution-159",
@@ -2561,7 +2561,7 @@
         "average": 71.16666666666667,
         "relativeDifference": 0.25
       },
-      "ms": 422.1591000000044
+      "ms": 75.65789999999834
     },
     {
       "seed": "beta-distribution-160",
@@ -2577,7 +2577,7 @@
         "average": 85.5,
         "relativeDifference": 0.27722772277227725
       },
-      "ms": 349.19450000000506
+      "ms": 70.0012999999999
     },
     {
       "seed": "beta-distribution-161",
@@ -2593,7 +2593,7 @@
         "average": 86.5,
         "relativeDifference": 0.29245283018867924
       },
-      "ms": 33.96820000000298
+      "ms": 32.32599999999911
     },
     {
       "seed": "beta-distribution-162",
@@ -2609,7 +2609,7 @@
         "average": 82.83333333333333,
         "relativeDifference": 0.2912621359223301
       },
-      "ms": 219.59539999999834
+      "ms": 52.43379999999888
     },
     {
       "seed": "beta-distribution-163",
@@ -2625,7 +2625,7 @@
         "average": 61.5,
         "relativeDifference": 0.28169014084507044
       },
-      "ms": 34.711199999997916
+      "ms": 32.358799999999974
     },
     {
       "seed": "beta-distribution-164",
@@ -2641,7 +2641,7 @@
         "average": 81.16666666666667,
         "relativeDifference": 0.28865979381443296
       },
-      "ms": 33.63000000000466
+      "ms": 33.17410000000018
     },
     {
       "seed": "beta-distribution-165",
@@ -2657,7 +2657,7 @@
         "average": 67.16666666666667,
         "relativeDifference": 0.2804878048780488
       },
-      "ms": 38.24569999999949
+      "ms": 34.55160000000069
     },
     {
       "seed": "beta-distribution-166",
@@ -2673,7 +2673,7 @@
         "average": 72.83333333333333,
         "relativeDifference": 0.20987654320987653
       },
-      "ms": 43.1730000000025
+      "ms": 35.34809999999925
     },
     {
       "seed": "beta-distribution-167",
@@ -2689,7 +2689,7 @@
         "average": 87.5,
         "relativeDifference": 0.2828282828282828
       },
-      "ms": 115.50340000000142
+      "ms": 41.15990000000056
     },
     {
       "seed": "beta-distribution-168",
@@ -2705,7 +2705,7 @@
         "average": 83,
         "relativeDifference": 0.29896907216494845
       },
-      "ms": 33.85620000000199
+      "ms": 33.063899999999194
     },
     {
       "seed": "beta-distribution-169",
@@ -2721,7 +2721,7 @@
         "average": 74.16666666666667,
         "relativeDifference": 0.27710843373493976
       },
-      "ms": 248.53319999999803
+      "ms": 55.71349999999984
     },
     {
       "seed": "beta-distribution-170",
@@ -2737,7 +2737,7 @@
         "average": 72.5,
         "relativeDifference": 0.2988505747126437
       },
-      "ms": 33.448099999994156
+      "ms": 33.11479999999938
     },
     {
       "seed": "beta-distribution-171",
@@ -2753,7 +2753,7 @@
         "average": 71.16666666666667,
         "relativeDifference": 0.21333333333333335
       },
-      "ms": 30.8804999999993
+      "ms": 32.78089999999975
     },
     {
       "seed": "beta-distribution-172",
@@ -2769,7 +2769,7 @@
         "average": 66.16666666666667,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 94.78579999999783
+      "ms": 39.683100000000195
     },
     {
       "seed": "beta-distribution-173",
@@ -2785,7 +2785,7 @@
         "average": 61.833333333333336,
         "relativeDifference": 0.26865671641791045
       },
-      "ms": 809.700800000006
+      "ms": 131.4307000000008
     },
     {
       "seed": "beta-distribution-174",
@@ -2801,7 +2801,7 @@
         "average": 77.16666666666667,
         "relativeDifference": 0.2988505747126437
       },
-      "ms": 248.4953999999998
+      "ms": 57.40190000000075
     },
     {
       "seed": "beta-distribution-175",
@@ -2817,7 +2817,7 @@
         "average": 51.166666666666664,
         "relativeDifference": 0.296875
       },
-      "ms": 905.9416999999958
+      "ms": 133.19220000000132
     },
     {
       "seed": "beta-distribution-176",
@@ -2833,7 +2833,7 @@
         "average": 55.833333333333336,
         "relativeDifference": 0.2878787878787879
       },
-      "ms": 572.4021999999968
+      "ms": 95.43080000000009
     },
     {
       "seed": "beta-distribution-177",
@@ -2849,7 +2849,7 @@
         "average": 71.5,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 32.35429999999906
+      "ms": 32.39840000000004
     },
     {
       "seed": "beta-distribution-178",
@@ -2865,7 +2865,7 @@
         "average": 78.5,
         "relativeDifference": 0.2872340425531915
       },
-      "ms": 176.4585999999981
+      "ms": 49.6270999999997
     },
     {
       "seed": "beta-distribution-179",
@@ -2881,7 +2881,7 @@
         "average": 73,
         "relativeDifference": 0.27586206896551724
       },
-      "ms": 33.40129999999772
+      "ms": 32.990200000000186
     },
     {
       "seed": "beta-distribution-180",
@@ -2897,7 +2897,7 @@
         "average": 79,
         "relativeDifference": 0.29473684210526313
       },
-      "ms": 33.29920000000129
+      "ms": 34.61909999999989
     },
     {
       "seed": "beta-distribution-181",
@@ -2913,7 +2913,7 @@
         "average": 59.5,
         "relativeDifference": 0.29850746268656714
       },
-      "ms": 32.050100000000384
+      "ms": 32.5010999999995
     },
     {
       "seed": "beta-distribution-182",
@@ -2929,7 +2929,7 @@
         "average": 85.66666666666667,
         "relativeDifference": 0.29
       },
-      "ms": 418.2046000000046
+      "ms": 76.32750000000124
     },
     {
       "seed": "beta-distribution-183",
@@ -2945,7 +2945,7 @@
         "average": 79.16666666666667,
         "relativeDifference": 0.29
       },
-      "ms": 30.26879999999801
+      "ms": 31.998900000000503
     },
     {
       "seed": "beta-distribution-184",
@@ -2961,7 +2961,7 @@
         "average": 91.5,
         "relativeDifference": 0.27884615384615385
       },
-      "ms": 32.10150000000431
+      "ms": 32.745200000001205
     },
     {
       "seed": "beta-distribution-185",
@@ -2977,7 +2977,7 @@
         "average": 71.16666666666667,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 361.9073000000062
+      "ms": 73.45249999999942
     },
     {
       "seed": "beta-distribution-186",
@@ -2993,7 +2993,7 @@
         "average": 66.33333333333333,
         "relativeDifference": 0.28378378378378377
       },
-      "ms": 467.6386000000057
+      "ms": 84.61080000000038
     },
     {
       "seed": "beta-distribution-187",
@@ -3009,7 +3009,7 @@
         "average": 65.83333333333333,
         "relativeDifference": 0.2857142857142857
       },
-      "ms": 31.610899999999674
+      "ms": 32.27570000000014
     },
     {
       "seed": "beta-distribution-188",
@@ -3025,7 +3025,7 @@
         "average": 74,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 30.98530000000028
+      "ms": 32.3057000000008
     },
     {
       "seed": "beta-distribution-189",
@@ -3041,7 +3041,7 @@
         "average": 95.16666666666667,
         "relativeDifference": 0.29523809523809524
       },
-      "ms": 176.5251999999964
+      "ms": 51.11570000000029
     },
     {
       "seed": "beta-distribution-190",
@@ -3057,7 +3057,7 @@
         "average": 67.33333333333333,
         "relativeDifference": 0.2962962962962963
       },
-      "ms": 555.5985999999975
+      "ms": 93.37880000000041
     },
     {
       "seed": "beta-distribution-191",
@@ -3073,7 +3073,7 @@
         "average": 69.5,
         "relativeDifference": 0.2948717948717949
       },
-      "ms": 837.9893999999986
+      "ms": 130.03650000000016
     },
     {
       "seed": "beta-distribution-192",
@@ -3089,7 +3089,7 @@
         "average": 72.5,
         "relativeDifference": 0.2716049382716049
       },
-      "ms": 36.04359999999724
+      "ms": 35.43419999999969
     },
     {
       "seed": "beta-distribution-193",
@@ -3105,7 +3105,7 @@
         "average": 76.33333333333333,
         "relativeDifference": 0.2988505747126437
       },
-      "ms": 31.45930000000226
+      "ms": 33.78679999999986
     },
     {
       "seed": "beta-distribution-194",
@@ -3121,7 +3121,7 @@
         "average": 68.16666666666667,
         "relativeDifference": 0.26666666666666666
       },
-      "ms": 33.618900000001304
+      "ms": 34.10599999999977
     },
     {
       "seed": "beta-distribution-195",
@@ -3137,7 +3137,7 @@
         "average": 69.83333333333333,
         "relativeDifference": 0.2976190476190476
       },
-      "ms": 406.79349999999977
+      "ms": 77.45789999999943
     },
     {
       "seed": "beta-distribution-196",
@@ -3153,7 +3153,7 @@
         "average": 65.83333333333333,
         "relativeDifference": 0.29333333333333333
       },
-      "ms": 31.92450000000099
+      "ms": 32.0625
     },
     {
       "seed": "beta-distribution-197",
@@ -3169,7 +3169,7 @@
         "average": 73.16666666666667,
         "relativeDifference": 0.3
       },
-      "ms": 32.8752999999997
+      "ms": 34.22770000000128
     },
     {
       "seed": "beta-distribution-198",
@@ -3185,7 +3185,7 @@
         "average": 85.83333333333333,
         "relativeDifference": 0.29896907216494845
       },
-      "ms": 32.255199999999604
+      "ms": 33.67309999999998
     },
     {
       "seed": "beta-distribution-199",
@@ -3201,7 +3201,7 @@
         "average": 86,
         "relativeDifference": 0.29906542056074764
       },
-      "ms": 41.397799999998824
+      "ms": 40.71510000000126
     }
   ]
 }

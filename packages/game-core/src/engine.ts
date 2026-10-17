@@ -81,6 +81,12 @@ export class MatchEngine {
     config: Partial<MatchConfig> = {},
   ) {
     this.maze = structuredClone(maze);
+    if (
+      new Set(maze.entrances.map(key)).size !== maze.entrances.length ||
+      maze.entrances.some((p) => !isTraversable(maze, p)) ||
+      !isTraversable(maze, maze.kevin)
+    )
+      throw new MatchError("INVALID_MAZE");
     this.config = { ...DEFAULT_MATCH_CONFIG, ...config };
     if (
       !Number.isInteger(this.config.maxParticipants) ||

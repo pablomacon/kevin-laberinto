@@ -1,5 +1,7 @@
 # KEL-002-C: diagnóstico y corrección
 
+Evidencia histórica de KEL-002-C con tolerancia del 15 %. La beta KEL-004 cambia los valores predeterminados a 30 % y mínimo 40 pasos, seleccionando entre varias posiciones válidas; véanse [LOCAL_BETA.md](LOCAL_BETA.md) y [KEVIN_DISTRIBUTION.json](KEVIN_DISTRIBUTION.json). Estos informes anteriores no se sustituyeron ni se presentan como resultados de la beta.
+
 ## Evidencia previa a la corrección
 
 El commit `75f882b` conserva el DFS local de KEL-002-B y la instrumentación antes de corregirlo. [diagnostic-before.json](diagnostic-before.json) registra el primer candidato de `integration-0` a `integration-19`: casillas, ciclos, bifurcaciones, callejones, todas las distancias perimetrales candidatas, distancia de la combinación seleccionada y motivos.
