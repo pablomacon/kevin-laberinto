@@ -1,0 +1,4408 @@
+{
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 7535HS with Radeon Graphics        "
+  },
+  "summary": {
+    "count": 100,
+    "successful": 100,
+    "exhausted": 0,
+    "topologyCandidates": 101,
+    "rejectedTopologies": 1,
+    "kevinCandidates": 247,
+    "entryCombinations": 622,
+    "rejectedEntryCombinations": 522,
+    "rejectionCounts": {
+      "perimeter-distribution": 19934,
+      "distance-window": 2621,
+      "entrance-spacing": 120,
+      "Corredor recto que cruza casi todo el mapa.": 1,
+      "Existe un cuello de botella común.": 402
+    },
+    "generationMs": {
+      "minimum": 10.721000000000004,
+      "maximum": 336.42470000000003,
+      "average": 38.082436000000015
+    },
+    "floorRatio": {
+      "minimum": 0.5030555555555556,
+      "maximum": 0.5161111111111111,
+      "average": 0.5100083333333333
+    },
+    "deadEnds": {
+      "minimum": 52,
+      "maximum": 84,
+      "average": 61.93
+    },
+    "junctions": {
+      "minimum": 221,
+      "maximum": 298,
+      "average": 263.02
+    },
+    "cycles": {
+      "minimum": 89,
+      "maximum": 135,
+      "average": 113.77
+    },
+    "relativeDifference": {
+      "minimum": 0.07228915662650602,
+      "maximum": 0.15,
+      "average": 0.13314914159559335
+    },
+    "shortestDistance": {
+      "minimum": 55,
+      "maximum": 115,
+      "average": 70.7
+    },
+    "longestDistance": {
+      "minimum": 63,
+      "maximum": 135,
+      "average": 81.6
+    },
+    "straightRun": {
+      "minimum": 15,
+      "maximum": 45,
+      "average": 25.87
+    }
+  },
+  "records": [
+    {
+      "seed": "integration-0",
+      "elapsedMs": 33.560900000000004,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 7,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 74, 77, 81, 81, 83],
+              "minimum": 73,
+              "maximum": 83,
+              "average": 78.16666666666667,
+              "relativeDifference": 0.12048192771084337
+            },
+            "traversableCells": 1838,
+            "wallCells": 1762,
+            "traversablePercentage": 0.5105555555555555,
+            "junctions": 265,
+            "deadEnds": 54,
+            "independentCycles": 116,
+            "articulationPoints": 215,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.5,
+              "longestStraightRun": 33,
+              "horizontalRun": 33,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-1",
+      "elapsedMs": 24.976200000000006,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [89, 78, 85, 89, 89, 84],
+              "minimum": 78,
+              "maximum": 89,
+              "average": 85.66666666666667,
+              "relativeDifference": 0.12359550561797752
+            },
+            "traversableCells": 1832,
+            "wallCells": 1768,
+            "traversablePercentage": 0.5088888888888888,
+            "junctions": 260,
+            "deadEnds": 68,
+            "independentCycles": 109,
+            "articulationPoints": 254,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 36,
+              "average": 4.4495412844036695,
+              "longestStraightRun": 25,
+              "horizontalRun": 21,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-2",
+      "elapsedMs": 26.454700000000003,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 0,
+          "entranceCombinations": 0,
+          "valid": false,
+          "reasons": ["Corredor recto que cruza casi todo el mapa."],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [],
+              "minimum": 0,
+              "maximum": 0,
+              "average": 0,
+              "relativeDifference": null
+            },
+            "traversableCells": 1822,
+            "wallCells": 1778,
+            "traversablePercentage": 0.5061111111111111,
+            "junctions": 246,
+            "deadEnds": 55,
+            "independentCycles": 107,
+            "articulationPoints": 257,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.737100737100737,
+              "longestStraightRun": 43,
+              "horizontalRun": 15,
+              "verticalRun": 43
+            }
+          },
+          "rejectedLocations": 0
+        },
+        {
+          "attempt": 1,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [77, 84, 83, 73, 85, 81],
+              "minimum": 73,
+              "maximum": 85,
+              "average": 80.5,
+              "relativeDifference": 0.1411764705882353
+            },
+            "traversableCells": 1829,
+            "wallCells": 1771,
+            "traversablePercentage": 0.5080555555555556,
+            "junctions": 259,
+            "deadEnds": 65,
+            "independentCycles": 107,
+            "articulationPoints": 320,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.5,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-3",
+      "elapsedMs": 336.42470000000003,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 18,
+          "entranceCombinations": 54,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [133, 132, 131, 115, 115, 135],
+              "minimum": 115,
+              "maximum": 135,
+              "average": 126.83333333333333,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1814,
+            "wallCells": 1786,
+            "traversablePercentage": 0.5038888888888889,
+            "junctions": 225,
+            "deadEnds": 64,
+            "independentCycles": 92,
+            "articulationPoints": 310,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 36,
+              "average": 5.0131578947368425,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 17
+        }
+      ]
+    },
+    {
+      "seed": "integration-4",
+      "elapsedMs": 15.364000000000033,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 5,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [87, 87, 86, 79, 83, 90],
+              "minimum": 79,
+              "maximum": 90,
+              "average": 85.33333333333333,
+              "relativeDifference": 0.12222222222222222
+            },
+            "traversableCells": 1823,
+            "wallCells": 1777,
+            "traversablePercentage": 0.5063888888888889,
+            "junctions": 240,
+            "deadEnds": 67,
+            "independentCycles": 100,
+            "articulationPoints": 309,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.733990147783251,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-5",
+      "elapsedMs": 13.940999999999974,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [64, 63, 63, 55, 59, 57],
+              "minimum": 55,
+              "maximum": 64,
+              "average": 60.166666666666664,
+              "relativeDifference": 0.140625
+            },
+            "traversableCells": 1826,
+            "wallCells": 1774,
+            "traversablePercentage": 0.5072222222222222,
+            "junctions": 256,
+            "deadEnds": 65,
+            "independentCycles": 104,
+            "articulationPoints": 262,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.5495283018867925,
+              "longestStraightRun": 29,
+              "horizontalRun": 21,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-6",
+      "elapsedMs": 13.114599999999996,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [80, 81, 75, 75, 81, 69],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 76.83333333333333,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1853,
+            "wallCells": 1747,
+            "traversablePercentage": 0.5147222222222222,
+            "junctions": 285,
+            "deadEnds": 53,
+            "independentCycles": 131,
+            "articulationPoints": 209,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.237179487179487,
+              "longestStraightRun": 35,
+              "horizontalRun": 35,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-7",
+      "elapsedMs": 13.932300000000055,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [63, 69, 64, 61, 59, 69],
+              "minimum": 59,
+              "maximum": 69,
+              "average": 64.16666666666667,
+              "relativeDifference": 0.14492753623188406
+            },
+            "traversableCells": 1827,
+            "wallCells": 1773,
+            "traversablePercentage": 0.5075,
+            "junctions": 250,
+            "deadEnds": 63,
+            "independentCycles": 105,
+            "articulationPoints": 230,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.630695443645084,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-8",
+      "elapsedMs": 14.576400000000035,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 4,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 77, 84, 77, 77, 84],
+              "minimum": 73,
+              "maximum": 84,
+              "average": 78.66666666666667,
+              "relativeDifference": 0.13095238095238096
+            },
+            "traversableCells": 1831,
+            "wallCells": 1769,
+            "traversablePercentage": 0.5086111111111111,
+            "junctions": 274,
+            "deadEnds": 84,
+            "independentCycles": 108,
+            "articulationPoints": 289,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.167741935483871,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 3
+        }
+      ]
+    },
+    {
+      "seed": "integration-9",
+      "elapsedMs": 19.59609999999998,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [86, 89, 81, 77, 83, 90],
+              "minimum": 77,
+              "maximum": 90,
+              "average": 84.33333333333333,
+              "relativeDifference": 0.14444444444444443
+            },
+            "traversableCells": 1835,
+            "wallCells": 1765,
+            "traversablePercentage": 0.5097222222222222,
+            "junctions": 257,
+            "deadEnds": 60,
+            "independentCycles": 112,
+            "articulationPoints": 221,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.546728971962617,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-10",
+      "elapsedMs": 12.533200000000079,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [85, 78, 85, 73, 73, 74],
+              "minimum": 73,
+              "maximum": 85,
+              "average": 78,
+              "relativeDifference": 0.1411764705882353
+            },
+            "traversableCells": 1837,
+            "wallCells": 1763,
+            "traversablePercentage": 0.5102777777777778,
+            "junctions": 253,
+            "deadEnds": 55,
+            "independentCycles": 114,
+            "articulationPoints": 191,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 36,
+              "average": 4.631828978622328,
+              "longestStraightRun": 27,
+              "horizontalRun": 25,
+              "verticalRun": 27
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-11",
+      "elapsedMs": 12.730500000000006,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 80, 79, 81, 73, 71],
+              "minimum": 71,
+              "maximum": 81,
+              "average": 76.16666666666667,
+              "relativeDifference": 0.12345679012345678
+            },
+            "traversableCells": 1828,
+            "wallCells": 1772,
+            "traversablePercentage": 0.5077777777777778,
+            "junctions": 251,
+            "deadEnds": 69,
+            "independentCycles": 106,
+            "articulationPoints": 268,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 22,
+              "average": 4.548235294117647,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-12",
+      "elapsedMs": 12.016300000000001,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [59, 60, 61, 63, 63, 55],
+              "minimum": 55,
+              "maximum": 63,
+              "average": 60.166666666666664,
+              "relativeDifference": 0.12698412698412698
+            },
+            "traversableCells": 1843,
+            "wallCells": 1757,
+            "traversablePercentage": 0.5119444444444444,
+            "junctions": 276,
+            "deadEnds": 60,
+            "independentCycles": 121,
+            "articulationPoints": 212,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.3048245614035086,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-13",
+      "elapsedMs": 180.8111,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 5,
+          "entranceCombinations": 33,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [63, 70, 61, 71, 61, 62],
+              "minimum": 61,
+              "maximum": 71,
+              "average": 64.66666666666667,
+              "relativeDifference": 0.14084507042253522
+            },
+            "traversableCells": 1849,
+            "wallCells": 1751,
+            "traversablePercentage": 0.5136111111111111,
+            "junctions": 286,
+            "deadEnds": 65,
+            "independentCycles": 126,
+            "articulationPoints": 241,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 20,
+              "average": 4.147058823529412,
+              "longestStraightRun": 23,
+              "horizontalRun": 21,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 4
+        }
+      ]
+    },
+    {
+      "seed": "integration-14",
+      "elapsedMs": 13.268199999999979,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 80, 71, 81, 81, 79],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 76.83333333333333,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1854,
+            "wallCells": 1746,
+            "traversablePercentage": 0.515,
+            "junctions": 282,
+            "deadEnds": 53,
+            "independentCycles": 132,
+            "articulationPoints": 203,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 22,
+              "average": 4.259656652360515,
+              "longestStraightRun": 33,
+              "horizontalRun": 21,
+              "verticalRun": 33
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-15",
+      "elapsedMs": 12.659999999999968,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [55, 64, 61, 59, 63, 57],
+              "minimum": 55,
+              "maximum": 64,
+              "average": 59.833333333333336,
+              "relativeDifference": 0.140625
+            },
+            "traversableCells": 1848,
+            "wallCells": 1752,
+            "traversablePercentage": 0.5133333333333333,
+            "junctions": 280,
+            "deadEnds": 54,
+            "independentCycles": 126,
+            "articulationPoints": 165,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.298474945533769,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-16",
+      "elapsedMs": 13.685799999999972,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [68, 67, 77, 77, 69, 73],
+              "minimum": 67,
+              "maximum": 77,
+              "average": 71.83333333333333,
+              "relativeDifference": 0.12987012987012986
+            },
+            "traversableCells": 1839,
+            "wallCells": 1761,
+            "traversablePercentage": 0.5108333333333334,
+            "junctions": 272,
+            "deadEnds": 61,
+            "independentCycles": 117,
+            "articulationPoints": 228,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.354120267260579,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-17",
+      "elapsedMs": 16.982500000000073,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 6,
+          "entranceCombinations": 3,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [83, 77, 82, 83, 83, 73],
+              "minimum": 73,
+              "maximum": 83,
+              "average": 80.16666666666667,
+              "relativeDifference": 0.12048192771084337
+            },
+            "traversableCells": 1850,
+            "wallCells": 1750,
+            "traversablePercentage": 0.5138888888888888,
+            "junctions": 291,
+            "deadEnds": 60,
+            "independentCycles": 128,
+            "articulationPoints": 207,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.135983263598327,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 5
+        }
+      ]
+    },
+    {
+      "seed": "integration-18",
+      "elapsedMs": 12.67719999999997,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [77, 73, 71, 68, 71, 74],
+              "minimum": 68,
+              "maximum": 77,
+              "average": 72.33333333333333,
+              "relativeDifference": 0.11688311688311688
+            },
+            "traversableCells": 1837,
+            "wallCells": 1763,
+            "traversablePercentage": 0.5102777777777778,
+            "junctions": 271,
+            "deadEnds": 66,
+            "independentCycles": 114,
+            "articulationPoints": 263,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.333333333333333,
+              "longestStraightRun": 21,
+              "horizontalRun": 19,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-19",
+      "elapsedMs": 14.728600000000029,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 4,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [70, 77, 73, 75, 67, 66],
+              "minimum": 66,
+              "maximum": 77,
+              "average": 71.33333333333333,
+              "relativeDifference": 0.14285714285714285
+            },
+            "traversableCells": 1857,
+            "wallCells": 1743,
+            "traversablePercentage": 0.5158333333333334,
+            "junctions": 298,
+            "deadEnds": 64,
+            "independentCycles": 134,
+            "articulationPoints": 190,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 24,
+              "average": 4.02020202020202,
+              "longestStraightRun": 17,
+              "horizontalRun": 17,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 3
+        }
+      ]
+    },
+    {
+      "seed": "integration-20",
+      "elapsedMs": 11.943000000000097,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [65, 73, 74, 71, 63, 71],
+              "minimum": 63,
+              "maximum": 74,
+              "average": 69.5,
+              "relativeDifference": 0.14864864864864866
+            },
+            "traversableCells": 1847,
+            "wallCells": 1753,
+            "traversablePercentage": 0.5130555555555556,
+            "junctions": 278,
+            "deadEnds": 59,
+            "independentCycles": 125,
+            "articulationPoints": 194,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 24,
+              "average": 4.275488069414317,
+              "longestStraightRun": 29,
+              "horizontalRun": 25,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-21",
+      "elapsedMs": 55.09109999999998,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 7,
+          "entranceCombinations": 8,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [74, 73, 69, 67, 65, 63],
+              "minimum": 63,
+              "maximum": 74,
+              "average": 68.5,
+              "relativeDifference": 0.14864864864864866
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 275,
+            "deadEnds": 64,
+            "independentCycles": 119,
+            "articulationPoints": 190,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.286652078774617,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 6
+        }
+      ]
+    },
+    {
+      "seed": "integration-22",
+      "elapsedMs": 12.274099999999976,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 6,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [81, 76, 77, 71, 77, 83],
+              "minimum": 71,
+              "maximum": 83,
+              "average": 77.5,
+              "relativeDifference": 0.14457831325301204
+            },
+            "traversableCells": 1822,
+            "wallCells": 1778,
+            "traversablePercentage": 0.5061111111111111,
+            "junctions": 238,
+            "deadEnds": 61,
+            "independentCycles": 100,
+            "articulationPoints": 246,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.826633165829146,
+              "longestStraightRun": 19,
+              "horizontalRun": 19,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-23",
+      "elapsedMs": 170.48180000000002,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 26,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [88, 97, 83, 97, 91, 91],
+              "minimum": 83,
+              "maximum": 97,
+              "average": 91.16666666666667,
+              "relativeDifference": 0.14432989690721648
+            },
+            "traversableCells": 1838,
+            "wallCells": 1762,
+            "traversablePercentage": 0.5105555555555555,
+            "junctions": 267,
+            "deadEnds": 65,
+            "independentCycles": 116,
+            "articulationPoints": 199,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.369127516778524,
+              "longestStraightRun": 39,
+              "horizontalRun": 19,
+              "verticalRun": 39
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-24",
+      "elapsedMs": 12.357000000000198,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [84, 83, 75, 85, 75, 73],
+              "minimum": 73,
+              "maximum": 85,
+              "average": 79.16666666666667,
+              "relativeDifference": 0.1411764705882353
+            },
+            "traversableCells": 1847,
+            "wallCells": 1753,
+            "traversablePercentage": 0.5130555555555556,
+            "junctions": 287,
+            "deadEnds": 59,
+            "independentCycles": 125,
+            "articulationPoints": 172,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.193617021276595,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-25",
+      "elapsedMs": 13.056299999999965,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 81, 76, 77, 77, 69],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 76.5,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1830,
+            "wallCells": 1770,
+            "traversablePercentage": 0.5083333333333333,
+            "junctions": 263,
+            "deadEnds": 66,
+            "independentCycles": 108,
+            "articulationPoints": 235,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.442660550458716,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-26",
+      "elapsedMs": 70.66620000000012,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 5,
+          "entranceCombinations": 10,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [64, 59, 59, 63, 57, 63],
+              "minimum": 57,
+              "maximum": 64,
+              "average": 60.833333333333336,
+              "relativeDifference": 0.109375
+            },
+            "traversableCells": 1832,
+            "wallCells": 1768,
+            "traversablePercentage": 0.5088888888888888,
+            "junctions": 256,
+            "deadEnds": 66,
+            "independentCycles": 110,
+            "articulationPoints": 218,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.503480278422273,
+              "longestStraightRun": 26,
+              "horizontalRun": 26,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 4
+        }
+      ]
+    },
+    {
+      "seed": "integration-27",
+      "elapsedMs": 13.535100000000057,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [90, 89, 89, 81, 81, 77],
+              "minimum": 77,
+              "maximum": 90,
+              "average": 84.5,
+              "relativeDifference": 0.14444444444444443
+            },
+            "traversableCells": 1825,
+            "wallCells": 1775,
+            "traversablePercentage": 0.5069444444444444,
+            "junctions": 248,
+            "deadEnds": 65,
+            "independentCycles": 103,
+            "articulationPoints": 244,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 24,
+              "average": 4.643373493975903,
+              "longestStraightRun": 29,
+              "horizontalRun": 29,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-28",
+      "elapsedMs": 13.630100000000084,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [99, 86, 101, 101, 87, 92],
+              "minimum": 86,
+              "maximum": 101,
+              "average": 94.33333333333333,
+              "relativeDifference": 0.1485148514851485
+            },
+            "traversableCells": 1834,
+            "wallCells": 1766,
+            "traversablePercentage": 0.5094444444444445,
+            "junctions": 250,
+            "deadEnds": 55,
+            "independentCycles": 111,
+            "articulationPoints": 215,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 38,
+              "average": 4.68433734939759,
+              "longestStraightRun": 23,
+              "horizontalRun": 21,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-29",
+      "elapsedMs": 122.02320000000009,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 5,
+          "entranceCombinations": 22,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [91, 78, 85, 91, 83, 83],
+              "minimum": 78,
+              "maximum": 91,
+              "average": 85.16666666666667,
+              "relativeDifference": 0.14285714285714285
+            },
+            "traversableCells": 1840,
+            "wallCells": 1760,
+            "traversablePercentage": 0.5111111111111111,
+            "junctions": 277,
+            "deadEnds": 70,
+            "independentCycles": 118,
+            "articulationPoints": 270,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 24,
+              "average": 4.217672413793103,
+              "longestStraightRun": 25,
+              "horizontalRun": 23,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 4
+        }
+      ]
+    },
+    {
+      "seed": "integration-30",
+      "elapsedMs": 50.03899999999999,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 8,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [65, 70, 65, 75, 75, 72],
+              "minimum": 65,
+              "maximum": 75,
+              "average": 70.33333333333333,
+              "relativeDifference": 0.13333333333333333
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 264,
+            "deadEnds": 56,
+            "independentCycles": 118,
+            "articulationPoints": 202,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.480549199084668,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-31",
+      "elapsedMs": 16.663299999999936,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [72, 65, 71, 71, 71, 73],
+              "minimum": 65,
+              "maximum": 73,
+              "average": 70.5,
+              "relativeDifference": 0.1095890410958904
+            },
+            "traversableCells": 1824,
+            "wallCells": 1776,
+            "traversablePercentage": 0.5066666666666667,
+            "junctions": 241,
+            "deadEnds": 56,
+            "independentCycles": 102,
+            "articulationPoints": 280,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.836683417085427,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-32",
+      "elapsedMs": 234.73250000000007,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 44,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [70, 69, 69, 81, 81, 81],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 75.16666666666667,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1845,
+            "wallCells": 1755,
+            "traversablePercentage": 0.5125,
+            "junctions": 286,
+            "deadEnds": 63,
+            "independentCycles": 123,
+            "articulationPoints": 182,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.176220806794055,
+              "longestStraightRun": 37,
+              "horizontalRun": 37,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-33",
+      "elapsedMs": 11.492599999999811,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [84, 79, 77, 87, 77, 77],
+              "minimum": 77,
+              "maximum": 87,
+              "average": 80.16666666666667,
+              "relativeDifference": 0.11494252873563218
+            },
+            "traversableCells": 1822,
+            "wallCells": 1778,
+            "traversablePercentage": 0.5061111111111111,
+            "junctions": 241,
+            "deadEnds": 56,
+            "independentCycles": 100,
+            "articulationPoints": 199,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 48,
+              "average": 4.851010101010101,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-34",
+      "elapsedMs": 12.397600000000011,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [78, 75, 77, 73, 67, 73],
+              "minimum": 67,
+              "maximum": 78,
+              "average": 73.83333333333333,
+              "relativeDifference": 0.14102564102564102
+            },
+            "traversableCells": 1842,
+            "wallCells": 1758,
+            "traversablePercentage": 0.5116666666666667,
+            "junctions": 272,
+            "deadEnds": 57,
+            "independentCycles": 120,
+            "articulationPoints": 210,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.377232142857143,
+              "longestStraightRun": 23,
+              "horizontalRun": 21,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-35",
+      "elapsedMs": 11.504000000000133,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [85, 85, 96, 97, 95, 97],
+              "minimum": 85,
+              "maximum": 97,
+              "average": 92.5,
+              "relativeDifference": 0.12371134020618557
+            },
+            "traversableCells": 1840,
+            "wallCells": 1760,
+            "traversablePercentage": 0.5111111111111111,
+            "junctions": 278,
+            "deadEnds": 67,
+            "independentCycles": 118,
+            "articulationPoints": 269,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.235930735930736,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-36",
+      "elapsedMs": 12.246799999999894,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 81, 70, 73, 69, 79],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 73.5,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1832,
+            "wallCells": 1768,
+            "traversablePercentage": 0.5088888888888888,
+            "junctions": 253,
+            "deadEnds": 59,
+            "independentCycles": 110,
+            "articulationPoints": 216,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.610451306413301,
+              "longestStraightRun": 17,
+              "horizontalRun": 15,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-37",
+      "elapsedMs": 12.134399999999914,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 64, 63, 67, 57, 67],
+              "minimum": 57,
+              "maximum": 67,
+              "average": 64.16666666666667,
+              "relativeDifference": 0.14925373134328357
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 274,
+            "deadEnds": 58,
+            "independentCycles": 119,
+            "articulationPoints": 245,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.3533333333333335,
+              "longestStraightRun": 33,
+              "horizontalRun": 33,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-38",
+      "elapsedMs": 13.816499999999905,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 5,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 80, 73, 69, 69, 81],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 75.16666666666667,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1843,
+            "wallCells": 1757,
+            "traversablePercentage": 0.5119444444444444,
+            "junctions": 281,
+            "deadEnds": 65,
+            "independentCycles": 121,
+            "articulationPoints": 238,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 38,
+              "average": 4.21244635193133,
+              "longestStraightRun": 29,
+              "horizontalRun": 29,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 4
+        }
+      ]
+    },
+    {
+      "seed": "integration-39",
+      "elapsedMs": 11.9679000000001,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [100, 91, 87, 99, 85, 100],
+              "minimum": 85,
+              "maximum": 100,
+              "average": 93.66666666666667,
+              "relativeDifference": 0.15
+            },
+            "traversableCells": 1827,
+            "wallCells": 1773,
+            "traversablePercentage": 0.5075,
+            "junctions": 258,
+            "deadEnds": 72,
+            "independentCycles": 104,
+            "articulationPoints": 355,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.457274826789838,
+              "longestStraightRun": 19,
+              "horizontalRun": 19,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-40",
+      "elapsedMs": 12.015699999999924,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [89, 92, 83, 91, 79, 84],
+              "minimum": 79,
+              "maximum": 92,
+              "average": 86.33333333333333,
+              "relativeDifference": 0.14130434782608695
+            },
+            "traversableCells": 1858,
+            "wallCells": 1742,
+            "traversablePercentage": 0.5161111111111111,
+            "junctions": 288,
+            "deadEnds": 61,
+            "independentCycles": 135,
+            "articulationPoints": 228,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 38,
+              "average": 4.124223602484472,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-41",
+      "elapsedMs": 12.682399999999916,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 70, 71, 75, 71, 76],
+              "minimum": 70,
+              "maximum": 79,
+              "average": 73.66666666666667,
+              "relativeDifference": 0.11392405063291139
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 266,
+            "deadEnds": 61,
+            "independentCycles": 118,
+            "articulationPoints": 266,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 36,
+              "average": 4.40990990990991,
+              "longestStraightRun": 19,
+              "horizontalRun": 19,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-42",
+      "elapsedMs": 105.45550000000003,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 20,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [75, 73, 68, 65, 75, 67],
+              "minimum": 65,
+              "maximum": 75,
+              "average": 70.5,
+              "relativeDifference": 0.13333333333333333
+            },
+            "traversableCells": 1823,
+            "wallCells": 1777,
+            "traversablePercentage": 0.5063888888888889,
+            "junctions": 248,
+            "deadEnds": 68,
+            "independentCycles": 101,
+            "articulationPoints": 265,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.622596153846154,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-43",
+      "elapsedMs": 72.26290000000017,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 8,
+          "entranceCombinations": 16,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [87, 81, 80, 87, 75, 79],
+              "minimum": 75,
+              "maximum": 87,
+              "average": 81.5,
+              "relativeDifference": 0.13793103448275862
+            },
+            "traversableCells": 1836,
+            "wallCells": 1764,
+            "traversablePercentage": 0.51,
+            "junctions": 263,
+            "deadEnds": 59,
+            "independentCycles": 114,
+            "articulationPoints": 206,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.480459770114942,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 7
+        }
+      ]
+    },
+    {
+      "seed": "integration-44",
+      "elapsedMs": 109.38220000000001,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 4,
+          "entranceCombinations": 35,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [83, 82, 77, 73, 71, 77],
+              "minimum": 71,
+              "maximum": 83,
+              "average": 77.16666666666667,
+              "relativeDifference": 0.14457831325301204
+            },
+            "traversableCells": 1827,
+            "wallCells": 1773,
+            "traversablePercentage": 0.5075,
+            "junctions": 253,
+            "deadEnds": 70,
+            "independentCycles": 105,
+            "articulationPoints": 237,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.522248243559719,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 3
+        }
+      ]
+    },
+    {
+      "seed": "integration-45",
+      "elapsedMs": 12.10609999999997,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [65, 69, 73, 72, 73, 63],
+              "minimum": 63,
+              "maximum": 73,
+              "average": 69.16666666666667,
+              "relativeDifference": 0.136986301369863
+            },
+            "traversableCells": 1839,
+            "wallCells": 1761,
+            "traversablePercentage": 0.5108333333333334,
+            "junctions": 259,
+            "deadEnds": 58,
+            "independentCycles": 117,
+            "articulationPoints": 279,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.515011547344111,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-46",
+      "elapsedMs": 279.74400000000014,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 10,
+          "entranceCombinations": 56,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [99, 91, 96, 107, 95, 105],
+              "minimum": 91,
+              "maximum": 107,
+              "average": 98.83333333333333,
+              "relativeDifference": 0.14953271028037382
+            },
+            "traversableCells": 1827,
+            "wallCells": 1773,
+            "traversablePercentage": 0.5075,
+            "junctions": 254,
+            "deadEnds": 63,
+            "independentCycles": 105,
+            "articulationPoints": 228,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.5866983372921615,
+              "longestStraightRun": 21,
+              "horizontalRun": 19,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 9
+        }
+      ]
+    },
+    {
+      "seed": "integration-47",
+      "elapsedMs": 11.86409999999978,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 82, 77, 83, 77, 79],
+              "minimum": 77,
+              "maximum": 83,
+              "average": 79.5,
+              "relativeDifference": 0.07228915662650602
+            },
+            "traversableCells": 1817,
+            "wallCells": 1783,
+            "traversablePercentage": 0.5047222222222222,
+            "junctions": 229,
+            "deadEnds": 63,
+            "independentCycles": 95,
+            "articulationPoints": 230,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.950777202072539,
+              "longestStraightRun": 29,
+              "horizontalRun": 29,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-48",
+      "elapsedMs": 12.942800000000261,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 74, 69, 69, 63, 63],
+              "minimum": 63,
+              "maximum": 74,
+              "average": 68.5,
+              "relativeDifference": 0.14864864864864866
+            },
+            "traversableCells": 1855,
+            "wallCells": 1745,
+            "traversablePercentage": 0.5152777777777777,
+            "junctions": 296,
+            "deadEnds": 55,
+            "independentCycles": 133,
+            "articulationPoints": 171,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.113871635610766,
+              "longestStraightRun": 45,
+              "horizontalRun": 45,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-49",
+      "elapsedMs": 10.925399999999627,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [75, 81, 86, 87, 87, 75],
+              "minimum": 75,
+              "maximum": 87,
+              "average": 81.83333333333333,
+              "relativeDifference": 0.13793103448275862
+            },
+            "traversableCells": 1838,
+            "wallCells": 1762,
+            "traversablePercentage": 0.5105555555555555,
+            "junctions": 265,
+            "deadEnds": 62,
+            "independentCycles": 116,
+            "articulationPoints": 205,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.418552036199095,
+              "longestStraightRun": 25,
+              "horizontalRun": 21,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-50",
+      "elapsedMs": 13.762900000000172,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 85, 76, 89, 76, 83],
+              "minimum": 76,
+              "maximum": 89,
+              "average": 81.33333333333333,
+              "relativeDifference": 0.14606741573033707
+            },
+            "traversableCells": 1843,
+            "wallCells": 1757,
+            "traversablePercentage": 0.5119444444444444,
+            "junctions": 276,
+            "deadEnds": 60,
+            "independentCycles": 120,
+            "articulationPoints": 206,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.312087912087912,
+              "longestStraightRun": 29,
+              "horizontalRun": 25,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-51",
+      "elapsedMs": 13.590700000000197,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 61, 68, 69, 69, 69],
+              "minimum": 61,
+              "maximum": 69,
+              "average": 67.5,
+              "relativeDifference": 0.11594202898550725
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 274,
+            "deadEnds": 65,
+            "independentCycles": 119,
+            "articulationPoints": 254,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.286652078774617,
+              "longestStraightRun": 19,
+              "horizontalRun": 19,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-52",
+      "elapsedMs": 11.500999999999749,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [81, 72, 73, 79, 77, 75],
+              "minimum": 72,
+              "maximum": 81,
+              "average": 76.16666666666667,
+              "relativeDifference": 0.1111111111111111
+            },
+            "traversableCells": 1850,
+            "wallCells": 1750,
+            "traversablePercentage": 0.5138888888888888,
+            "junctions": 285,
+            "deadEnds": 60,
+            "independentCycles": 128,
+            "articulationPoints": 227,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.188559322033898,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-53",
+      "elapsedMs": 16.051699999999983,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 7,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 65, 69, 76, 71, 65],
+              "minimum": 65,
+              "maximum": 76,
+              "average": 69.83333333333333,
+              "relativeDifference": 0.14473684210526316
+            },
+            "traversableCells": 1822,
+            "wallCells": 1778,
+            "traversablePercentage": 0.5061111111111111,
+            "junctions": 245,
+            "deadEnds": 66,
+            "independentCycles": 100,
+            "articulationPoints": 277,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.685365853658537,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 6
+        }
+      ]
+    },
+    {
+      "seed": "integration-54",
+      "elapsedMs": 12.30580000000009,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 79, 82, 75, 83, 73],
+              "minimum": 73,
+              "maximum": 83,
+              "average": 78.5,
+              "relativeDifference": 0.12048192771084337
+            },
+            "traversableCells": 1821,
+            "wallCells": 1779,
+            "traversablePercentage": 0.5058333333333334,
+            "junctions": 242,
+            "deadEnds": 68,
+            "independentCycles": 99,
+            "articulationPoints": 284,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.703431372549019,
+              "longestStraightRun": 19,
+              "horizontalRun": 19,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-55",
+      "elapsedMs": 13.43600000000015,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 69, 63, 68, 59, 69],
+              "minimum": 59,
+              "maximum": 69,
+              "average": 66.16666666666667,
+              "relativeDifference": 0.14492753623188406
+            },
+            "traversableCells": 1830,
+            "wallCells": 1770,
+            "traversablePercentage": 0.5083333333333333,
+            "junctions": 254,
+            "deadEnds": 61,
+            "independentCycles": 108,
+            "articulationPoints": 251,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.590047393364929,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-56",
+      "elapsedMs": 10.721000000000004,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 5,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [77, 75, 79, 80, 87, 88],
+              "minimum": 75,
+              "maximum": 88,
+              "average": 81,
+              "relativeDifference": 0.14772727272727273
+            },
+            "traversableCells": 1826,
+            "wallCells": 1774,
+            "traversablePercentage": 0.5072222222222222,
+            "junctions": 239,
+            "deadEnds": 54,
+            "independentCycles": 103,
+            "articulationPoints": 209,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.881012658227848,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-57",
+      "elapsedMs": 11.832100000000082,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 80, 79, 69, 77, 74],
+              "minimum": 69,
+              "maximum": 80,
+              "average": 76.33333333333333,
+              "relativeDifference": 0.1375
+            },
+            "traversableCells": 1835,
+            "wallCells": 1765,
+            "traversablePercentage": 0.5097222222222222,
+            "junctions": 248,
+            "deadEnds": 53,
+            "independentCycles": 112,
+            "articulationPoints": 219,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.723300970873787,
+              "longestStraightRun": 29,
+              "horizontalRun": 29,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-58",
+      "elapsedMs": 13.731800000000021,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [91, 83, 81, 90, 91, 83],
+              "minimum": 81,
+              "maximum": 91,
+              "average": 86.5,
+              "relativeDifference": 0.10989010989010989
+            },
+            "traversableCells": 1836,
+            "wallCells": 1764,
+            "traversablePercentage": 0.51,
+            "junctions": 260,
+            "deadEnds": 58,
+            "independentCycles": 114,
+            "articulationPoints": 203,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 44,
+              "average": 4.522041763341067,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-59",
+      "elapsedMs": 312.06309999999985,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 58,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 81, 72, 77, 75, 81],
+              "minimum": 72,
+              "maximum": 81,
+              "average": 76.5,
+              "relativeDifference": 0.1111111111111111
+            },
+            "traversableCells": 1833,
+            "wallCells": 1767,
+            "traversablePercentage": 0.5091666666666667,
+            "junctions": 254,
+            "deadEnds": 67,
+            "independentCycles": 111,
+            "articulationPoints": 287,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.508120649651972,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-60",
+      "elapsedMs": 12.39409999999998,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [68, 67, 61, 63, 67, 61],
+              "minimum": 61,
+              "maximum": 68,
+              "average": 64.5,
+              "relativeDifference": 0.10294117647058823
+            },
+            "traversableCells": 1851,
+            "wallCells": 1749,
+            "traversablePercentage": 0.5141666666666667,
+            "junctions": 288,
+            "deadEnds": 59,
+            "independentCycles": 129,
+            "articulationPoints": 205,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 20,
+              "average": 4.166315789473685,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-61",
+      "elapsedMs": 12.503200000000106,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [72, 71, 73, 67, 63, 68],
+              "minimum": 63,
+              "maximum": 73,
+              "average": 69,
+              "relativeDifference": 0.136986301369863
+            },
+            "traversableCells": 1848,
+            "wallCells": 1752,
+            "traversablePercentage": 0.5133333333333333,
+            "junctions": 280,
+            "deadEnds": 65,
+            "independentCycles": 125,
+            "articulationPoints": 212,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 22,
+              "average": 4.204690831556503,
+              "longestStraightRun": 31,
+              "horizontalRun": 31,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-62",
+      "elapsedMs": 12.178699999999935,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 65, 73, 66, 65, 63],
+              "minimum": 63,
+              "maximum": 73,
+              "average": 66.5,
+              "relativeDifference": 0.136986301369863
+            },
+            "traversableCells": 1836,
+            "wallCells": 1764,
+            "traversablePercentage": 0.51,
+            "junctions": 258,
+            "deadEnds": 66,
+            "independentCycles": 114,
+            "articulationPoints": 265,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.459954233409611,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-63",
+      "elapsedMs": 12.17029999999977,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 74, 69, 69, 69, 69],
+              "minimum": 67,
+              "maximum": 74,
+              "average": 69.5,
+              "relativeDifference": 0.0945945945945946
+            },
+            "traversableCells": 1831,
+            "wallCells": 1769,
+            "traversablePercentage": 0.5086111111111111,
+            "junctions": 255,
+            "deadEnds": 73,
+            "independentCycles": 109,
+            "articulationPoints": 269,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.447247706422019,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-64",
+      "elapsedMs": 12.737300000000232,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 81, 69, 72, 69, 74],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 73,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1829,
+            "wallCells": 1771,
+            "traversablePercentage": 0.5080555555555556,
+            "junctions": 252,
+            "deadEnds": 64,
+            "independentCycles": 106,
+            "articulationPoints": 256,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.593824228028503,
+              "longestStraightRun": 33,
+              "horizontalRun": 33,
+              "verticalRun": 13
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-65",
+      "elapsedMs": 13.583800000000338,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [70, 69, 75, 69, 75, 73],
+              "minimum": 69,
+              "maximum": 75,
+              "average": 71.83333333333333,
+              "relativeDifference": 0.08
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 274,
+            "deadEnds": 64,
+            "independentCycles": 119,
+            "articulationPoints": 216,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 46,
+              "average": 4.296052631578948,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-66",
+      "elapsedMs": 12.565499999999702,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 73, 67, 76, 73, 67],
+              "minimum": 67,
+              "maximum": 76,
+              "average": 70.83333333333333,
+              "relativeDifference": 0.11842105263157894
+            },
+            "traversableCells": 1846,
+            "wallCells": 1754,
+            "traversablePercentage": 0.5127777777777778,
+            "junctions": 274,
+            "deadEnds": 56,
+            "independentCycles": 124,
+            "articulationPoints": 205,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.346578366445916,
+              "longestStraightRun": 25,
+              "horizontalRun": 19,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-67",
+      "elapsedMs": 12.507599999999911,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 2,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [64, 61, 65, 65, 57, 65],
+              "minimum": 57,
+              "maximum": 65,
+              "average": 62.833333333333336,
+              "relativeDifference": 0.12307692307692308
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 264,
+            "deadEnds": 58,
+            "independentCycles": 119,
+            "articulationPoints": 186,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.452272727272727,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-68",
+      "elapsedMs": 206.10109999999986,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 33,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [83, 84, 77, 87, 87, 81],
+              "minimum": 77,
+              "maximum": 87,
+              "average": 83.16666666666667,
+              "relativeDifference": 0.11494252873563218
+            },
+            "traversableCells": 1835,
+            "wallCells": 1765,
+            "traversablePercentage": 0.5097222222222222,
+            "junctions": 264,
+            "deadEnds": 62,
+            "independentCycles": 113,
+            "articulationPoints": 256,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.445205479452055,
+              "longestStraightRun": 28,
+              "horizontalRun": 17,
+              "verticalRun": 28
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-69",
+      "elapsedMs": 14.091100000000097,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [87, 82, 77, 87, 81, 74],
+              "minimum": 74,
+              "maximum": 87,
+              "average": 81.33333333333333,
+              "relativeDifference": 0.14942528735632185
+            },
+            "traversableCells": 1831,
+            "wallCells": 1769,
+            "traversablePercentage": 0.5086111111111111,
+            "junctions": 261,
+            "deadEnds": 62,
+            "independentCycles": 108,
+            "articulationPoints": 217,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 44,
+              "average": 4.506976744186047,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-70",
+      "elapsedMs": 12.744100000000344,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 69, 69, 78, 77, 75],
+              "minimum": 67,
+              "maximum": 78,
+              "average": 72.5,
+              "relativeDifference": 0.14102564102564102
+            },
+            "traversableCells": 1811,
+            "wallCells": 1789,
+            "traversablePercentage": 0.5030555555555556,
+            "junctions": 221,
+            "deadEnds": 62,
+            "independentCycles": 89,
+            "articulationPoints": 276,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 52,
+              "average": 5.118598382749326,
+              "longestStraightRun": 22,
+              "horizontalRun": 21,
+              "verticalRun": 22
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-71",
+      "elapsedMs": 13.505699999999706,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [101, 103, 89, 104, 93, 103],
+              "minimum": 89,
+              "maximum": 104,
+              "average": 98.83333333333333,
+              "relativeDifference": 0.14423076923076922
+            },
+            "traversableCells": 1832,
+            "wallCells": 1768,
+            "traversablePercentage": 0.5088888888888888,
+            "junctions": 249,
+            "deadEnds": 58,
+            "independentCycles": 110,
+            "articulationPoints": 284,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 42,
+              "average": 4.665865384615385,
+              "longestStraightRun": 27,
+              "horizontalRun": 27,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-72",
+      "elapsedMs": 12.567700000000059,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 3,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [63, 55, 57, 60, 63, 63],
+              "minimum": 55,
+              "maximum": 63,
+              "average": 60.166666666666664,
+              "relativeDifference": 0.12698412698412698
+            },
+            "traversableCells": 1847,
+            "wallCells": 1753,
+            "traversablePercentage": 0.5130555555555556,
+            "junctions": 269,
+            "deadEnds": 66,
+            "independentCycles": 125,
+            "articulationPoints": 239,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.294117647058823,
+              "longestStraightRun": 33,
+              "horizontalRun": 33,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-73",
+      "elapsedMs": 12.429399999999987,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 65, 72, 75, 65, 64],
+              "minimum": 64,
+              "maximum": 75,
+              "average": 68,
+              "relativeDifference": 0.14666666666666667
+            },
+            "traversableCells": 1842,
+            "wallCells": 1758,
+            "traversablePercentage": 0.5116666666666667,
+            "junctions": 271,
+            "deadEnds": 64,
+            "independentCycles": 119,
+            "articulationPoints": 252,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.326710816777042,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-74",
+      "elapsedMs": 11.373199999999997,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [64, 71, 67, 69, 71, 69],
+              "minimum": 64,
+              "maximum": 71,
+              "average": 68.5,
+              "relativeDifference": 0.09859154929577464
+            },
+            "traversableCells": 1843,
+            "wallCells": 1757,
+            "traversablePercentage": 0.5119444444444444,
+            "junctions": 271,
+            "deadEnds": 57,
+            "independentCycles": 121,
+            "articulationPoints": 245,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 4,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.381696428571429,
+              "longestStraightRun": 23,
+              "horizontalRun": 17,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-75",
+      "elapsedMs": 11.40729999999985,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [71, 61, 68, 67, 71, 65],
+              "minimum": 61,
+              "maximum": 71,
+              "average": 67.16666666666667,
+              "relativeDifference": 0.14084507042253522
+            },
+            "traversableCells": 1831,
+            "wallCells": 1769,
+            "traversablePercentage": 0.5086111111111111,
+            "junctions": 257,
+            "deadEnds": 62,
+            "independentCycles": 109,
+            "articulationPoints": 268,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 20,
+              "average": 4.540983606557377,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-76",
+      "elapsedMs": 12.467099999999846,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [87, 79, 77, 86, 75, 86],
+              "minimum": 75,
+              "maximum": 87,
+              "average": 81.66666666666667,
+              "relativeDifference": 0.13793103448275862
+            },
+            "traversableCells": 1837,
+            "wallCells": 1763,
+            "traversablePercentage": 0.5102777777777778,
+            "junctions": 267,
+            "deadEnds": 65,
+            "independentCycles": 114,
+            "articulationPoints": 228,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 24,
+              "average": 4.382022471910112,
+              "longestStraightRun": 41,
+              "horizontalRun": 41,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-77",
+      "elapsedMs": 15.554600000000391,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 6,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [65, 68, 59, 65, 65, 59],
+              "minimum": 59,
+              "maximum": 68,
+              "average": 63.5,
+              "relativeDifference": 0.1323529411764706
+            },
+            "traversableCells": 1845,
+            "wallCells": 1755,
+            "traversablePercentage": 0.5125,
+            "junctions": 276,
+            "deadEnds": 60,
+            "independentCycles": 123,
+            "articulationPoints": 238,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.294759825327511,
+              "longestStraightRun": 21,
+              "horizontalRun": 19,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 5
+        }
+      ]
+    },
+    {
+      "seed": "integration-78",
+      "elapsedMs": 12.967499999999745,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [97, 97, 92, 107, 101, 107],
+              "minimum": 92,
+              "maximum": 107,
+              "average": 100.16666666666667,
+              "relativeDifference": 0.14018691588785046
+            },
+            "traversableCells": 1839,
+            "wallCells": 1761,
+            "traversablePercentage": 0.5108333333333334,
+            "junctions": 260,
+            "deadEnds": 52,
+            "independentCycles": 117,
+            "articulationPoints": 206,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 22,
+              "average": 4.567757009345795,
+              "longestStraightRun": 15,
+              "horizontalRun": 15,
+              "verticalRun": 15
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-79",
+      "elapsedMs": 12.83869999999979,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [85, 85, 75, 88, 77, 75],
+              "minimum": 75,
+              "maximum": 88,
+              "average": 80.83333333333333,
+              "relativeDifference": 0.14772727272727273
+            },
+            "traversableCells": 1832,
+            "wallCells": 1768,
+            "traversablePercentage": 0.5088888888888888,
+            "junctions": 261,
+            "deadEnds": 65,
+            "independentCycles": 110,
+            "articulationPoints": 217,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.462068965517242,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-80",
+      "elapsedMs": 11.85779999999977,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [79, 81, 77, 72, 77, 80],
+              "minimum": 72,
+              "maximum": 81,
+              "average": 77.66666666666667,
+              "relativeDifference": 0.1111111111111111
+            },
+            "traversableCells": 1850,
+            "wallCells": 1750,
+            "traversablePercentage": 0.5138888888888888,
+            "junctions": 288,
+            "deadEnds": 59,
+            "independentCycles": 127,
+            "articulationPoints": 215,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.177589852008457,
+              "longestStraightRun": 21,
+              "horizontalRun": 15,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-81",
+      "elapsedMs": 187.85120000000006,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 15,
+          "entranceCombinations": 41,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [85, 88, 75, 81, 79, 75],
+              "minimum": 75,
+              "maximum": 88,
+              "average": 80.5,
+              "relativeDifference": 0.14772727272727273
+            },
+            "traversableCells": 1831,
+            "wallCells": 1769,
+            "traversablePercentage": 0.5086111111111111,
+            "junctions": 254,
+            "deadEnds": 64,
+            "independentCycles": 109,
+            "articulationPoints": 259,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.551643192488263,
+              "longestStraightRun": 31,
+              "horizontalRun": 23,
+              "verticalRun": 31
+            }
+          },
+          "rejectedLocations": 14
+        }
+      ]
+    },
+    {
+      "seed": "integration-82",
+      "elapsedMs": 19.691200000000208,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [74, 85, 73, 85, 73, 74],
+              "minimum": 73,
+              "maximum": 85,
+              "average": 77.33333333333333,
+              "relativeDifference": 0.1411764705882353
+            },
+            "traversableCells": 1828,
+            "wallCells": 1772,
+            "traversablePercentage": 0.5077777777777778,
+            "junctions": 246,
+            "deadEnds": 63,
+            "independentCycles": 105,
+            "articulationPoints": 295,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 42,
+              "average": 4.677966101694915,
+              "longestStraightRun": 29,
+              "horizontalRun": 23,
+              "verticalRun": 29
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-83",
+      "elapsedMs": 16.085700000000088,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [101, 89, 95, 92, 93, 95],
+              "minimum": 89,
+              "maximum": 101,
+              "average": 94.16666666666667,
+              "relativeDifference": 0.1188118811881188
+            },
+            "traversableCells": 1844,
+            "wallCells": 1756,
+            "traversablePercentage": 0.5122222222222222,
+            "junctions": 274,
+            "deadEnds": 55,
+            "independentCycles": 122,
+            "articulationPoints": 234,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.366666666666666,
+              "longestStraightRun": 23,
+              "horizontalRun": 19,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-84",
+      "elapsedMs": 12.321400000000267,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [88, 75, 79, 87, 87, 79],
+              "minimum": 75,
+              "maximum": 88,
+              "average": 82.5,
+              "relativeDifference": 0.14772727272727273
+            },
+            "traversableCells": 1814,
+            "wallCells": 1786,
+            "traversablePercentage": 0.5038888888888889,
+            "junctions": 229,
+            "deadEnds": 62,
+            "independentCycles": 92,
+            "articulationPoints": 237,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.986910994764398,
+              "longestStraightRun": 25,
+              "horizontalRun": 17,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-85",
+      "elapsedMs": 13.20950000000039,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 3,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [66, 65, 71, 67, 73, 73],
+              "minimum": 65,
+              "maximum": 73,
+              "average": 69.16666666666667,
+              "relativeDifference": 0.1095890410958904
+            },
+            "traversableCells": 1853,
+            "wallCells": 1747,
+            "traversablePercentage": 0.5147222222222222,
+            "junctions": 298,
+            "deadEnds": 57,
+            "independentCycles": 131,
+            "articulationPoints": 161,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 38,
+              "average": 4.088659793814433,
+              "longestStraightRun": 23,
+              "horizontalRun": 23,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-86",
+      "elapsedMs": 12.602699999999913,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [76, 75, 67, 73, 75, 75],
+              "minimum": 67,
+              "maximum": 76,
+              "average": 73.5,
+              "relativeDifference": 0.11842105263157894
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 263,
+            "deadEnds": 56,
+            "independentCycles": 119,
+            "articulationPoints": 211,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 32,
+              "average": 4.482837528604119,
+              "longestStraightRun": 25,
+              "horizontalRun": 23,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-87",
+      "elapsedMs": 12.253499999999804,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 3,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 65, 64, 57, 67, 67],
+              "minimum": 57,
+              "maximum": 67,
+              "average": 64.5,
+              "relativeDifference": 0.14925373134328357
+            },
+            "traversableCells": 1834,
+            "wallCells": 1766,
+            "traversablePercentage": 0.5094444444444445,
+            "junctions": 265,
+            "deadEnds": 67,
+            "independentCycles": 112,
+            "articulationPoints": 278,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 48,
+              "average": 4.390519187358916,
+              "longestStraightRun": 31,
+              "horizontalRun": 25,
+              "verticalRun": 31
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-88",
+      "elapsedMs": 13.495000000000346,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 67, 74, 73, 63, 63],
+              "minimum": 63,
+              "maximum": 74,
+              "average": 68.16666666666667,
+              "relativeDifference": 0.14864864864864866
+            },
+            "traversableCells": 1828,
+            "wallCells": 1772,
+            "traversablePercentage": 0.5077777777777778,
+            "junctions": 246,
+            "deadEnds": 60,
+            "independentCycles": 106,
+            "articulationPoints": 251,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 36,
+              "average": 4.70316301703163,
+              "longestStraightRun": 31,
+              "horizontalRun": 31,
+              "verticalRun": 27
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-89",
+      "elapsedMs": 12.420000000000073,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [68, 63, 65, 65, 69, 69],
+              "minimum": 63,
+              "maximum": 69,
+              "average": 66.5,
+              "relativeDifference": 0.08695652173913043
+            },
+            "traversableCells": 1839,
+            "wallCells": 1761,
+            "traversablePercentage": 0.5108333333333334,
+            "junctions": 269,
+            "deadEnds": 68,
+            "independentCycles": 117,
+            "articulationPoints": 248,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 22,
+              "average": 4.315673289183223,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 21
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-90",
+      "elapsedMs": 10.833099999999831,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [94, 91, 89, 97, 83, 97],
+              "minimum": 83,
+              "maximum": 97,
+              "average": 91.83333333333333,
+              "relativeDifference": 0.14432989690721648
+            },
+            "traversableCells": 1824,
+            "wallCells": 1776,
+            "traversablePercentage": 0.5066666666666667,
+            "junctions": 250,
+            "deadEnds": 70,
+            "independentCycles": 102,
+            "articulationPoints": 239,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 26,
+              "average": 4.572446555819478,
+              "longestStraightRun": 19,
+              "horizontalRun": 17,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-91",
+      "elapsedMs": 11.777999999999793,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [63, 71, 73, 66, 71, 74],
+              "minimum": 63,
+              "maximum": 74,
+              "average": 69.66666666666667,
+              "relativeDifference": 0.14864864864864866
+            },
+            "traversableCells": 1825,
+            "wallCells": 1775,
+            "traversablePercentage": 0.5069444444444444,
+            "junctions": 245,
+            "deadEnds": 61,
+            "independentCycles": 102,
+            "articulationPoints": 243,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.732186732186732,
+              "longestStraightRun": 21,
+              "horizontalRun": 21,
+              "verticalRun": 17
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-92",
+      "elapsedMs": 24.04410000000007,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 7,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 61, 68, 63, 59, 68],
+              "minimum": 59,
+              "maximum": 69,
+              "average": 64.66666666666667,
+              "relativeDifference": 0.14492753623188406
+            },
+            "traversableCells": 1827,
+            "wallCells": 1773,
+            "traversablePercentage": 0.5075,
+            "junctions": 249,
+            "deadEnds": 70,
+            "independentCycles": 104,
+            "articulationPoints": 273,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 30,
+              "average": 4.57345971563981,
+              "longestStraightRun": 37,
+              "horizontalRun": 37,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-93",
+      "elapsedMs": 11.926699999999983,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [102, 107, 99, 103, 97, 99],
+              "minimum": 97,
+              "maximum": 107,
+              "average": 101.16666666666667,
+              "relativeDifference": 0.09345794392523364
+            },
+            "traversableCells": 1836,
+            "wallCells": 1764,
+            "traversablePercentage": 0.51,
+            "junctions": 264,
+            "deadEnds": 65,
+            "independentCycles": 114,
+            "articulationPoints": 252,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 34,
+              "average": 4.409502262443439,
+              "longestStraightRun": 39,
+              "horizontalRun": 21,
+              "verticalRun": 39
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-94",
+      "elapsedMs": 13.338999999999942,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [65, 68, 65, 67, 67, 59],
+              "minimum": 59,
+              "maximum": 68,
+              "average": 65.16666666666667,
+              "relativeDifference": 0.1323529411764706
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 271,
+            "deadEnds": 63,
+            "independentCycles": 119,
+            "articulationPoints": 186,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 48,
+              "average": 4.334070796460177,
+              "longestStraightRun": 29,
+              "horizontalRun": 29,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-95",
+      "elapsedMs": 12.231800000000021,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [69, 79, 80, 75, 71, 71],
+              "minimum": 69,
+              "maximum": 80,
+              "average": 74.16666666666667,
+              "relativeDifference": 0.1375
+            },
+            "traversableCells": 1824,
+            "wallCells": 1776,
+            "traversablePercentage": 0.5066666666666667,
+            "junctions": 242,
+            "deadEnds": 55,
+            "independentCycles": 102,
+            "articulationPoints": 267,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 40,
+              "average": 4.836683417085427,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 25
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    },
+    {
+      "seed": "integration-96",
+      "elapsedMs": 160.8023000000003,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 4,
+          "entranceCombinations": 34,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [85, 76, 85, 85, 81, 73],
+              "minimum": 73,
+              "maximum": 85,
+              "average": 80.83333333333333,
+              "relativeDifference": 0.1411764705882353
+            },
+            "traversableCells": 1845,
+            "wallCells": 1755,
+            "traversablePercentage": 0.5125,
+            "junctions": 280,
+            "deadEnds": 60,
+            "independentCycles": 123,
+            "articulationPoints": 244,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 44,
+              "average": 4.257575757575758,
+              "longestStraightRun": 35,
+              "horizontalRun": 35,
+              "verticalRun": 30
+            }
+          },
+          "rejectedLocations": 3
+        }
+      ]
+    },
+    {
+      "seed": "integration-97",
+      "elapsedMs": 13.739199999999983,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 3,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [67, 65, 73, 76, 75, 75],
+              "minimum": 65,
+              "maximum": 76,
+              "average": 71.83333333333333,
+              "relativeDifference": 0.14473684210526316
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 267,
+            "deadEnds": 55,
+            "independentCycles": 119,
+            "articulationPoints": 210,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 44,
+              "average": 4.452272727272727,
+              "longestStraightRun": 23,
+              "horizontalRun": 19,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 2
+        }
+      ]
+    },
+    {
+      "seed": "integration-98",
+      "elapsedMs": 11.569800000000214,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 1,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [113, 113, 107, 114, 97, 102],
+              "minimum": 97,
+              "maximum": 114,
+              "average": 107.66666666666667,
+              "relativeDifference": 0.14912280701754385
+            },
+            "traversableCells": 1841,
+            "wallCells": 1759,
+            "traversablePercentage": 0.5113888888888889,
+            "junctions": 269,
+            "deadEnds": 60,
+            "independentCycles": 118,
+            "articulationPoints": 234,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 3,
+            "corridors": {
+              "maximum": 28,
+              "average": 4.390134529147982,
+              "longestStraightRun": 25,
+              "horizontalRun": 25,
+              "verticalRun": 19
+            }
+          },
+          "rejectedLocations": 0
+        }
+      ]
+    },
+    {
+      "seed": "integration-99",
+      "elapsedMs": 13.039600000000064,
+      "success": true,
+      "candidates": [
+        {
+          "attempt": 0,
+          "availableKevinCandidates": 448,
+          "kevinCandidates": 2,
+          "entranceCombinations": 1,
+          "valid": true,
+          "reasons": [],
+          "metrics": {
+            "isConnected": true,
+            "entranceDistanceTolerance": 0.15,
+            "distance": {
+              "byEntrance": [73, 77, 81, 70, 69, 81],
+              "minimum": 69,
+              "maximum": 81,
+              "average": 75.16666666666667,
+              "relativeDifference": 0.14814814814814814
+            },
+            "traversableCells": 1828,
+            "wallCells": 1772,
+            "traversablePercentage": 0.5077777777777778,
+            "junctions": 245,
+            "deadEnds": 62,
+            "independentCycles": 106,
+            "articulationPoints": 265,
+            "hasSharedBottleneck": false,
+            "kevinRegionEntrances": 2,
+            "corridors": {
+              "maximum": 36,
+              "average": 4.691747572815534,
+              "longestStraightRun": 37,
+              "horizontalRun": 37,
+              "verticalRun": 23
+            }
+          },
+          "rejectedLocations": 1
+        }
+      ]
+    }
+  ]
+}
