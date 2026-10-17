@@ -55,7 +55,7 @@ function buildCandidate(config: Required<MazeConfig>, attempt: number): Maze {
   const rng = createRandom(`${config.seed}:${attempt}`);
   const cells: Terrain[][] = Array.from({ length: config.rows }, () => Array.from({ length: config.columns }, () => "floor"));
   // Paredes en islas: preservan una red conectada con ciclos y crean corredores de longitud variable.
-  for (let row = 2; row < config.rows - 2; row += 1) for (let column = 2; column < config.columns - 2; column += 1) if ((column + row) % 3 !== 0 && rng() > config.extraConnectionRate) cells[row]![column] = "wall";
+  for (let row = 2; row < config.rows - 2; row += 1) for (let column = 2; column < config.columns - 2; column += 1) if (row % 3 === 1 && column % 3 === 1 && rng() > config.extraConnectionRate) cells[row]![column] = "wall";
   const midColumn = Math.floor(config.columns / 2), midRow = Math.floor(config.rows / 2);
   for (let row = 0; row < config.rows; row += 1) { cells[row]![0] = "floor"; cells[row]![config.columns - 1] = "floor"; cells[row]![midColumn] = "floor"; }
   for (let column = 0; column < config.columns; column += 1) { cells[0]![column] = "floor"; cells[config.rows - 1]![column] = "floor"; cells[midRow]![column] = "floor"; }
