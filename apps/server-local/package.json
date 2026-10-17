@@ -2,5 +2,11 @@
   "name": "@kevin/server-local",
   "version": "0.1.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@kevin/game-core": "0.1.0",
+    "@kevin/maze-engine": "0.1.0",
+    "@kevin/protocol": "0.1.0",
+    "ws": "^8.22.0"
+  }
 }
