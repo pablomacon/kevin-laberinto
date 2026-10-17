@@ -104,27 +104,46 @@ function validConfig(c: Required<MazeConfig>): boolean {
   );
 }
 
-function makeEntrances(
-  columns: number,
-  rows: number,
-  count: number,
-): Position[] {
-  const candidates = [
-    { column: 0, row: 2 },
-    { column: 0, row: rows - 3 },
-    { column: columns - 1, row: 2 },
-    { column: columns - 1, row: rows - 3 },
-    { column: 1, row: 0 },
-    { column: columns - 2, row: rows - 1 },
-  ];
-  return candidates.slice(0, count);
+function makeEntrances(columns: number, rows: number, count: number): Position[] {
+  return [{ column: 0, row: 1 }, { column: columns - 1, row: 1 }, { column: 1, row: 0 }, { column: columns - 2, row: rows - 1 }, { column: 0, row: rows - 2 }, { column: columns - 1, row: rows - 2 }].slice(0, count);
 }
-function buildCandidate(config: Required<MazeConfig>, attempt: number): Maze {
+export interface CandidateDiagnostic {
+  seed: string;
+  attempt: number;
+  kevinCandidates: number;
+  entranceCombinations: number;
+  candidateDistances: number[];
+  validation: MazeValidation;
+}
+export function diagnoseCandidate(input: MazeConfig, attempt = 0): CandidateDiagnostic {
+  const detail = { kevinCandidates: 1, entranceCombinations: 0, candidateDistances: [] as number[] };
+  const maze = buildCandidate({ ...defaults, ...input }, attempt, detail);
+  return { seed: input.seed, attempt, ...detail, validation: validateMaze(maze, maze.entrances, maze.kevin) };
+}
+function buildCandidate(config: Required<MazeConfig>, attempt: number, diagnostic?: { kevinCandidates: number; entranceCombinations: number; candidateDistances: number[] }): Maze {
+  /* real DFS rasterized maze */
   const rng = createRandom(`${config.seed}:${attempt}`);
-  const cells: Terrain[][] = Array.from({ length: config.rows }, () =>
-    Array.from({ length: config.columns }, () => "floor"),
-  );
-  // Paredes en islas: preservan una red conectada con ciclos y crean corredores de longitud variable.
+  const cells: Terrain[][] = Array.from({ length: config.rows }, () => Array.from({ length: config.columns }, () => "wall"));
+  const lc = Math.floor((config.columns - 1) / 2), lr = Math.floor((config.rows - 1) / 2);
+  const node = (x: number, y: number): Position => ({ column: x * 2 + 1, row: y * 2 + 1 });
+  const seen = new Set<string>(), stack = [node(Math.floor(rng() * lc), Math.floor(rng() * lr))];
+  while (stack.length) { const current = stack[stack.length - 1]!; if (!seen.has(key(current))) { seen.add(key(current)); cells[current.row]![current.column] = "floor"; }
+    const options = dirs.map(([x, y]) => ({ column: current.column + x * 2, row: current.row + y * 2 })).filter((p) => p.column > 0 && p.row > 0 && p.column < config.columns - 1 && p.row < config.rows - 1 && !seen.has(key(p)));
+    if (!options.length) { stack.pop(); } else { const next = options[Math.floor(rng() * options.length)]!; cells[(current.row + next.row) / 2]![((current.column + next.column) / 2)] = "floor"; stack.push(next); }
+  }
+  for (let y = 0; y < lr; y += 1) for (let x = 0; x < lc; x += 1) for (const [dx, dy] of [[1, 0], [0, 1]] as const) if (x + dx < lc && y + dy < lr && rng() < config.extraConnectionRate) { const a = node(x, y), b = node(x + dx, y + dy); cells[(a.row + b.row) / 2]![((a.column + b.column) / 2)] = "floor"; }
+  const nodes: Position[] = []; for (let y = 0; y < lr; y += 1) for (let x = 0; x < lc; x += 1) nodes.push(node(x, y));
+  const inner = nodes.filter((p) => p.column > 5 && p.row > 5 && p.column < config.columns - 6 && p.row < config.rows - 6); const kevin = inner[Math.floor(rng() * inner.length)]!;
+  const candidates: { entry: Position; inner: Position; side: string }[] = [];
+  for (let x = 0; x < lc; x += 1) { const top = node(x, 0), bottom = node(x, lr - 1); candidates.push({ entry: { column: top.column, row: 0 }, inner: top, side: "top" }, { entry: { column: bottom.column, row: config.rows - 1 }, inner: bottom, side: "bottom" }); }
+  for (let y = 0; y < lr; y += 1) { const left = node(0, y), right = node(lc - 1, y); candidates.push({ entry: { column: 0, row: left.row }, inner: left, side: "left" }, { entry: { column: config.columns - 1, row: right.row }, inner: right, side: "right" }); }
+  const provisional: Maze = { id: "candidate", config, cells, entrances: [], kevin }; const fromKevin = distancesFrom(provisional, kevin); const scored = candidates.map((c) => ({ ...c, distance: (fromKevin.get(key(c.inner)) ?? -1) + 1 })).filter((c) => c.distance > 0).sort((a, b) => a.distance - b.distance);
+  const selected: typeof scored = []; for (const base of scored) { const pool = scored.filter((c) => c.distance <= base.distance / (1 - config.distanceTolerance)); if (pool.length >= config.entranceCount && new Set(pool.map((c) => c.side)).size === 4) { for (const side of ["top", "bottom", "left", "right"]) { const choices = pool.filter((c) => c.side === side); selected.push(choices[Math.floor(rng() * choices.length)]!); } for (const c of pool) if (selected.length < config.entranceCount && !selected.includes(c)) selected.push(c); break; } }
+  if (diagnostic) { diagnostic.candidateDistances = scored.map((c) => c.distance); diagnostic.entranceCombinations = selected.length ? 1 : 0; }
+  if (selected.length === config.entranceCount) { for (const e of selected) { cells[e.entry.row]![e.entry.column] = "floor"; const gap = Math.abs(e.entry.column - e.inner.column) + Math.abs(e.entry.row - e.inner.row); if (gap === 2) cells[(e.entry.row + e.inner.row) / 2]![((e.entry.column + e.inner.column) / 2)] = "floor"; } return { id: `maze-${config.seed}-${attempt}`, config, cells, entrances: selected.map((e) => e.entry), kevin }; }
+  return { id: "invalid", config, cells, entrances: [], kevin };
+  {
+  // legacy candidate retained only while replacing generator
   for (let row = 2; row < config.rows - 2; row += 1)
     for (let column = 2; column < config.columns - 2; column += 1)
       if (
@@ -177,6 +196,7 @@ function buildCandidate(config: Required<MazeConfig>, attempt: number): Maze {
     entrances,
     kevin,
   };
+  }
 }
 
 export function isTraversable(maze: Maze, p: Position): boolean {
