@@ -15,6 +15,7 @@ const records = Array.from({ length: count }, (_, i) => {
     columns: 80,
     rows: 45,
     entranceCount: 6,
+    distanceTolerance: 0.15,
     seed,
   });
   const elapsedMs = performance.now() - started;

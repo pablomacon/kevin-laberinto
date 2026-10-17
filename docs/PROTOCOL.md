@@ -1,5 +1,7 @@
 # Protocolo WebSocket inicial
 
+La implementación de beta 0.1 está especificada en [BETA_PROTOCOL.md](BETA_PROTOCOL.md). Ese contrato y los tipos de `packages/protocol` prevalecen sobre esta propuesta histórica.
+
 Todos los mensajes transportan `protocolVersion: 1` y `messageId`. El cliente añade una secuencia monotónica a `player.move`; el servidor conserva la última aceptada por conexión/participante y descarta duplicados. Los contratos exactos están en `@kevin/protocol`.
 
 | Ámbito                       | Mensajes                                                                      |

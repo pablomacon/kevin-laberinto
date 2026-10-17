@@ -13,6 +13,7 @@ const config = {
   rows: 45,
   entranceCount: 6,
   seed: "kel-002-example",
+  distanceTolerance: 0.15,
 };
 function result(seed = config.seed) {
   const value = generateMaze({ ...config, seed });

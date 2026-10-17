@@ -12,6 +12,8 @@
     "packages/*"
   ],
   "scripts": {
+    "start:local": "tsx apps/server-local/src/index.ts",
+    "smoke:local": "tsx scripts/local-smoke.ts",
     "dev": "npm --workspace @kevin/web run dev",
     "preview": "npm --workspace @kevin/web run preview",
     "typecheck": "tsc --noEmit",
@@ -24,10 +26,13 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@types/node": "^26.6.5",
+    "@types/ws": "^8.18.2",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.5.0",
     "prettier": "^3.6.2",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3",
     "vite": "^7.1.12",

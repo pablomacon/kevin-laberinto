@@ -10,7 +10,7 @@ Biblioteca TypeScript estricta sin dependencias de ejecución. `Position` se imp
 4. Se comprueba el perfil estructural de la topología antes de buscar posiciones.
 5. Se barajan las posiciones interiores de Kevin (margen aproximado del 15 % por eje). Para cada posición, una BFS calcula todas las distancias. Se suman uno o dos pasos hasta el borde según la paridad de las dimensiones.
 6. Se buscan ventanas de distancias con ambas cotas y `(máxima − mínima) / máxima <= distanceTolerance`. Para seis entradas se exigen los cuatro bordes, como máximo dos por borde y separación Manhattan entre entradas de al menos cinco casillas en 80×45. La distancia usada para el equilibrio siempre es BFS, no Manhattan.
-7. Se abren únicamente las entradas elegidas, se recalculan distancias reales y se valida conectividad, equilibrio y ausencia de cuello común. Si falla una combinación se intenta otra ventana/posición; sólo después de agotar las posiciones se pasa a otra topología determinista. `maxAttempts` sigue siendo 12.
+7. Se abren únicamente las entradas elegidas, se recalculan distancias reales y se valida conectividad, equilibrio, mínimo de distancia y ausencia de cuello común. Se reúne un grupo de cuatro ubicaciones válidas de Kevin (o las disponibles tras agotar las posiciones) y se elige con el PRNG. Si falla una combinación se intenta otra ventana/posición; sólo después de agotar las posiciones sin éxito se pasa a otra topología determinista. `maxAttempts` sigue siendo 12.
 
 Las bifurcaciones y los callejones surgen del árbol DFS; no se colocan callejones fijos. La distribución de entradas, fila y columna de Kevin y topología varían con la semilla. La dificultad humana no se deduce sólo de las distancias.
 
@@ -22,7 +22,8 @@ const config: MazeConfig = {
   rows: 45,
   seed: "integration-0",
   entranceCount: 6,
-  distanceTolerance: 0.15,
+  distanceTolerance: 0.3,
+  minimumKevinDistance: 40,
   extraConnectionRate: 0.14,
   maxAttempts: 12,
   structure: {
@@ -74,4 +75,4 @@ npx --yes tsx scripts/maze-diagnostic.ts 20
 npx --yes tsx scripts/maze-diagnostic.ts 100
 ```
 
-`tsx` se usa como ejecutor temporal de desarrollo; no se añadió al dominio ni a las dependencias del proyecto. El comando puede necesitar acceso al registro npm. Produce resúmenes JSON, trazas NDJSON completas y un mapa de ejemplo; devuelve código de salida no cero si alguna semilla agota intentos.
+`tsx` está instalado como herramienta de desarrollo de la beta y no pertenece al dominio. El diagnóstico histórico configura explícitamente 15 %. Para la selección beta (30 % y mínimo 40), ejecutar `npx tsx scripts/kevin-distribution.ts`: registra 200 semillas y frecuencias espaciales 3×3. Produce código de salida no cero si alguna semilla agota intentos; véase [LOCAL_BETA.md](../../docs/LOCAL_BETA.md) para los resultados y sesgos observados.

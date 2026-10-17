@@ -1,0 +1,3207 @@
+{
+  "seeds": 200,
+  "failures": 0,
+  "sectors": [13, 37, 10, 11, 66, 8, 6, 39, 10],
+  "records": [
+    {
+      "seed": "beta-distribution-0",
+      "sector": 7,
+      "kevin": {
+        "column": 35,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [71, 98, 75, 97, 97, 81],
+        "minimum": 71,
+        "maximum": 98,
+        "average": 86.5,
+        "relativeDifference": 0.2755102040816326
+      },
+      "ms": 69.6814
+    },
+    {
+      "seed": "beta-distribution-1",
+      "sector": 4,
+      "kevin": {
+        "column": 29,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [71, 73, 90, 73, 63, 65],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 72.5,
+        "relativeDifference": 0.3
+      },
+      "ms": 143.73149999999998
+    },
+    {
+      "seed": "beta-distribution-2",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [59, 59, 54, 47, 43, 60],
+        "minimum": 43,
+        "maximum": 60,
+        "average": 53.666666666666664,
+        "relativeDifference": 0.2833333333333333
+      },
+      "ms": 40.16539999999998
+    },
+    {
+      "seed": "beta-distribution-3",
+      "sector": 1,
+      "kevin": {
+        "column": 31,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [73, 86, 87, 85, 61, 77],
+        "minimum": 61,
+        "maximum": 87,
+        "average": 78.16666666666667,
+        "relativeDifference": 0.2988505747126437
+      },
+      "ms": 41.1395
+    },
+    {
+      "seed": "beta-distribution-4",
+      "sector": 1,
+      "kevin": {
+        "column": 43,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [83, 69, 70, 79, 81, 80],
+        "minimum": 69,
+        "maximum": 83,
+        "average": 77,
+        "relativeDifference": 0.1686746987951807
+      },
+      "ms": 48.605399999999975
+    },
+    {
+      "seed": "beta-distribution-5",
+      "sector": 7,
+      "kevin": {
+        "column": 47,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [79, 77, 57, 62, 57, 79],
+        "minimum": 57,
+        "maximum": 79,
+        "average": 68.5,
+        "relativeDifference": 0.27848101265822783
+      },
+      "ms": 47.276700000000005
+    },
+    {
+      "seed": "beta-distribution-6",
+      "sector": 0,
+      "kevin": {
+        "column": 13,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [117, 97, 105, 134, 127, 99],
+        "minimum": 97,
+        "maximum": 134,
+        "average": 113.16666666666667,
+        "relativeDifference": 0.27611940298507465
+      },
+      "ms": 101.60010000000011
+    },
+    {
+      "seed": "beta-distribution-7",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [71, 69, 68, 57, 65, 51],
+        "minimum": 51,
+        "maximum": 71,
+        "average": 63.5,
+        "relativeDifference": 0.28169014084507044
+      },
+      "ms": 66.26529999999991
+    },
+    {
+      "seed": "beta-distribution-8",
+      "sector": 1,
+      "kevin": {
+        "column": 39,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [60, 51, 69, 65, 49, 67],
+        "minimum": 49,
+        "maximum": 69,
+        "average": 60.166666666666664,
+        "relativeDifference": 0.2898550724637681
+      },
+      "ms": 86.13749999999993
+    },
+    {
+      "seed": "beta-distribution-9",
+      "sector": 4,
+      "kevin": {
+        "column": 27,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [80, 67, 77, 75, 81, 57],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 72.83333333333333,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 61.05449999999996
+    },
+    {
+      "seed": "beta-distribution-10",
+      "sector": 4,
+      "kevin": {
+        "column": 49,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [89, 69, 75, 70, 66, 89],
+        "minimum": 66,
+        "maximum": 89,
+        "average": 76.33333333333333,
+        "relativeDifference": 0.25842696629213485
+      },
+      "ms": 88.04420000000005
+    },
+    {
+      "seed": "beta-distribution-11",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [71, 67, 62, 71, 50, 71],
+        "minimum": 50,
+        "maximum": 71,
+        "average": 65.33333333333333,
+        "relativeDifference": 0.29577464788732394
+      },
+      "ms": 52.77170000000001
+    },
+    {
+      "seed": "beta-distribution-12",
+      "sector": 8,
+      "kevin": {
+        "column": 57,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [70, 63, 71, 83, 77, 64],
+        "minimum": 63,
+        "maximum": 83,
+        "average": 71.33333333333333,
+        "relativeDifference": 0.24096385542168675
+      },
+      "ms": 34.54790000000003
+    },
+    {
+      "seed": "beta-distribution-13",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [61, 74, 75, 63, 75, 55],
+        "minimum": 55,
+        "maximum": 75,
+        "average": 67.16666666666667,
+        "relativeDifference": 0.26666666666666666
+      },
+      "ms": 219.08190000000013
+    },
+    {
+      "seed": "beta-distribution-14",
+      "sector": 0,
+      "kevin": {
+        "column": 23,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [95, 73, 88, 71, 87, 94],
+        "minimum": 71,
+        "maximum": 95,
+        "average": 84.66666666666667,
+        "relativeDifference": 0.25263157894736843
+      },
+      "ms": 86.78950000000009
+    },
+    {
+      "seed": "beta-distribution-15",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [59, 71, 55, 72, 69, 55],
+        "minimum": 55,
+        "maximum": 72,
+        "average": 63.5,
+        "relativeDifference": 0.2361111111111111
+      },
+      "ms": 52.73029999999994
+    },
+    {
+      "seed": "beta-distribution-16",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [83, 84, 59, 59, 65, 69],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 69.83333333333333,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 74.29299999999989
+    },
+    {
+      "seed": "beta-distribution-17",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [69, 67, 83, 86, 75, 65],
+        "minimum": 65,
+        "maximum": 86,
+        "average": 74.16666666666667,
+        "relativeDifference": 0.2441860465116279
+      },
+      "ms": 39.86799999999994
+    },
+    {
+      "seed": "beta-distribution-18",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [67, 81, 63, 60, 57, 59],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 64.5,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 45.079099999999926
+    },
+    {
+      "seed": "beta-distribution-19",
+      "sector": 3,
+      "kevin": {
+        "column": 23,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [77, 81, 94, 79, 81, 71],
+        "minimum": 71,
+        "maximum": 94,
+        "average": 80.5,
+        "relativeDifference": 0.24468085106382978
+      },
+      "ms": 84.80490000000009
+    },
+    {
+      "seed": "beta-distribution-20",
+      "sector": 4,
+      "kevin": {
+        "column": 49,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [91, 84, 71, 71, 65, 65],
+        "minimum": 65,
+        "maximum": 91,
+        "average": 74.5,
+        "relativeDifference": 0.2857142857142857
+      },
+      "ms": 72.25060000000008
+    },
+    {
+      "seed": "beta-distribution-21",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [72, 61, 61, 79, 79, 61],
+        "minimum": 61,
+        "maximum": 79,
+        "average": 68.83333333333333,
+        "relativeDifference": 0.22784810126582278
+      },
+      "ms": 33.484899999999925
+    },
+    {
+      "seed": "beta-distribution-22",
+      "sector": 0,
+      "kevin": {
+        "column": 25,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [127, 117, 101, 138, 119, 133],
+        "minimum": 101,
+        "maximum": 138,
+        "average": 122.5,
+        "relativeDifference": 0.26811594202898553
+      },
+      "ms": 99.67419999999993
+    },
+    {
+      "seed": "beta-distribution-23",
+      "sector": 7,
+      "kevin": {
+        "column": 39,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [75, 61, 68, 59, 71, 59],
+        "minimum": 59,
+        "maximum": 75,
+        "average": 65.5,
+        "relativeDifference": 0.21333333333333335
+      },
+      "ms": 87.08740000000012
+    },
+    {
+      "seed": "beta-distribution-24",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [70, 99, 91, 89, 83, 71],
+        "minimum": 70,
+        "maximum": 99,
+        "average": 83.83333333333333,
+        "relativeDifference": 0.29292929292929293
+      },
+      "ms": 50.924600000000055
+    },
+    {
+      "seed": "beta-distribution-25",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [55, 49, 59, 60, 47, 57],
+        "minimum": 47,
+        "maximum": 60,
+        "average": 54.5,
+        "relativeDifference": 0.21666666666666667
+      },
+      "ms": 105.40710000000013
+    },
+    {
+      "seed": "beta-distribution-26",
+      "sector": 6,
+      "kevin": {
+        "column": 19,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [90, 63, 67, 77, 85, 79],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 76.83333333333333,
+        "relativeDifference": 0.3
+      },
+      "ms": 32.03879999999981
+    },
+    {
+      "seed": "beta-distribution-27",
+      "sector": 1,
+      "kevin": {
+        "column": 31,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [69, 51, 67, 70, 69, 55],
+        "minimum": 51,
+        "maximum": 70,
+        "average": 63.5,
+        "relativeDifference": 0.2714285714285714
+      },
+      "ms": 41.11860000000024
+    },
+    {
+      "seed": "beta-distribution-28",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [71, 74, 71, 55, 53, 53],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 62.833333333333336,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 78.35609999999997
+    },
+    {
+      "seed": "beta-distribution-29",
+      "sector": 1,
+      "kevin": {
+        "column": 37,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [69, 91, 80, 67, 91, 91],
+        "minimum": 67,
+        "maximum": 91,
+        "average": 81.5,
+        "relativeDifference": 0.26373626373626374
+      },
+      "ms": 46.37049999999999
+    },
+    {
+      "seed": "beta-distribution-30",
+      "sector": 7,
+      "kevin": {
+        "column": 39,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [61, 62, 83, 69, 83, 72],
+        "minimum": 61,
+        "maximum": 83,
+        "average": 71.66666666666667,
+        "relativeDifference": 0.26506024096385544
+      },
+      "ms": 34.060399999999845
+    },
+    {
+      "seed": "beta-distribution-31",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [75, 86, 67, 67, 71, 61],
+        "minimum": 61,
+        "maximum": 86,
+        "average": 71.16666666666667,
+        "relativeDifference": 0.29069767441860467
+      },
+      "ms": 32.05919999999969
+    },
+    {
+      "seed": "beta-distribution-32",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [73, 77, 78, 81, 81, 57],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 74.5,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 33.7837999999997
+    },
+    {
+      "seed": "beta-distribution-33",
+      "sector": 2,
+      "kevin": {
+        "column": 55,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [89, 90, 69, 89, 65, 63],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 77.5,
+        "relativeDifference": 0.3
+      },
+      "ms": 32.96340000000009
+    },
+    {
+      "seed": "beta-distribution-34",
+      "sector": 1,
+      "kevin": {
+        "column": 35,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [45, 57, 57, 62, 53, 59],
+        "minimum": 45,
+        "maximum": 62,
+        "average": 55.5,
+        "relativeDifference": 0.27419354838709675
+      },
+      "ms": 85.63869999999997
+    },
+    {
+      "seed": "beta-distribution-35",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [83, 66, 77, 65, 83, 72],
+        "minimum": 65,
+        "maximum": 83,
+        "average": 74.33333333333333,
+        "relativeDifference": 0.21686746987951808
+      },
+      "ms": 32.09659999999985
+    },
+    {
+      "seed": "beta-distribution-36",
+      "sector": 8,
+      "kevin": {
+        "column": 57,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [72, 91, 95, 101, 71, 71],
+        "minimum": 71,
+        "maximum": 101,
+        "average": 83.5,
+        "relativeDifference": 0.297029702970297
+      },
+      "ms": 33.4994999999999
+    },
+    {
+      "seed": "beta-distribution-37",
+      "sector": 0,
+      "kevin": {
+        "column": 25,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [61, 76, 61, 65, 71, 55],
+        "minimum": 55,
+        "maximum": 76,
+        "average": 64.83333333333333,
+        "relativeDifference": 0.27631578947368424
+      },
+      "ms": 88.35410000000002
+    },
+    {
+      "seed": "beta-distribution-38",
+      "sector": 7,
+      "kevin": {
+        "column": 45,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [111, 110, 85, 79, 110, 111],
+        "minimum": 79,
+        "maximum": 111,
+        "average": 101,
+        "relativeDifference": 0.2882882882882883
+      },
+      "ms": 49.158800000000156
+    },
+    {
+      "seed": "beta-distribution-39",
+      "sector": 1,
+      "kevin": {
+        "column": 37,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [55, 51, 70, 51, 65, 69],
+        "minimum": 51,
+        "maximum": 70,
+        "average": 60.166666666666664,
+        "relativeDifference": 0.2714285714285714
+      },
+      "ms": 101.26220000000012
+    },
+    {
+      "seed": "beta-distribution-40",
+      "sector": 1,
+      "kevin": {
+        "column": 41,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [115, 129, 133, 164, 159, 163],
+        "minimum": 115,
+        "maximum": 164,
+        "average": 143.83333333333334,
+        "relativeDifference": 0.29878048780487804
+      },
+      "ms": 57.117699999999786
+    },
+    {
+      "seed": "beta-distribution-41",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [97, 79, 68, 73, 69, 71],
+        "minimum": 68,
+        "maximum": 97,
+        "average": 76.16666666666667,
+        "relativeDifference": 0.29896907216494845
+      },
+      "ms": 31.853399999999965
+    },
+    {
+      "seed": "beta-distribution-42",
+      "sector": 8,
+      "kevin": {
+        "column": 59,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [63, 68, 79, 65, 57, 56],
+        "minimum": 56,
+        "maximum": 79,
+        "average": 64.66666666666667,
+        "relativeDifference": 0.2911392405063291
+      },
+      "ms": 98.41630000000032
+    },
+    {
+      "seed": "beta-distribution-43",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [63, 57, 74, 57, 53, 67],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 61.833333333333336,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 72.9010000000003
+    },
+    {
+      "seed": "beta-distribution-44",
+      "sector": 1,
+      "kevin": {
+        "column": 33,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [84, 63, 67, 83, 63, 69],
+        "minimum": 63,
+        "maximum": 84,
+        "average": 71.5,
+        "relativeDifference": 0.25
+      },
+      "ms": 33.25540000000001
+    },
+    {
+      "seed": "beta-distribution-45",
+      "sector": 7,
+      "kevin": {
+        "column": 27,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [79, 75, 77, 80, 59, 75],
+        "minimum": 59,
+        "maximum": 80,
+        "average": 74.16666666666667,
+        "relativeDifference": 0.2625
+      },
+      "ms": 54.3435999999997
+    },
+    {
+      "seed": "beta-distribution-46",
+      "sector": 1,
+      "kevin": {
+        "column": 37,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [57, 74, 71, 55, 75, 67],
+        "minimum": 55,
+        "maximum": 75,
+        "average": 66.5,
+        "relativeDifference": 0.26666666666666666
+      },
+      "ms": 33.596700000000055
+    },
+    {
+      "seed": "beta-distribution-47",
+      "sector": 7,
+      "kevin": {
+        "column": 37,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [115, 81, 83, 114, 104, 105],
+        "minimum": 81,
+        "maximum": 115,
+        "average": 100.33333333333333,
+        "relativeDifference": 0.2956521739130435
+      },
+      "ms": 156.4955
+    },
+    {
+      "seed": "beta-distribution-48",
+      "sector": 4,
+      "kevin": {
+        "column": 39,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [78, 69, 63, 69, 55, 55],
+        "minimum": 55,
+        "maximum": 78,
+        "average": 64.83333333333333,
+        "relativeDifference": 0.2948717948717949
+      },
+      "ms": 33.94990000000007
+    },
+    {
+      "seed": "beta-distribution-49",
+      "sector": 1,
+      "kevin": {
+        "column": 45,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [79, 94, 93, 69, 95, 71],
+        "minimum": 69,
+        "maximum": 95,
+        "average": 83.5,
+        "relativeDifference": 0.2736842105263158
+      },
+      "ms": 33.98690000000033
+    },
+    {
+      "seed": "beta-distribution-50",
+      "sector": 8,
+      "kevin": {
+        "column": 61,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [79, 79, 80, 103, 103, 93],
+        "minimum": 79,
+        "maximum": 103,
+        "average": 89.5,
+        "relativeDifference": 0.23300970873786409
+      },
+      "ms": 143.6322
+    },
+    {
+      "seed": "beta-distribution-51",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [95, 78, 73, 85, 77, 77],
+        "minimum": 73,
+        "maximum": 95,
+        "average": 80.83333333333333,
+        "relativeDifference": 0.23157894736842105
+      },
+      "ms": 86.59079999999994
+    },
+    {
+      "seed": "beta-distribution-52",
+      "sector": 6,
+      "kevin": {
+        "column": 25,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [86, 77, 85, 71, 67, 61],
+        "minimum": 61,
+        "maximum": 86,
+        "average": 74.5,
+        "relativeDifference": 0.29069767441860467
+      },
+      "ms": 53.911299999999756
+    },
+    {
+      "seed": "beta-distribution-53",
+      "sector": 1,
+      "kevin": {
+        "column": 39,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [93, 99, 83, 102, 75, 87],
+        "minimum": 75,
+        "maximum": 102,
+        "average": 89.83333333333333,
+        "relativeDifference": 0.2647058823529412
+      },
+      "ms": 95.66269999999986
+    },
+    {
+      "seed": "beta-distribution-54",
+      "sector": 3,
+      "kevin": {
+        "column": 25,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [86, 65, 61, 81, 61, 77],
+        "minimum": 61,
+        "maximum": 86,
+        "average": 71.83333333333333,
+        "relativeDifference": 0.29069767441860467
+      },
+      "ms": 34.08809999999994
+    },
+    {
+      "seed": "beta-distribution-55",
+      "sector": 1,
+      "kevin": {
+        "column": 31,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [95, 67, 69, 86, 95, 82],
+        "minimum": 67,
+        "maximum": 95,
+        "average": 82.33333333333333,
+        "relativeDifference": 0.29473684210526313
+      },
+      "ms": 131.18880000000036
+    },
+    {
+      "seed": "beta-distribution-56",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [89, 75, 103, 74, 95, 103],
+        "minimum": 74,
+        "maximum": 103,
+        "average": 89.83333333333333,
+        "relativeDifference": 0.2815533980582524
+      },
+      "ms": 44.5639000000001
+    },
+    {
+      "seed": "beta-distribution-57",
+      "sector": 2,
+      "kevin": {
+        "column": 57,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [66, 67, 57, 67, 47, 50],
+        "minimum": 47,
+        "maximum": 67,
+        "average": 59,
+        "relativeDifference": 0.29850746268656714
+      },
+      "ms": 43.01290000000017
+    },
+    {
+      "seed": "beta-distribution-58",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [94, 71, 67, 85, 69, 67],
+        "minimum": 67,
+        "maximum": 94,
+        "average": 75.5,
+        "relativeDifference": 0.2872340425531915
+      },
+      "ms": 36.46609999999964
+    },
+    {
+      "seed": "beta-distribution-59",
+      "sector": 3,
+      "kevin": {
+        "column": 21,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [73, 83, 96, 69, 97, 69],
+        "minimum": 69,
+        "maximum": 97,
+        "average": 81.16666666666667,
+        "relativeDifference": 0.28865979381443296
+      },
+      "ms": 41.47099999999955
+    },
+    {
+      "seed": "beta-distribution-60",
+      "sector": 4,
+      "kevin": {
+        "column": 35,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [67, 66, 63, 49, 63, 53],
+        "minimum": 49,
+        "maximum": 67,
+        "average": 60.166666666666664,
+        "relativeDifference": 0.26865671641791045
+      },
+      "ms": 35.498999999999796
+    },
+    {
+      "seed": "beta-distribution-61",
+      "sector": 1,
+      "kevin": {
+        "column": 49,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [66, 79, 65, 57, 75, 59],
+        "minimum": 57,
+        "maximum": 79,
+        "average": 66.83333333333333,
+        "relativeDifference": 0.27848101265822783
+      },
+      "ms": 35.43260000000009
+    },
+    {
+      "seed": "beta-distribution-62",
+      "sector": 7,
+      "kevin": {
+        "column": 29,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [70, 69, 57, 67, 69, 49],
+        "minimum": 49,
+        "maximum": 70,
+        "average": 63.5,
+        "relativeDifference": 0.3
+      },
+      "ms": 32.71839999999975
+    },
+    {
+      "seed": "beta-distribution-63",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [63, 74, 59, 59, 55, 53],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 60.5,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 46.139000000000124
+    },
+    {
+      "seed": "beta-distribution-64",
+      "sector": 5,
+      "kevin": {
+        "column": 63,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [113, 82, 83, 83, 115, 115],
+        "minimum": 82,
+        "maximum": 115,
+        "average": 98.5,
+        "relativeDifference": 0.28695652173913044
+      },
+      "ms": 37.916699999999764
+    },
+    {
+      "seed": "beta-distribution-65",
+      "sector": 1,
+      "kevin": {
+        "column": 41,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [47, 60, 61, 53, 55, 51],
+        "minimum": 47,
+        "maximum": 61,
+        "average": 54.5,
+        "relativeDifference": 0.22950819672131148
+      },
+      "ms": 37.40810000000056
+    },
+    {
+      "seed": "beta-distribution-66",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [67, 65, 61, 66, 47, 67],
+        "minimum": 47,
+        "maximum": 67,
+        "average": 62.166666666666664,
+        "relativeDifference": 0.29850746268656714
+      },
+      "ms": 68.90570000000025
+    },
+    {
+      "seed": "beta-distribution-67",
+      "sector": 5,
+      "kevin": {
+        "column": 59,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [87, 81, 109, 86, 95, 109],
+        "minimum": 81,
+        "maximum": 109,
+        "average": 94.5,
+        "relativeDifference": 0.25688073394495414
+      },
+      "ms": 81.08719999999994
+    },
+    {
+      "seed": "beta-distribution-68",
+      "sector": 2,
+      "kevin": {
+        "column": 61,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [79, 80, 99, 87, 87, 73],
+        "minimum": 73,
+        "maximum": 99,
+        "average": 84.16666666666667,
+        "relativeDifference": 0.26262626262626265
+      },
+      "ms": 34.99699999999939
+    },
+    {
+      "seed": "beta-distribution-69",
+      "sector": 7,
+      "kevin": {
+        "column": 31,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [87, 69, 94, 91, 67, 73],
+        "minimum": 67,
+        "maximum": 94,
+        "average": 80.16666666666667,
+        "relativeDifference": 0.2872340425531915
+      },
+      "ms": 33.82210000000032
+    },
+    {
+      "seed": "beta-distribution-70",
+      "sector": 1,
+      "kevin": {
+        "column": 45,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [62, 75, 69, 53, 57, 63],
+        "minimum": 53,
+        "maximum": 75,
+        "average": 63.166666666666664,
+        "relativeDifference": 0.29333333333333333
+      },
+      "ms": 32.22060000000056
+    },
+    {
+      "seed": "beta-distribution-71",
+      "sector": 8,
+      "kevin": {
+        "column": 59,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [54, 61, 67, 77, 69, 77],
+        "minimum": 54,
+        "maximum": 77,
+        "average": 67.5,
+        "relativeDifference": 0.2987012987012987
+      },
+      "ms": 33.29389999999967
+    },
+    {
+      "seed": "beta-distribution-72",
+      "sector": 1,
+      "kevin": {
+        "column": 53,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [75, 91, 66, 77, 91, 65],
+        "minimum": 65,
+        "maximum": 91,
+        "average": 77.5,
+        "relativeDifference": 0.2857142857142857
+      },
+      "ms": 33.8728000000001
+    },
+    {
+      "seed": "beta-distribution-73",
+      "sector": 0,
+      "kevin": {
+        "column": 19,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [108, 87, 87, 105, 101, 95],
+        "minimum": 87,
+        "maximum": 108,
+        "average": 97.16666666666667,
+        "relativeDifference": 0.19444444444444445
+      },
+      "ms": 33.722099999999955
+    },
+    {
+      "seed": "beta-distribution-74",
+      "sector": 2,
+      "kevin": {
+        "column": 55,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [73, 56, 71, 79, 77, 56],
+        "minimum": 56,
+        "maximum": 79,
+        "average": 68.66666666666667,
+        "relativeDifference": 0.2911392405063291
+      },
+      "ms": 99.67309999999998
+    },
+    {
+      "seed": "beta-distribution-75",
+      "sector": 7,
+      "kevin": {
+        "column": 29,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [69, 90, 63, 63, 65, 63],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 68.83333333333333,
+        "relativeDifference": 0.3
+      },
+      "ms": 89.1240000000007
+    },
+    {
+      "seed": "beta-distribution-76",
+      "sector": 1,
+      "kevin": {
+        "column": 37,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [59, 64, 47, 59, 51, 63],
+        "minimum": 47,
+        "maximum": 64,
+        "average": 57.166666666666664,
+        "relativeDifference": 0.265625
+      },
+      "ms": 35.1900999999998
+    },
+    {
+      "seed": "beta-distribution-77",
+      "sector": 7,
+      "kevin": {
+        "column": 43,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [67, 77, 66, 59, 78, 75],
+        "minimum": 59,
+        "maximum": 78,
+        "average": 70.33333333333333,
+        "relativeDifference": 0.24358974358974358
+      },
+      "ms": 44.4380000000001
+    },
+    {
+      "seed": "beta-distribution-78",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [51, 67, 64, 67, 61, 47],
+        "minimum": 47,
+        "maximum": 67,
+        "average": 59.5,
+        "relativeDifference": 0.29850746268656714
+      },
+      "ms": 59.43149999999969
+    },
+    {
+      "seed": "beta-distribution-79",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [53, 57, 66, 67, 59, 51],
+        "minimum": 51,
+        "maximum": 67,
+        "average": 58.833333333333336,
+        "relativeDifference": 0.23880597014925373
+      },
+      "ms": 35.99030000000039
+    },
+    {
+      "seed": "beta-distribution-80",
+      "sector": 1,
+      "kevin": {
+        "column": 33,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [71, 81, 69, 76, 81, 75],
+        "minimum": 69,
+        "maximum": 81,
+        "average": 75.5,
+        "relativeDifference": 0.14814814814814814
+      },
+      "ms": 32.53900000000067
+    },
+    {
+      "seed": "beta-distribution-81",
+      "sector": 1,
+      "kevin": {
+        "column": 43,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [45, 63, 63, 58, 63, 45],
+        "minimum": 45,
+        "maximum": 63,
+        "average": 56.166666666666664,
+        "relativeDifference": 0.2857142857142857
+      },
+      "ms": 48.70550000000003
+    },
+    {
+      "seed": "beta-distribution-82",
+      "sector": 0,
+      "kevin": {
+        "column": 23,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [87, 87, 90, 73, 63, 63],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 77.16666666666667,
+        "relativeDifference": 0.3
+      },
+      "ms": 33.30549999999948
+    },
+    {
+      "seed": "beta-distribution-83",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [115, 85, 115, 92, 95, 111],
+        "minimum": 85,
+        "maximum": 115,
+        "average": 102.16666666666667,
+        "relativeDifference": 0.2608695652173913
+      },
+      "ms": 83.46750000000065
+    },
+    {
+      "seed": "beta-distribution-84",
+      "sector": 7,
+      "kevin": {
+        "column": 31,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [96, 79, 93, 95, 71, 95],
+        "minimum": 71,
+        "maximum": 96,
+        "average": 88.16666666666667,
+        "relativeDifference": 0.2604166666666667
+      },
+      "ms": 35.35109999999986
+    },
+    {
+      "seed": "beta-distribution-85",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [55, 72, 73, 63, 73, 75],
+        "minimum": 55,
+        "maximum": 75,
+        "average": 68.5,
+        "relativeDifference": 0.26666666666666666
+      },
+      "ms": 45.84389999999985
+    },
+    {
+      "seed": "beta-distribution-86",
+      "sector": 8,
+      "kevin": {
+        "column": 67,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [77, 72, 81, 101, 99, 71],
+        "minimum": 71,
+        "maximum": 101,
+        "average": 83.5,
+        "relativeDifference": 0.297029702970297
+      },
+      "ms": 35.13300000000072
+    },
+    {
+      "seed": "beta-distribution-87",
+      "sector": 2,
+      "kevin": {
+        "column": 59,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [105, 103, 87, 78, 81, 107],
+        "minimum": 78,
+        "maximum": 107,
+        "average": 93.5,
+        "relativeDifference": 0.27102803738317754
+      },
+      "ms": 31.772399999999834
+    },
+    {
+      "seed": "beta-distribution-88",
+      "sector": 1,
+      "kevin": {
+        "column": 29,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [92, 71, 97, 85, 69, 98],
+        "minimum": 69,
+        "maximum": 98,
+        "average": 85.33333333333333,
+        "relativeDifference": 0.29591836734693877
+      },
+      "ms": 42.33770000000004
+    },
+    {
+      "seed": "beta-distribution-89",
+      "sector": 7,
+      "kevin": {
+        "column": 33,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [67, 73, 69, 78, 75, 69],
+        "minimum": 67,
+        "maximum": 78,
+        "average": 71.83333333333333,
+        "relativeDifference": 0.14102564102564102
+      },
+      "ms": 35.60400000000027
+    },
+    {
+      "seed": "beta-distribution-90",
+      "sector": 4,
+      "kevin": {
+        "column": 29,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [65, 59, 84, 75, 77, 73],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 72.16666666666667,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 31.82340000000022
+    },
+    {
+      "seed": "beta-distribution-91",
+      "sector": 8,
+      "kevin": {
+        "column": 61,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [91, 107, 109, 96, 81, 94],
+        "minimum": 81,
+        "maximum": 109,
+        "average": 96.33333333333333,
+        "relativeDifference": 0.25688073394495414
+      },
+      "ms": 83.21400000000085
+    },
+    {
+      "seed": "beta-distribution-92",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [97, 87, 98, 95, 69, 98],
+        "minimum": 69,
+        "maximum": 98,
+        "average": 90.66666666666667,
+        "relativeDifference": 0.29591836734693877
+      },
+      "ms": 44.49719999999979
+    },
+    {
+      "seed": "beta-distribution-93",
+      "sector": 3,
+      "kevin": {
+        "column": 17,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [93, 122, 111, 89, 91, 113],
+        "minimum": 89,
+        "maximum": 122,
+        "average": 103.16666666666667,
+        "relativeDifference": 0.27049180327868855
+      },
+      "ms": 94.92799999999988
+    },
+    {
+      "seed": "beta-distribution-94",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [85, 77, 63, 62, 85, 62],
+        "minimum": 62,
+        "maximum": 85,
+        "average": 72.33333333333333,
+        "relativeDifference": 0.27058823529411763
+      },
+      "ms": 33.710799999999836
+    },
+    {
+      "seed": "beta-distribution-95",
+      "sector": 7,
+      "kevin": {
+        "column": 31,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [69, 71, 71, 76, 67, 71],
+        "minimum": 67,
+        "maximum": 76,
+        "average": 70.83333333333333,
+        "relativeDifference": 0.11842105263157894
+      },
+      "ms": 32.070699999999306
+    },
+    {
+      "seed": "beta-distribution-96",
+      "sector": 6,
+      "kevin": {
+        "column": 15,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [71, 90, 67, 67, 69, 81],
+        "minimum": 67,
+        "maximum": 90,
+        "average": 74.16666666666667,
+        "relativeDifference": 0.25555555555555554
+      },
+      "ms": 34.40779999999995
+    },
+    {
+      "seed": "beta-distribution-97",
+      "sector": 4,
+      "kevin": {
+        "column": 39,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [77, 103, 84, 79, 96, 73],
+        "minimum": 73,
+        "maximum": 103,
+        "average": 85.33333333333333,
+        "relativeDifference": 0.2912621359223301
+      },
+      "ms": 37.468400000000656
+    },
+    {
+      "seed": "beta-distribution-98",
+      "sector": 3,
+      "kevin": {
+        "column": 15,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [93, 93, 71, 94, 67, 67],
+        "minimum": 67,
+        "maximum": 94,
+        "average": 80.83333333333333,
+        "relativeDifference": 0.2872340425531915
+      },
+      "ms": 53.23660000000018
+    },
+    {
+      "seed": "beta-distribution-99",
+      "sector": 1,
+      "kevin": {
+        "column": 43,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [95, 83, 101, 82, 73, 88],
+        "minimum": 73,
+        "maximum": 101,
+        "average": 87,
+        "relativeDifference": 0.27722772277227725
+      },
+      "ms": 31.902799999999843
+    },
+    {
+      "seed": "beta-distribution-100",
+      "sector": 1,
+      "kevin": {
+        "column": 45,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [59, 66, 61, 67, 65, 55],
+        "minimum": 55,
+        "maximum": 67,
+        "average": 62.166666666666664,
+        "relativeDifference": 0.1791044776119403
+      },
+      "ms": 32.457800000000134
+    },
+    {
+      "seed": "beta-distribution-101",
+      "sector": 4,
+      "kevin": {
+        "column": 39,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [67, 66, 65, 63, 61, 51],
+        "minimum": 51,
+        "maximum": 67,
+        "average": 62.166666666666664,
+        "relativeDifference": 0.23880597014925373
+      },
+      "ms": 75.3734000000004
+    },
+    {
+      "seed": "beta-distribution-102",
+      "sector": 7,
+      "kevin": {
+        "column": 27,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [49, 69, 69, 70, 59, 49],
+        "minimum": 49,
+        "maximum": 70,
+        "average": 60.833333333333336,
+        "relativeDifference": 0.3
+      },
+      "ms": 59.82440000000042
+    },
+    {
+      "seed": "beta-distribution-103",
+      "sector": 0,
+      "kevin": {
+        "column": 23,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [73, 104, 75, 81, 104, 73],
+        "minimum": 73,
+        "maximum": 104,
+        "average": 85,
+        "relativeDifference": 0.2980769230769231
+      },
+      "ms": 32.63369999999941
+    },
+    {
+      "seed": "beta-distribution-104",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [62, 67, 83, 77, 67, 70],
+        "minimum": 62,
+        "maximum": 83,
+        "average": 71,
+        "relativeDifference": 0.25301204819277107
+      },
+      "ms": 32.93880000000081
+    },
+    {
+      "seed": "beta-distribution-105",
+      "sector": 7,
+      "kevin": {
+        "column": 43,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [59, 62, 67, 51, 51, 65],
+        "minimum": 51,
+        "maximum": 67,
+        "average": 59.166666666666664,
+        "relativeDifference": 0.23880597014925373
+      },
+      "ms": 35.630699999999706
+    },
+    {
+      "seed": "beta-distribution-106",
+      "sector": 7,
+      "kevin": {
+        "column": 39,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [53, 74, 63, 73, 71, 62],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 66,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 61.064000000000306
+    },
+    {
+      "seed": "beta-distribution-107",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [81, 90, 63, 63, 65, 90],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 75.33333333333333,
+        "relativeDifference": 0.3
+      },
+      "ms": 41.229700000000776
+    },
+    {
+      "seed": "beta-distribution-108",
+      "sector": 6,
+      "kevin": {
+        "column": 19,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [89, 96, 79, 93, 97, 79],
+        "minimum": 79,
+        "maximum": 97,
+        "average": 88.83333333333333,
+        "relativeDifference": 0.18556701030927836
+      },
+      "ms": 33.33470000000034
+    },
+    {
+      "seed": "beta-distribution-109",
+      "sector": 1,
+      "kevin": {
+        "column": 49,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [74, 59, 73, 59, 53, 75],
+        "minimum": 53,
+        "maximum": 75,
+        "average": 65.5,
+        "relativeDifference": 0.29333333333333333
+      },
+      "ms": 41.38909999999942
+    },
+    {
+      "seed": "beta-distribution-110",
+      "sector": 6,
+      "kevin": {
+        "column": 23,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [80, 61, 67, 63, 67, 63],
+        "minimum": 61,
+        "maximum": 80,
+        "average": 66.83333333333333,
+        "relativeDifference": 0.2375
+      },
+      "ms": 42.3113000000003
+    },
+    {
+      "seed": "beta-distribution-111",
+      "sector": 5,
+      "kevin": {
+        "column": 65,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [75, 80, 97, 69, 89, 77],
+        "minimum": 69,
+        "maximum": 97,
+        "average": 81.16666666666667,
+        "relativeDifference": 0.28865979381443296
+      },
+      "ms": 32.46890000000076
+    },
+    {
+      "seed": "beta-distribution-112",
+      "sector": 7,
+      "kevin": {
+        "column": 53,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [87, 64, 65, 89, 63, 64],
+        "minimum": 63,
+        "maximum": 89,
+        "average": 72,
+        "relativeDifference": 0.29213483146067415
+      },
+      "ms": 32.656700000000455
+    },
+    {
+      "seed": "beta-distribution-113",
+      "sector": 5,
+      "kevin": {
+        "column": 59,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [95, 74, 91, 75, 71, 67],
+        "minimum": 67,
+        "maximum": 95,
+        "average": 78.83333333333333,
+        "relativeDifference": 0.29473684210526313
+      },
+      "ms": 106.48750000000018
+    },
+    {
+      "seed": "beta-distribution-114",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [43, 55, 60, 43, 55, 59],
+        "minimum": 43,
+        "maximum": 60,
+        "average": 52.5,
+        "relativeDifference": 0.2833333333333333
+      },
+      "ms": 32.926800000000185
+    },
+    {
+      "seed": "beta-distribution-115",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [63, 69, 58, 61, 67, 49],
+        "minimum": 49,
+        "maximum": 69,
+        "average": 61.166666666666664,
+        "relativeDifference": 0.2898550724637681
+      },
+      "ms": 32.80420000000049
+    },
+    {
+      "seed": "beta-distribution-116",
+      "sector": 7,
+      "kevin": {
+        "column": 45,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [63, 62, 65, 67, 63, 62],
+        "minimum": 62,
+        "maximum": 67,
+        "average": 63.666666666666664,
+        "relativeDifference": 0.07462686567164178
+      },
+      "ms": 32.9979000000003
+    },
+    {
+      "seed": "beta-distribution-117",
+      "sector": 1,
+      "kevin": {
+        "column": 41,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [59, 67, 49, 64, 67, 47],
+        "minimum": 47,
+        "maximum": 67,
+        "average": 58.833333333333336,
+        "relativeDifference": 0.29850746268656714
+      },
+      "ms": 35.363499999999476
+    },
+    {
+      "seed": "beta-distribution-118",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [51, 61, 63, 50, 51, 63],
+        "minimum": 50,
+        "maximum": 63,
+        "average": 56.5,
+        "relativeDifference": 0.20634920634920634
+      },
+      "ms": 76.50579999999991
+    },
+    {
+      "seed": "beta-distribution-119",
+      "sector": 7,
+      "kevin": {
+        "column": 29,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [73, 61, 80, 71, 79, 57],
+        "minimum": 57,
+        "maximum": 80,
+        "average": 70.16666666666667,
+        "relativeDifference": 0.2875
+      },
+      "ms": 135.26209999999992
+    },
+    {
+      "seed": "beta-distribution-120",
+      "sector": 4,
+      "kevin": {
+        "column": 47,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [72, 53, 71, 75, 75, 53],
+        "minimum": 53,
+        "maximum": 75,
+        "average": 66.5,
+        "relativeDifference": 0.29333333333333333
+      },
+      "ms": 34.6247000000003
+    },
+    {
+      "seed": "beta-distribution-121",
+      "sector": 4,
+      "kevin": {
+        "column": 35,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [53, 61, 63, 68, 67, 69],
+        "minimum": 53,
+        "maximum": 69,
+        "average": 63.5,
+        "relativeDifference": 0.2318840579710145
+      },
+      "ms": 37.46110000000044
+    },
+    {
+      "seed": "beta-distribution-122",
+      "sector": 3,
+      "kevin": {
+        "column": 15,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [71, 98, 81, 69, 71, 98],
+        "minimum": 69,
+        "maximum": 98,
+        "average": 81.33333333333333,
+        "relativeDifference": 0.29591836734693877
+      },
+      "ms": 33.588299999999435
+    },
+    {
+      "seed": "beta-distribution-123",
+      "sector": 3,
+      "kevin": {
+        "column": 25,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [94, 93, 87, 85, 98, 73],
+        "minimum": 73,
+        "maximum": 98,
+        "average": 88.33333333333333,
+        "relativeDifference": 0.25510204081632654
+      },
+      "ms": 32.76800000000003
+    },
+    {
+      "seed": "beta-distribution-124",
+      "sector": 1,
+      "kevin": {
+        "column": 47,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [75, 77, 74, 63, 56, 73],
+        "minimum": 56,
+        "maximum": 77,
+        "average": 69.66666666666667,
+        "relativeDifference": 0.2727272727272727
+      },
+      "ms": 32.64469999999983
+    },
+    {
+      "seed": "beta-distribution-125",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [77, 81, 76, 71, 57, 77],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 73.16666666666667,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 120.1203000000005
+    },
+    {
+      "seed": "beta-distribution-126",
+      "sector": 1,
+      "kevin": {
+        "column": 45,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [73, 68, 63, 69, 63, 65],
+        "minimum": 63,
+        "maximum": 73,
+        "average": 66.83333333333333,
+        "relativeDifference": 0.136986301369863
+      },
+      "ms": 33.28269999999975
+    },
+    {
+      "seed": "beta-distribution-127",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [57, 62, 57, 63, 55, 63],
+        "minimum": 55,
+        "maximum": 63,
+        "average": 59.5,
+        "relativeDifference": 0.12698412698412698
+      },
+      "ms": 56.226700000000164
+    },
+    {
+      "seed": "beta-distribution-128",
+      "sector": 0,
+      "kevin": {
+        "column": 15,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [94, 87, 69, 89, 67, 67],
+        "minimum": 67,
+        "maximum": 94,
+        "average": 78.83333333333333,
+        "relativeDifference": 0.2872340425531915
+      },
+      "ms": 77.16170000000056
+    },
+    {
+      "seed": "beta-distribution-129",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [79, 87, 86, 85, 67, 73],
+        "minimum": 67,
+        "maximum": 87,
+        "average": 79.5,
+        "relativeDifference": 0.22988505747126436
+      },
+      "ms": 63.223800000000665
+    },
+    {
+      "seed": "beta-distribution-130",
+      "sector": 5,
+      "kevin": {
+        "column": 65,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [111, 81, 78, 107, 111, 85],
+        "minimum": 78,
+        "maximum": 111,
+        "average": 95.5,
+        "relativeDifference": 0.2972972972972973
+      },
+      "ms": 35.14040000000023
+    },
+    {
+      "seed": "beta-distribution-131",
+      "sector": 8,
+      "kevin": {
+        "column": 55,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [95, 93, 69, 68, 67, 69],
+        "minimum": 67,
+        "maximum": 95,
+        "average": 76.83333333333333,
+        "relativeDifference": 0.29473684210526313
+      },
+      "ms": 81.95809999999983
+    },
+    {
+      "seed": "beta-distribution-132",
+      "sector": 4,
+      "kevin": {
+        "column": 43,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [61, 66, 59, 65, 63, 65],
+        "minimum": 59,
+        "maximum": 66,
+        "average": 63.166666666666664,
+        "relativeDifference": 0.10606060606060606
+      },
+      "ms": 33.09589999999935
+    },
+    {
+      "seed": "beta-distribution-133",
+      "sector": 3,
+      "kevin": {
+        "column": 23,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [67, 63, 75, 90, 87, 87],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 78.16666666666667,
+        "relativeDifference": 0.3
+      },
+      "ms": 41.38180000000011
+    },
+    {
+      "seed": "beta-distribution-134",
+      "sector": 0,
+      "kevin": {
+        "column": 25,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [87, 69, 86, 79, 83, 63],
+        "minimum": 63,
+        "maximum": 87,
+        "average": 77.83333333333333,
+        "relativeDifference": 0.27586206896551724
+      },
+      "ms": 44.27819999999974
+    },
+    {
+      "seed": "beta-distribution-135",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [70, 59, 67, 67, 67, 65],
+        "minimum": 59,
+        "maximum": 70,
+        "average": 65.83333333333333,
+        "relativeDifference": 0.15714285714285714
+      },
+      "ms": 33.612599999999475
+    },
+    {
+      "seed": "beta-distribution-136",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [70, 81, 63, 77, 81, 59],
+        "minimum": 59,
+        "maximum": 81,
+        "average": 71.83333333333333,
+        "relativeDifference": 0.2716049382716049
+      },
+      "ms": 62.81800000000021
+    },
+    {
+      "seed": "beta-distribution-137",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [70, 67, 49, 61, 69, 69],
+        "minimum": 49,
+        "maximum": 70,
+        "average": 64.16666666666667,
+        "relativeDifference": 0.3
+      },
+      "ms": 135.84990000000016
+    },
+    {
+      "seed": "beta-distribution-138",
+      "sector": 4,
+      "kevin": {
+        "column": 49,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [83, 89, 76, 83, 89, 81],
+        "minimum": 76,
+        "maximum": 89,
+        "average": 83.5,
+        "relativeDifference": 0.14606741573033707
+      },
+      "ms": 37.9991
+    },
+    {
+      "seed": "beta-distribution-139",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [77, 71, 61, 60, 77, 76],
+        "minimum": 60,
+        "maximum": 77,
+        "average": 70.33333333333333,
+        "relativeDifference": 0.22077922077922077
+      },
+      "ms": 48.38429999999971
+    },
+    {
+      "seed": "beta-distribution-140",
+      "sector": 5,
+      "kevin": {
+        "column": 59,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [89, 65, 73, 68, 64, 89],
+        "minimum": 64,
+        "maximum": 89,
+        "average": 74.66666666666667,
+        "relativeDifference": 0.2808988764044944
+      },
+      "ms": 33.64539999999943
+    },
+    {
+      "seed": "beta-distribution-141",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [64, 79, 77, 75, 59, 74],
+        "minimum": 59,
+        "maximum": 79,
+        "average": 71.33333333333333,
+        "relativeDifference": 0.25316455696202533
+      },
+      "ms": 34.196500000000015
+    },
+    {
+      "seed": "beta-distribution-142",
+      "sector": 1,
+      "kevin": {
+        "column": 47,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [69, 67, 65, 66, 49, 60],
+        "minimum": 49,
+        "maximum": 69,
+        "average": 62.666666666666664,
+        "relativeDifference": 0.2898550724637681
+      },
+      "ms": 44.2532999999994
+    },
+    {
+      "seed": "beta-distribution-143",
+      "sector": 0,
+      "kevin": {
+        "column": 21,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [103, 101, 97, 112, 85, 81],
+        "minimum": 81,
+        "maximum": 112,
+        "average": 96.5,
+        "relativeDifference": 0.2767857142857143
+      },
+      "ms": 33.13909999999942
+    },
+    {
+      "seed": "beta-distribution-144",
+      "sector": 4,
+      "kevin": {
+        "column": 35,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [80, 85, 69, 91, 65, 88],
+        "minimum": 65,
+        "maximum": 91,
+        "average": 79.66666666666667,
+        "relativeDifference": 0.2857142857142857
+      },
+      "ms": 36.23750000000018
+    },
+    {
+      "seed": "beta-distribution-145",
+      "sector": 7,
+      "kevin": {
+        "column": 31,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [81, 75, 78, 67, 81, 71],
+        "minimum": 67,
+        "maximum": 81,
+        "average": 75.5,
+        "relativeDifference": 0.1728395061728395
+      },
+      "ms": 35.756499999999505
+    },
+    {
+      "seed": "beta-distribution-146",
+      "sector": 7,
+      "kevin": {
+        "column": 35,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [70, 61, 69, 57, 49, 69],
+        "minimum": 49,
+        "maximum": 70,
+        "average": 62.5,
+        "relativeDifference": 0.3
+      },
+      "ms": 34.426800000001094
+    },
+    {
+      "seed": "beta-distribution-147",
+      "sector": 4,
+      "kevin": {
+        "column": 45,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [67, 70, 73, 87, 61, 69],
+        "minimum": 61,
+        "maximum": 87,
+        "average": 71.16666666666667,
+        "relativeDifference": 0.2988505747126437
+      },
+      "ms": 105.63379999999961
+    },
+    {
+      "seed": "beta-distribution-148",
+      "sector": 7,
+      "kevin": {
+        "column": 37,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [61, 57, 67, 72, 67, 51],
+        "minimum": 51,
+        "maximum": 72,
+        "average": 62.5,
+        "relativeDifference": 0.2916666666666667
+      },
+      "ms": 34.87670000000071
+    },
+    {
+      "seed": "beta-distribution-149",
+      "sector": 7,
+      "kevin": {
+        "column": 35,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [82, 67, 81, 67, 85, 79],
+        "minimum": 67,
+        "maximum": 85,
+        "average": 76.83333333333333,
+        "relativeDifference": 0.21176470588235294
+      },
+      "ms": 48.04069999999956
+    },
+    {
+      "seed": "beta-distribution-150",
+      "sector": 4,
+      "kevin": {
+        "column": 27,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [84, 69, 75, 65, 59, 83],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 72.5,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 142.90200000000004
+    },
+    {
+      "seed": "beta-distribution-151",
+      "sector": 2,
+      "kevin": {
+        "column": 57,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [65, 65, 89, 74, 89, 65],
+        "minimum": 65,
+        "maximum": 89,
+        "average": 74.5,
+        "relativeDifference": 0.2696629213483146
+      },
+      "ms": 33.149200000001656
+    },
+    {
+      "seed": "beta-distribution-152",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [69, 74, 71, 59, 73, 63],
+        "minimum": 59,
+        "maximum": 74,
+        "average": 68.16666666666667,
+        "relativeDifference": 0.20270270270270271
+      },
+      "ms": 34.36569999999847
+    },
+    {
+      "seed": "beta-distribution-153",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 15
+      },
+      "distances": {
+        "byEntrance": [65, 67, 71, 78, 75, 65],
+        "minimum": 65,
+        "maximum": 78,
+        "average": 70.16666666666667,
+        "relativeDifference": 0.16666666666666666
+      },
+      "ms": 36.01629999999932
+    },
+    {
+      "seed": "beta-distribution-154",
+      "sector": 2,
+      "kevin": {
+        "column": 57,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [85, 83, 89, 64, 73, 63],
+        "minimum": 63,
+        "maximum": 89,
+        "average": 76.16666666666667,
+        "relativeDifference": 0.29213483146067415
+      },
+      "ms": 40.1317999999992
+    },
+    {
+      "seed": "beta-distribution-155",
+      "sector": 1,
+      "kevin": {
+        "column": 35,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [72, 57, 69, 51, 71, 63],
+        "minimum": 51,
+        "maximum": 72,
+        "average": 63.833333333333336,
+        "relativeDifference": 0.2916666666666667
+      },
+      "ms": 94.36150000000089
+    },
+    {
+      "seed": "beta-distribution-156",
+      "sector": 8,
+      "kevin": {
+        "column": 63,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [103, 84, 83, 89, 81, 73],
+        "minimum": 73,
+        "maximum": 103,
+        "average": 85.5,
+        "relativeDifference": 0.2912621359223301
+      },
+      "ms": 34.1841000000004
+    },
+    {
+      "seed": "beta-distribution-157",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 17
+      },
+      "distances": {
+        "byEntrance": [79, 63, 80, 67, 57, 63],
+        "minimum": 57,
+        "maximum": 80,
+        "average": 68.16666666666667,
+        "relativeDifference": 0.2875
+      },
+      "ms": 70.01519999999982
+    },
+    {
+      "seed": "beta-distribution-158",
+      "sector": 0,
+      "kevin": {
+        "column": 19,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [73, 96, 79, 73, 97, 87],
+        "minimum": 73,
+        "maximum": 97,
+        "average": 84.16666666666667,
+        "relativeDifference": 0.24742268041237114
+      },
+      "ms": 35.19540000000052
+    },
+    {
+      "seed": "beta-distribution-159",
+      "sector": 7,
+      "kevin": {
+        "column": 37,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [75, 84, 63, 63, 73, 69],
+        "minimum": 63,
+        "maximum": 84,
+        "average": 71.16666666666667,
+        "relativeDifference": 0.25
+      },
+      "ms": 75.65789999999834
+    },
+    {
+      "seed": "beta-distribution-160",
+      "sector": 7,
+      "kevin": {
+        "column": 47,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [76, 95, 93, 101, 75, 73],
+        "minimum": 73,
+        "maximum": 101,
+        "average": 85.5,
+        "relativeDifference": 0.27722772277227725
+      },
+      "ms": 70.0012999999999
+    },
+    {
+      "seed": "beta-distribution-161",
+      "sector": 4,
+      "kevin": {
+        "column": 33,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [89, 106, 83, 91, 75, 75],
+        "minimum": 75,
+        "maximum": 106,
+        "average": 86.5,
+        "relativeDifference": 0.29245283018867924
+      },
+      "ms": 32.32599999999911
+    },
+    {
+      "seed": "beta-distribution-162",
+      "sector": 4,
+      "kevin": {
+        "column": 53,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [87, 74, 79, 103, 81, 73],
+        "minimum": 73,
+        "maximum": 103,
+        "average": 82.83333333333333,
+        "relativeDifference": 0.2912621359223301
+      },
+      "ms": 52.43379999999888
+    },
+    {
+      "seed": "beta-distribution-163",
+      "sector": 4,
+      "kevin": {
+        "column": 51,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [71, 65, 59, 66, 57, 51],
+        "minimum": 51,
+        "maximum": 71,
+        "average": 61.5,
+        "relativeDifference": 0.28169014084507044
+      },
+      "ms": 32.358799999999974
+    },
+    {
+      "seed": "beta-distribution-164",
+      "sector": 5,
+      "kevin": {
+        "column": 61,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [72, 97, 89, 91, 69, 69],
+        "minimum": 69,
+        "maximum": 97,
+        "average": 81.16666666666667,
+        "relativeDifference": 0.28865979381443296
+      },
+      "ms": 33.17410000000018
+    },
+    {
+      "seed": "beta-distribution-165",
+      "sector": 4,
+      "kevin": {
+        "column": 37,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [65, 82, 67, 69, 59, 61],
+        "minimum": 59,
+        "maximum": 82,
+        "average": 67.16666666666667,
+        "relativeDifference": 0.2804878048780488
+      },
+      "ms": 34.55160000000069
+    },
+    {
+      "seed": "beta-distribution-166",
+      "sector": 7,
+      "kevin": {
+        "column": 41,
+        "row": 35
+      },
+      "distances": {
+        "byEntrance": [79, 64, 65, 81, 67, 81],
+        "minimum": 64,
+        "maximum": 81,
+        "average": 72.83333333333333,
+        "relativeDifference": 0.20987654320987653
+      },
+      "ms": 35.34809999999925
+    },
+    {
+      "seed": "beta-distribution-167",
+      "sector": 7,
+      "kevin": {
+        "column": 47,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [83, 99, 94, 89, 89, 71],
+        "minimum": 71,
+        "maximum": 99,
+        "average": 87.5,
+        "relativeDifference": 0.2828282828282828
+      },
+      "ms": 41.15990000000056
+    },
+    {
+      "seed": "beta-distribution-168",
+      "sector": 7,
+      "kevin": {
+        "column": 43,
+        "row": 37
+      },
+      "distances": {
+        "byEntrance": [97, 92, 87, 77, 77, 68],
+        "minimum": 68,
+        "maximum": 97,
+        "average": 83,
+        "relativeDifference": 0.29896907216494845
+      },
+      "ms": 33.063899999999194
+    },
+    {
+      "seed": "beta-distribution-169",
+      "sector": 1,
+      "kevin": {
+        "column": 51,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [79, 83, 75, 60, 65, 83],
+        "minimum": 60,
+        "maximum": 83,
+        "average": 74.16666666666667,
+        "relativeDifference": 0.27710843373493976
+      },
+      "ms": 55.71349999999984
+    },
+    {
+      "seed": "beta-distribution-170",
+      "sector": 7,
+      "kevin": {
+        "column": 27,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [69, 61, 69, 86, 63, 87],
+        "minimum": 61,
+        "maximum": 87,
+        "average": 72.5,
+        "relativeDifference": 0.2988505747126437
+      },
+      "ms": 33.11479999999938
+    },
+    {
+      "seed": "beta-distribution-171",
+      "sector": 4,
+      "kevin": {
+        "column": 43,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [59, 75, 70, 75, 75, 73],
+        "minimum": 59,
+        "maximum": 75,
+        "average": 71.16666666666667,
+        "relativeDifference": 0.21333333333333335
+      },
+      "ms": 32.78089999999975
+    },
+    {
+      "seed": "beta-distribution-172",
+      "sector": 4,
+      "kevin": {
+        "column": 31,
+        "row": 25
+      },
+      "distances": {
+        "byEntrance": [59, 53, 74, 71, 69, 71],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 66.16666666666667,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 39.683100000000195
+    },
+    {
+      "seed": "beta-distribution-173",
+      "sector": 1,
+      "kevin": {
+        "column": 43,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [66, 49, 67, 67, 55, 67],
+        "minimum": 49,
+        "maximum": 67,
+        "average": 61.833333333333336,
+        "relativeDifference": 0.26865671641791045
+      },
+      "ms": 131.4307000000008
+    },
+    {
+      "seed": "beta-distribution-174",
+      "sector": 5,
+      "kevin": {
+        "column": 59,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [87, 73, 68, 87, 61, 87],
+        "minimum": 61,
+        "maximum": 87,
+        "average": 77.16666666666667,
+        "relativeDifference": 0.2988505747126437
+      },
+      "ms": 57.40190000000075
+    },
+    {
+      "seed": "beta-distribution-175",
+      "sector": 4,
+      "kevin": {
+        "column": 29,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [47, 64, 51, 49, 51, 45],
+        "minimum": 45,
+        "maximum": 64,
+        "average": 51.166666666666664,
+        "relativeDifference": 0.296875
+      },
+      "ms": 133.19220000000132
+    },
+    {
+      "seed": "beta-distribution-176",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 27
+      },
+      "distances": {
+        "byEntrance": [47, 66, 53, 55, 65, 49],
+        "minimum": 47,
+        "maximum": 66,
+        "average": 55.833333333333336,
+        "relativeDifference": 0.2878787878787879
+      },
+      "ms": 95.43080000000009
+    },
+    {
+      "seed": "beta-distribution-177",
+      "sector": 4,
+      "kevin": {
+        "column": 39,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [81, 59, 72, 81, 57, 79],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 71.5,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 32.39840000000004
+    },
+    {
+      "seed": "beta-distribution-178",
+      "sector": 6,
+      "kevin": {
+        "column": 23,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [91, 71, 81, 94, 67, 67],
+        "minimum": 67,
+        "maximum": 94,
+        "average": 78.5,
+        "relativeDifference": 0.2872340425531915
+      },
+      "ms": 49.6270999999997
+    },
+    {
+      "seed": "beta-distribution-179",
+      "sector": 1,
+      "kevin": {
+        "column": 49,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [87, 70, 75, 63, 75, 68],
+        "minimum": 63,
+        "maximum": 87,
+        "average": 73,
+        "relativeDifference": 0.27586206896551724
+      },
+      "ms": 32.990200000000186
+    },
+    {
+      "seed": "beta-distribution-180",
+      "sector": 8,
+      "kevin": {
+        "column": 55,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [95, 74, 93, 69, 67, 76],
+        "minimum": 67,
+        "maximum": 95,
+        "average": 79,
+        "relativeDifference": 0.29473684210526313
+      },
+      "ms": 34.61909999999989
+    },
+    {
+      "seed": "beta-distribution-181",
+      "sector": 4,
+      "kevin": {
+        "column": 41,
+        "row": 19
+      },
+      "distances": {
+        "byEntrance": [66, 67, 61, 55, 61, 47],
+        "minimum": 47,
+        "maximum": 67,
+        "average": 59.5,
+        "relativeDifference": 0.29850746268656714
+      },
+      "ms": 32.5010999999995
+    },
+    {
+      "seed": "beta-distribution-182",
+      "sector": 3,
+      "kevin": {
+        "column": 17,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [71, 75, 75, 100, 93, 100],
+        "minimum": 71,
+        "maximum": 100,
+        "average": 85.66666666666667,
+        "relativeDifference": 0.29
+      },
+      "ms": 76.32750000000124
+    },
+    {
+      "seed": "beta-distribution-183",
+      "sector": 0,
+      "kevin": {
+        "column": 23,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [71, 83, 71, 100, 79, 71],
+        "minimum": 71,
+        "maximum": 100,
+        "average": 79.16666666666667,
+        "relativeDifference": 0.29
+      },
+      "ms": 31.998900000000503
+    },
+    {
+      "seed": "beta-distribution-184",
+      "sector": 0,
+      "kevin": {
+        "column": 17,
+        "row": 7
+      },
+      "distances": {
+        "byEntrance": [95, 97, 75, 104, 75, 103],
+        "minimum": 75,
+        "maximum": 104,
+        "average": 91.5,
+        "relativeDifference": 0.27884615384615385
+      },
+      "ms": 32.745200000001205
+    },
+    {
+      "seed": "beta-distribution-185",
+      "sector": 1,
+      "kevin": {
+        "column": 33,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [75, 84, 63, 63, 59, 83],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 71.16666666666667,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 73.45249999999942
+    },
+    {
+      "seed": "beta-distribution-186",
+      "sector": 7,
+      "kevin": {
+        "column": 43,
+        "row": 31
+      },
+      "distances": {
+        "byEntrance": [73, 73, 68, 53, 57, 74],
+        "minimum": 53,
+        "maximum": 74,
+        "average": 66.33333333333333,
+        "relativeDifference": 0.28378378378378377
+      },
+      "ms": 84.61080000000038
+    },
+    {
+      "seed": "beta-distribution-187",
+      "sector": 2,
+      "kevin": {
+        "column": 55,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [55, 57, 77, 68, 67, 71],
+        "minimum": 55,
+        "maximum": 77,
+        "average": 65.83333333333333,
+        "relativeDifference": 0.2857142857142857
+      },
+      "ms": 32.27570000000014
+    },
+    {
+      "seed": "beta-distribution-188",
+      "sector": 1,
+      "kevin": {
+        "column": 41,
+        "row": 11
+      },
+      "distances": {
+        "byEntrance": [59, 83, 79, 84, 77, 62],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 74,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 32.3057000000008
+    },
+    {
+      "seed": "beta-distribution-189",
+      "sector": 1,
+      "kevin": {
+        "column": 47,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [83, 101, 74, 103, 105, 105],
+        "minimum": 74,
+        "maximum": 105,
+        "average": 95.16666666666667,
+        "relativeDifference": 0.29523809523809524
+      },
+      "ms": 51.11570000000029
+    },
+    {
+      "seed": "beta-distribution-190",
+      "sector": 4,
+      "kevin": {
+        "column": 49,
+        "row": 21
+      },
+      "distances": {
+        "byEntrance": [66, 69, 59, 81, 57, 72],
+        "minimum": 57,
+        "maximum": 81,
+        "average": 67.33333333333333,
+        "relativeDifference": 0.2962962962962963
+      },
+      "ms": 93.37880000000041
+    },
+    {
+      "seed": "beta-distribution-191",
+      "sector": 1,
+      "kevin": {
+        "column": 39,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [71, 78, 71, 77, 65, 55],
+        "minimum": 55,
+        "maximum": 78,
+        "average": 69.5,
+        "relativeDifference": 0.2948717948717949
+      },
+      "ms": 130.03650000000016
+    },
+    {
+      "seed": "beta-distribution-192",
+      "sector": 2,
+      "kevin": {
+        "column": 57,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [81, 66, 69, 79, 81, 59],
+        "minimum": 59,
+        "maximum": 81,
+        "average": 72.5,
+        "relativeDifference": 0.2716049382716049
+      },
+      "ms": 35.43419999999969
+    },
+    {
+      "seed": "beta-distribution-193",
+      "sector": 7,
+      "kevin": {
+        "column": 39,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [69, 73, 61, 82, 87, 86],
+        "minimum": 61,
+        "maximum": 87,
+        "average": 76.33333333333333,
+        "relativeDifference": 0.2988505747126437
+      },
+      "ms": 33.78679999999986
+    },
+    {
+      "seed": "beta-distribution-194",
+      "sector": 1,
+      "kevin": {
+        "column": 37,
+        "row": 13
+      },
+      "distances": {
+        "byEntrance": [55, 74, 63, 69, 75, 73],
+        "minimum": 55,
+        "maximum": 75,
+        "average": 68.16666666666667,
+        "relativeDifference": 0.26666666666666666
+      },
+      "ms": 34.10599999999977
+    },
+    {
+      "seed": "beta-distribution-195",
+      "sector": 3,
+      "kevin": {
+        "column": 23,
+        "row": 29
+      },
+      "distances": {
+        "byEntrance": [63, 84, 73, 59, 61, 79],
+        "minimum": 59,
+        "maximum": 84,
+        "average": 69.83333333333333,
+        "relativeDifference": 0.2976190476190476
+      },
+      "ms": 77.45789999999943
+    },
+    {
+      "seed": "beta-distribution-196",
+      "sector": 4,
+      "kevin": {
+        "column": 43,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [74, 75, 53, 55, 67, 71],
+        "minimum": 53,
+        "maximum": 75,
+        "average": 65.83333333333333,
+        "relativeDifference": 0.29333333333333333
+      },
+      "ms": 32.0625
+    },
+    {
+      "seed": "beta-distribution-197",
+      "sector": 3,
+      "kevin": {
+        "column": 23,
+        "row": 23
+      },
+      "distances": {
+        "byEntrance": [79, 81, 90, 63, 63, 63],
+        "minimum": 63,
+        "maximum": 90,
+        "average": 73.16666666666667,
+        "relativeDifference": 0.3
+      },
+      "ms": 34.22770000000128
+    },
+    {
+      "seed": "beta-distribution-198",
+      "sector": 2,
+      "kevin": {
+        "column": 55,
+        "row": 9
+      },
+      "distances": {
+        "byEntrance": [97, 68, 71, 87, 97, 95],
+        "minimum": 68,
+        "maximum": 97,
+        "average": 85.83333333333333,
+        "relativeDifference": 0.29896907216494845
+      },
+      "ms": 33.67309999999998
+    },
+    {
+      "seed": "beta-distribution-199",
+      "sector": 7,
+      "kevin": {
+        "column": 49,
+        "row": 33
+      },
+      "distances": {
+        "byEntrance": [101, 76, 79, 107, 75, 78],
+        "minimum": 75,
+        "maximum": 107,
+        "average": 86,
+        "relativeDifference": 0.29906542056074764
+      },
+      "ms": 40.71510000000126
+    }
+  ]
+}

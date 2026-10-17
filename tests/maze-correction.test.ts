@@ -20,6 +20,7 @@ const standard: MazeConfig = {
   rows: 45,
   entranceCount: 6,
   seed: "integration-0",
+  distanceTolerance: 0.15,
 };
 const getMaze = (config = standard): Maze => {
   const result = generateMaze(config);
