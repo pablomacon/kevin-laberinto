@@ -4,6 +4,7 @@ import {
   findShortestPath,
   generateMaze,
   hasSharedBottleneck,
+  validateMaze,
   type Maze,
 } from "../packages/maze-engine/src/index.js";
 
@@ -95,14 +96,101 @@ describe("maze-engine", () => {
       code: "INVALID_CONFIG",
     });
   });
-  it("valida 100 semillas estándar reproducibles", () => {
-    for (let i = 0; i < 100; i += 1) {
-      const value = result(`integration-${i}`);
-      expect(value.metrics.isConnected).toBe(true);
-      expect(value.metrics.hasSharedBottleneck).toBe(false);
-      expect(value.metrics.distance.relativeDifference).toBeLessThanOrEqual(
-        0.15,
-      );
-    }
-  });
+  it(
+    "valida 100 semillas estándar reproducibles",
+    () => {
+      const failures: string[] = [],
+        positions = new Set<string>(),
+        layouts = new Set<string>();
+      for (let i = 0; i < 100; i += 1) {
+        const seed = `integration-${i}`;
+        const value = generateMaze({ ...config, seed });
+        if ("code" in value) {
+          failures.push(`${seed}: ${JSON.stringify(value)}`);
+          continue;
+        }
+        expect.soft(generateMaze({ ...config, seed }), seed).toEqual(value);
+        const { maze, metrics } = value;
+        positions.add(`${maze.kevin.column},${maze.kevin.row}`);
+        layouts.add(JSON.stringify(maze.entrances));
+        expect
+          .soft(validateMaze(maze, maze.entrances, maze.kevin).valid, seed)
+          .toBe(true);
+        expect
+          .soft(
+            new Set(
+              maze.entrances.map((p) =>
+                p.column === 0
+                  ? "left"
+                  : p.column === 79
+                    ? "right"
+                    : p.row === 0
+                      ? "top"
+                      : "bottom",
+              ),
+            ).size,
+            seed,
+          )
+          .toBe(4);
+        const sides = maze.entrances.map((p) =>
+          p.column === 0
+            ? "left"
+            : p.column === 79
+              ? "right"
+              : p.row === 0
+                ? "top"
+                : "bottom",
+        );
+        expect
+          .soft(
+            Math.max(
+              ...sides.map((side) => sides.filter((s) => s === side).length),
+            ),
+            seed,
+          )
+          .toBeLessThanOrEqual(2);
+        expect
+          .soft(metrics.traversablePercentage, seed)
+          .toBeLessThanOrEqual(0.6);
+        expect.soft(metrics.deadEnds, seed).toBeGreaterThan(0);
+        expect.soft(metrics.junctions, seed).toBeGreaterThan(0);
+        expect.soft(metrics.independentCycles, seed).toBeGreaterThan(0);
+        expect
+          .soft(metrics.corridors.horizontalRun / 80, seed)
+          .toBeLessThanOrEqual(0.9);
+        expect
+          .soft(metrics.corridors.verticalRun / 45, seed)
+          .toBeLessThanOrEqual(0.9);
+        expect
+          .soft(
+            metrics.corridors.lengths.reduce((a, b) => a + b, 0),
+            seed,
+          )
+          .toBe(metrics.independentCycles + metrics.traversableCells - 1);
+        for (const [entryIndex, entry] of maze.entrances.entries()) {
+          const path = findShortestPath(maze, entry, maze.kevin)!;
+          expect
+            .soft(path.length - 1, seed)
+            .toBe(metrics.distance.byEntrance[entryIndex]);
+        }
+        expect(value.metrics.isConnected).toBe(true);
+        expect(value.metrics.hasSharedBottleneck).toBe(false);
+        expect(value.metrics.distance.relativeDifference).toBeLessThanOrEqual(
+          0.15,
+        );
+      }
+      expect(failures, failures.join("\n")).toEqual([]);
+      expect(positions.size).toBeGreaterThan(1);
+      expect(layouts.size).toBeGreaterThan(1);
+      expect(
+        new Set([...positions].map((p) => p.split(",")[0])).size,
+      ).toBeGreaterThan(1);
+      expect(
+        new Set([...positions].map((p) => p.split(",")[1])).size,
+      ).toBeGreaterThan(1);
+    },
+    Number(
+      Reflect.get(globalThis, "process")?.env?.MAZE_TEST_TIMEOUT_MS ?? 30_000,
+    ),
+  );
 });
