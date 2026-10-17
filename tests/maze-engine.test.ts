@@ -34,6 +34,7 @@ describe("maze-engine", () => {
     ).toBe(6);
     expect(metrics.distance.byEntrance.every((d) => d > 0)).toBe(true);
     expect(metrics.distance.relativeDifference).toBeLessThanOrEqual(0.15);
+    expect(metrics.deadEnds).toBeGreaterThan(0);
   });
   it("recupera un camino BFS óptimo ortogonal", () => {
     const { maze } = result();

@@ -140,6 +140,17 @@ function buildCandidate(config: Required<MazeConfig>, attempt: number): Maze {
     cells[row]![config.columns - 1] = "floor";
     cells[row]![midColumn] = "floor";
   }
+  // Dos callejones controlados conectados al corredor general; son variedad, no restricciones de validez.
+  for (const deadEnd of [
+    { column: 3, row: 3 },
+    { column: config.columns - 4, row: config.rows - 4 },
+  ]) {
+    cells[deadEnd.row]![deadEnd.column] = "floor";
+    cells[deadEnd.row - 1]![deadEnd.column] = "wall";
+    cells[deadEnd.row + 1]![deadEnd.column] = "wall";
+    cells[deadEnd.row]![deadEnd.column - 1] = "wall";
+    cells[deadEnd.row]![deadEnd.column + 1] = "floor";
+  }
   for (let column = 0; column < config.columns; column += 1) {
     cells[0]![column] = "floor";
     cells[config.rows - 1]![column] = "floor";
