@@ -7,8 +7,10 @@ import {
   type MazeResult,
 } from "../packages/maze-engine/src/index.js";
 import {
+  buildTerrainCacheKey,
   calculateViewportLayout,
   computeAllOptimalPaths,
+  computeMazeSignature,
   computeOptimalPath,
   computeVisibleCells,
   createViewerState,
@@ -18,6 +20,7 @@ import {
   getCellVisibility,
   getSelectedExplorer,
   gridToScreen,
+  hasMazeChanged,
   isKevinVisible,
   isWithinLantern,
   moveSelectedPlayer,
@@ -25,6 +28,7 @@ import {
   resetPlayerExploration,
   screenToGrid,
   selectPlayer,
+  shouldRedrawTerrain,
 } from "../apps/web/src/viewer-logic.js";
 
 function buildControlledMazeResult(): MazeResult {
@@ -403,5 +407,143 @@ describe("KEL-003 viewer-logic", () => {
 
     const nextSeed = generateNextSeed("integration-0", 1);
     expect(nextSeed).not.toBe("integration-0");
+  });
+
+  it("invalida el caché de terreno al regenerar con igual semilla y dimensiones pero distinta densidad, conservando la optimización al mover exploradores", () => {
+    const lowDensityResult = generateMaze({
+      ...DEFAULT_VIEWER_CONFIG,
+      seed: "integration-0",
+      extraConnectionRate: 0.05,
+    });
+    const highDensityResult = generateMaze({
+      ...DEFAULT_VIEWER_CONFIG,
+      seed: "integration-0",
+      extraConnectionRate: 0.35,
+    });
+
+    expect("maze" in lowDensityResult).toBe(true);
+    expect("maze" in highDensityResult).toBe(true);
+    if ("code" in lowDensityResult || "code" in highDensityResult) return;
+
+    // Ambos candidatos se aceptan en el intento 0 y comparten el mismo maze.id en el motor
+    expect(lowDensityResult.maze.id).toBe(highDensityResult.maze.id);
+    expect(lowDensityResult.maze.cells).not.toEqual(
+      highDensityResult.maze.cells,
+    );
+
+    const layout = calculateViewportLayout(1600, 900, 80, 45, 14);
+    const stateLow = createViewerState(lowDensityResult, {
+      viewMode: "lantern",
+    });
+    const stateHigh = createViewerState(highDensityResult, {
+      viewMode: "lantern",
+    });
+
+    // La firma y la clave de caché deben diferir aunque maze.id sea idéntico
+    expect(computeMazeSignature(lowDensityResult.maze)).not.toBe(
+      computeMazeSignature(highDensityResult.maze),
+    );
+    const lowKey = buildTerrainCacheKey(stateLow, layout);
+    const highKey = buildTerrainCacheKey(stateHigh, layout);
+    expect(lowKey).not.toBe(highKey);
+
+    // Al regenerar con distinta densidad debe exigir redibujo del terreno
+    expect(hasMazeChanged(stateLow, stateHigh)).toBe(true);
+    expect(shouldRedrawTerrain(stateLow, stateHigh, lowKey, layout)).toBe(true);
+
+    // En cambio, al mover un explorador o cambiar de jugador en el mismo mapa NO se redibuja el terreno
+    const dirs = ["up", "down", "left", "right"] as const;
+    let movedState = stateLow;
+    for (const dir of dirs) {
+      const attempt = moveSelectedPlayer(stateLow, dir);
+      if (attempt.moved) {
+        movedState = attempt.state;
+        break;
+      }
+    }
+    expect(movedState).not.toBe(stateLow);
+    expect(hasMazeChanged(stateLow, movedState)).toBe(false);
+    expect(shouldRedrawTerrain(stateLow, movedState, lowKey, layout)).toBe(
+      false,
+    );
+
+    const switchedPlayerState = selectPlayer(movedState, 2);
+    expect(hasMazeChanged(movedState, switchedPlayerState)).toBe(false);
+    expect(
+      shouldRedrawTerrain(movedState, switchedPlayerState, lowKey, layout),
+    ).toBe(false);
+
+    // Verifica que rutas, paredes, entradas y Kevin correspondan íntegramente al nuevo mapa regenerado
+    for (const activeState of [stateLow, stateHigh]) {
+      const { maze, explorers } = activeState;
+      expect(maze.cells[maze.kevin.row]?.[maze.kevin.column]).toBe("floor");
+      expect(explorers).toHaveLength(maze.entrances.length);
+
+      const allPaths = computeAllOptimalPaths(maze);
+      allPaths.forEach((path, idx) => {
+        const entrance = maze.entrances[idx]!;
+        expect(explorers[idx]?.entrance).toEqual(entrance);
+        expect(explorers[idx]?.position).toEqual(entrance);
+        expect(maze.cells[entrance.row]?.[entrance.column]).toBe("floor");
+
+        expect(path).not.toBeNull();
+        expect(path![0]).toEqual(entrance);
+        expect(path![path!.length - 1]).toEqual(maze.kevin);
+        for (const step of path!) {
+          expect(maze.cells[step.row]?.[step.column]).toBe("floor");
+        }
+      });
+    }
+  });
+
+  it("actualiza correctamente la visibilidad al alternar entre mapa completo y linterna sin invalidar el terreno estático", () => {
+    const layout = calculateViewportLayout(1280, 720, 9, 9, 14);
+    const fullState = createViewerState(buildControlledMazeResult(), {
+      viewMode: "full",
+    });
+    const terrainKey = buildTerrainCacheKey(fullState, layout);
+
+    // En modo mapa completo todas las casillas y Kevin son visibles
+    expect(
+      getCellVisibility(
+        { column: 8, row: 8 },
+        getSelectedExplorer(fullState).position,
+        getSelectedExplorer(fullState).exploredKeys,
+        fullState.viewMode,
+        fullState.lanternRadius,
+      ),
+    ).toBe("visible");
+    expect(
+      isKevinVisible(
+        fullState.maze,
+        getSelectedExplorer(fullState).position,
+        fullState.viewMode,
+        fullState.lanternRadius,
+      ),
+    ).toBe(true);
+
+    // Cambiar a modo linterna conserva el mismo terreno estático pero restringe la visibilidad
+    const lanternState = { ...fullState, viewMode: "lantern" as const };
+    expect(hasMazeChanged(fullState, lanternState)).toBe(false);
+    expect(
+      shouldRedrawTerrain(fullState, lanternState, terrainKey, layout),
+    ).toBe(false);
+    expect(
+      getCellVisibility(
+        { column: 8, row: 8 },
+        getSelectedExplorer(lanternState).position,
+        getSelectedExplorer(lanternState).exploredKeys,
+        lanternState.viewMode,
+        lanternState.lanternRadius,
+      ),
+    ).toBe("hidden");
+    expect(
+      isKevinVisible(
+        lanternState.maze,
+        getSelectedExplorer(lanternState).position,
+        lanternState.viewMode,
+        lanternState.lanternRadius,
+      ),
+    ).toBe(false);
   });
 });

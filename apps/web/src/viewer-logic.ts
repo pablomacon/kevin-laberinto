@@ -129,6 +129,7 @@ export interface ViewerDisplayOptions {
 
 export interface ViewerState {
   readonly maze: Maze;
+  readonly mazeSignature: string;
   readonly metrics: MazeMetrics;
   readonly validation: MazeValidation;
   readonly selectedPlayerIndex: number;
@@ -157,6 +158,95 @@ export function positionKey(position: Position): string {
 
 export function samePosition(a: Position, b: Position): boolean {
   return a.column === b.column && a.row === b.row;
+}
+
+/**
+ * Calcula una firma determinista del contenido real del laberinto (matriz cells, entradas,
+ * posición de Kevin y configuración), evitando depender únicamente de maze.id.
+ */
+export function computeMazeSignature(maze: Maze): string {
+  let hashA = 2166136261;
+  let hashB = 0x811c9dc5 ^ 0x5bd1e995;
+
+  const mix = (value: number): void => {
+    hashA = Math.imul(hashA ^ value, 16777619);
+    hashB = Math.imul(hashB ^ ((value << 5) | (value >>> 27)), 1597334677);
+  };
+
+  for (let row = 0; row < maze.cells.length; row += 1) {
+    const rowCells = maze.cells[row];
+    if (!rowCells) continue;
+    mix(row + 1);
+    for (let col = 0; col < rowCells.length; col += 1) {
+      mix(rowCells[col] === "floor" ? 1 : 2);
+    }
+  }
+
+  mix(maze.kevin.column);
+  mix(maze.kevin.row);
+  for (const entrance of maze.entrances) {
+    mix(entrance.column);
+    mix(entrance.row);
+  }
+
+  const hexA = (hashA >>> 0).toString(16).padStart(8, "0");
+  const hexB = (hashB >>> 0).toString(16).padStart(8, "0");
+  const cfg = maze.config;
+  const entriesTag = maze.entrances
+    .map((e) => `${e.column},${e.row}`)
+    .join(";");
+
+  return [
+    maze.id,
+    `${cfg.columns}x${cfg.rows}`,
+    cfg.seed,
+    cfg.entranceCount,
+    cfg.extraConnectionRate ?? "default",
+    cfg.distanceTolerance ?? "default",
+    `${maze.kevin.column},${maze.kevin.row}`,
+    entriesTag,
+    `${hexA}${hexB}`,
+  ].join("|");
+}
+
+/**
+ * Determina si el laberinto o su matriz cambiaron entre dos estados del visor,
+ * comprobando tanto referencias de matriz/mapa como la firma estructural completa.
+ */
+export function hasMazeChanged(
+  previousState: ViewerState | null,
+  nextState: ViewerState,
+): boolean {
+  if (!previousState) {
+    return true;
+  }
+  return (
+    previousState.maze !== nextState.maze ||
+    previousState.maze.cells !== nextState.maze.cells ||
+    previousState.mazeSignature !== nextState.mazeSignature
+  );
+}
+
+export function buildTerrainCacheKey(
+  state: ViewerState,
+  layout: ViewportLayout,
+): string {
+  return `${state.mazeSignature}:${layout.cellSize}:${layout.offsetX}:${layout.offsetY}:${state.showGrid}`;
+}
+
+export function shouldRedrawTerrain(
+  previousState: ViewerState | null,
+  nextState: ViewerState,
+  previousTerrainKey: string,
+  nextLayout: ViewportLayout,
+): boolean {
+  if (hasMazeChanged(previousState, nextState)) {
+    return true;
+  }
+  if (previousState && previousState.showGrid !== nextState.showGrid) {
+    return true;
+  }
+  return buildTerrainCacheKey(nextState, nextLayout) !== previousTerrainKey;
 }
 
 export function getParticipantStyle(index: number): ParticipantStyle {
@@ -371,6 +461,7 @@ export function createViewerState(
 
   return {
     maze: result.maze,
+    mazeSignature: computeMazeSignature(result.maze),
     metrics: result.metrics,
     validation,
     selectedPlayerIndex: 0,

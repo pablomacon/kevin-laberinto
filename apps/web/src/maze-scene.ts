@@ -1,6 +1,8 @@
 import Phaser from "phaser";
+import type { CellMatrix } from "@kevin/maze-engine";
 import type { Position } from "@kevin/shared";
 import {
+  buildTerrainCacheKey,
   calculateViewportLayout,
   computeAllOptimalPaths,
   computeOptimalPath,
@@ -8,9 +10,11 @@ import {
   getParticipantStyle,
   getSelectedExplorer,
   gridToScreen,
+  hasMazeChanged,
   isKevinVisible,
   samePosition,
   screenToGrid,
+  shouldRedrawTerrain,
   type ViewportLayout,
   type ViewerState,
 } from "./viewer-logic.js";
@@ -46,6 +50,7 @@ export class MazeViewerScene extends Phaser.Scene {
   private labelsContainer!: Phaser.GameObjects.Container;
 
   private lastTerrainKey = "";
+  private lastRenderedCells: CellMatrix | null = null;
   private isDragging = false;
   private dragMoved = false;
   private dragStartX = 0;
@@ -83,10 +88,10 @@ export class MazeViewerScene extends Phaser.Scene {
   }
 
   public setViewerState(nextState: ViewerState): void {
-    const previousMazeId = this.viewerState?.maze.id;
-    const previousCols = this.viewerState?.maze.config.columns;
-    const previousRows = this.viewerState?.maze.config.rows;
-    const previousGrid = this.viewerState?.showGrid;
+    const previousState = this.viewerState;
+    const previousCols = previousState?.maze.config.columns;
+    const previousRows = previousState?.maze.config.rows;
+    const mazeChanged = hasMazeChanged(previousState, nextState);
 
     this.viewerState = nextState;
 
@@ -106,8 +111,14 @@ export class MazeViewerScene extends Phaser.Scene {
 
     const forceTerrain =
       dimensionsChanged ||
-      previousMazeId !== nextState.maze.id ||
-      previousGrid !== nextState.showGrid;
+      mazeChanged ||
+      (this.layout !== null &&
+        shouldRedrawTerrain(
+          previousState,
+          nextState,
+          this.lastTerrainKey,
+          this.layout,
+        ));
 
     this.renderAll(forceTerrain);
   }
@@ -137,6 +148,7 @@ export class MazeViewerScene extends Phaser.Scene {
 
   private handleResize(): void {
     this.lastTerrainKey = "";
+    this.lastRenderedCells = null;
     this.recalculateLayout();
     if (this.cameras?.main && this.cameras.main.zoom === 1) {
       this.cameras.main.centerOn(this.scale.width / 2, this.scale.height / 2);
@@ -268,11 +280,15 @@ export class MazeViewerScene extends Phaser.Scene {
   private renderAll(forceTerrain: boolean): void {
     if (!this.viewerState || !this.layout) return;
 
-    const { maze, showGrid } = this.viewerState;
-    const terrainKey = `${maze.id}:${this.layout.cellSize}:${this.layout.offsetX}:${this.layout.offsetY}:${showGrid}`;
-    if (forceTerrain || terrainKey !== this.lastTerrainKey) {
+    const terrainKey = buildTerrainCacheKey(this.viewerState, this.layout);
+    if (
+      forceTerrain ||
+      terrainKey !== this.lastTerrainKey ||
+      this.lastRenderedCells !== this.viewerState.maze.cells
+    ) {
       this.renderTerrainLayer();
       this.lastTerrainKey = terrainKey;
+      this.lastRenderedCells = this.viewerState.maze.cells;
     }
 
     this.renderDebugLayer();
