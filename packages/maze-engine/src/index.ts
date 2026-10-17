@@ -16,6 +16,7 @@ export interface MazeConfig {
   readonly seed: string;
   readonly entranceCount: number;
   readonly distanceTolerance?: number;
+  readonly minimumKevinDistance?: number;
   readonly extraConnectionRate?: number;
   readonly maxAttempts?: number;
   readonly structure?: StructureLimits;
@@ -86,7 +87,8 @@ const dirs = [
   [-1, 0],
 ] as const;
 const defaults = {
-  distanceTolerance: 0.15,
+  distanceTolerance: 0.3,
+  minimumKevinDistance: 40,
   extraConnectionRate: 0.14,
   maxAttempts: 12,
   structure: {
@@ -127,6 +129,8 @@ function validConfig(c: Required<MazeConfig>): boolean {
     Number.isFinite(c.distanceTolerance) &&
     c.distanceTolerance >= 0 &&
     c.distanceTolerance < 1 &&
+    Number.isFinite(c.minimumKevinDistance) &&
+    c.minimumKevinDistance >= 0 &&
     Number.isFinite(c.extraConnectionRate) &&
     c.extraConnectionRate >= 0 &&
     c.extraConnectionRate <= 1 &&
@@ -306,6 +310,7 @@ function evaluateCandidate(
   const rng = createRandom(`${config.seed}:${attempt}`);
   const topology = carveTopology(config, rng);
   const selections: SelectionDiagnostic[] = [];
+  const accepted: { maze: Maze; validation: MazeValidation }[] = [];
   let combinations = 0;
   let last: Maze = {
     id: `maze-${config.seed}-${attempt}`,
@@ -334,6 +339,7 @@ function evaluateCandidate(
       },
     };
   for (const kevin of topology.interior) {
+    let acceptedThis = false;
     const base = { ...last, cells: topology.cells, entrances: [], kevin };
     const distances = distancesFrom(base, kevin);
     const scored = topology.entries
@@ -344,7 +350,9 @@ function evaluateCandidate(
           Math.abs(e.inner.column - e.entry.column) +
           Math.abs(e.inner.row - e.entry.row),
       }))
-      .filter((e) => e.distance > 0)
+      .filter(
+        (e) => e.distance >= config.minimumKevinDistance && e.distance > 0,
+      )
       .sort((a, b) => a.distance - b.distance);
     const rejectionCounts: Record<string, number> = {};
     const reject = (reason: string): void => {
@@ -449,30 +457,38 @@ function evaluateCandidate(
         rejectionCounts,
         evaluations,
       });
-      return {
-        maze: last,
-        diagnostic: {
-          seed: config.seed,
-          attempt,
-          availableKevinCandidates: topology.interior.length,
-          kevinCandidates: selections.length,
-          entranceCombinations: combinations,
-          selections,
-          validation,
-        },
-      };
+      accepted.push({ maze: last, validation });
+      acceptedThis = true;
+      break;
     }
-    selections.push({
-      kevin,
-      candidateDistances: scored.map(({ entry, side, distance }) => ({
-        entry,
-        side,
-        distance,
-      })),
-      combinationsEvaluated: evaluated,
-      rejectionCounts,
-      evaluations,
-    });
+    if (!acceptedThis)
+      selections.push({
+        kevin,
+        candidateDistances: scored.map(({ entry, side, distance }) => ({
+          entry,
+          side,
+          distance,
+        })),
+        combinationsEvaluated: evaluated,
+        rejectionCounts,
+        evaluations,
+      });
+    if (accepted.length >= 4) break;
+  }
+  if (accepted.length) {
+    const chosen = accepted[Math.floor(rng() * accepted.length)]!;
+    return {
+      maze: chosen.maze,
+      diagnostic: {
+        seed: config.seed,
+        attempt,
+        availableKevinCandidates: topology.interior.length,
+        kevinCandidates: selections.length,
+        entranceCombinations: combinations,
+        selections,
+        validation: chosen.validation,
+      },
+    };
   }
   const validation = validateMaze(last, last.entrances, last.kevin);
   return {
@@ -926,6 +942,13 @@ export function validateMaze(
   reasons.push(...structureReasons(maze, metrics));
   if (metrics.distance.relativeDifference > tolerance)
     reasons.push("Las distancias no están equilibradas.");
+  if (
+    metrics.distance.byEntrance.some(
+      (d) =>
+        d < (maze.config.minimumKevinDistance ?? defaults.minimumKevinDistance),
+    )
+  )
+    reasons.push("Kevin está demasiado cerca de una entrada.");
   if (options.rejectSharedBottleneck !== false && metrics.hasSharedBottleneck)
     reasons.push("Existe un cuello de botella común.");
   return { valid: reasons.length === 0, reasons, metrics };
