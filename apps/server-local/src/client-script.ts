@@ -605,10 +605,16 @@ export const browserClient = `(() => {
       ctx.fillRect(ox + ent.column * cs, oy + ent.row * cs, cs, cs);
     });
 
-    // 3. Kevin (K)
+    // 3. Kevin (K) con aura de baliza para transmisión
     if (maze.kevin) {
       const kx = ox + maze.kevin.column * cs + cs / 2;
       const ky = oy + maze.kevin.row * cs + cs / 2;
+      ctx.strokeStyle = "rgba(250, 204, 21, 0.45)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(kx, ky, Math.max(5, cs * 0.75), 0, Math.PI * 2);
+      ctx.stroke();
+
       ctx.fillStyle = "#facc15";
       ctx.beginPath();
       ctx.arc(kx, ky, Math.max(3, cs * 0.46), 0, Math.PI * 2);
