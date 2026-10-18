@@ -316,6 +316,11 @@ export const browserClient = `(() => {
     if (sLobby) sLobby.hidden = true;
     if (sGame) sGame.hidden = false;
     if (sFinished) sFinished.hidden = true;
+
+    const canvas = document.getElementById("player-canvas");
+    if (canvas && syncCanvasBitmapSize(canvas) && lastKnownView) {
+      renderPlayerCanvas(lastKnownView);
+    }
   }
 
   function showPlayerLobbyOrGame() {
@@ -479,17 +484,74 @@ export const browserClient = `(() => {
     return { cellSize: cellSize, offsetX: offsetX, offsetY: offsetY, mapW: mapW, mapH: mapH };
   }
 
+  /* Sincronización desacoplada del tamaño del bitmap sin alterar el contenedor CSS */
+  function syncCanvasBitmapSize(canvas) {
+    if (!canvas) return false;
+    const container = canvas.parentElement;
+    if (!container) return false;
+    const rect = typeof container.getBoundingClientRect === "function" ? container.getBoundingClientRect() : null;
+    const w = Math.floor((rect && rect.width) || container.clientWidth || 0);
+    const h = Math.floor((rect && rect.height) || container.clientHeight || 0);
+    if (w <= 0 || h <= 0) return false;
+
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+      return true;
+    }
+    return false;
+  }
+
+  function setupCanvasObserver(canvasId, redrawCallback) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const container = canvas.parentElement;
+    if (!container) return;
+
+    syncCanvasBitmapSize(canvas);
+
+    if (typeof ResizeObserver !== "undefined") {
+      let rafId = null;
+      const ro = new ResizeObserver((entries) => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+          for (let i = 0; i < entries.length; i++) {
+            const entry = entries[i];
+            let w = 0;
+            let h = 0;
+            if (entry.contentRect) {
+              w = Math.floor(entry.contentRect.width);
+              h = Math.floor(entry.contentRect.height);
+            }
+            if (w <= 0 || h <= 0) {
+              w = Math.floor(container.clientWidth || 0);
+              h = Math.floor(container.clientHeight || 0);
+            }
+            if (w <= 0 || h <= 0) continue;
+
+            if (canvas.width !== w || canvas.height !== h) {
+              canvas.width = w;
+              canvas.height = h;
+              if (redrawCallback) redrawCallback();
+            }
+          }
+        });
+      });
+      ro.observe(container);
+    }
+  }
+
   /* Renderizado de la vista privada del jugador */
   function renderPlayerCanvas(view) {
     const canvas = document.getElementById("player-canvas");
     if (!canvas) return;
-    const container = canvas.parentElement;
-    const w = container.clientWidth || 800;
-    const h = container.clientHeight || 500;
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width = w;
-      canvas.height = h;
+
+    if (canvas.width <= 0 || canvas.height <= 0) {
+      syncCanvasBitmapSize(canvas);
     }
+    const w = canvas.width || 800;
+    const h = canvas.height || 500;
+    if (w <= 0 || h <= 0) return;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -572,13 +634,13 @@ export const browserClient = `(() => {
   function renderBroadcastCanvas(canvasId, state) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
-    const container = canvas.parentElement;
-    const w = container.clientWidth || 960;
-    const h = container.clientHeight || 540;
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width = w;
-      canvas.height = h;
+
+    if (canvas.width <= 0 || canvas.height <= 0) {
+      syncCanvasBitmapSize(canvas);
     }
+    const w = canvas.width || 960;
+    const h = canvas.height || 540;
+    if (w <= 0 || h <= 0) return;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -802,17 +864,36 @@ export const browserClient = `(() => {
     connectWs();
     if (role === "player") {
       setupPlayerInput();
+      setupCanvasObserver("player-canvas", () => {
+        if (lastKnownView) renderPlayerCanvas(lastKnownView);
+      });
     } else if (role === "director") {
       setupDirectorControls();
+      setupCanvasObserver("director-canvas", () => {
+        if (lastKnownBroadcast) renderBroadcastCanvas("director-canvas", lastKnownBroadcast);
+      });
+    } else if (role === "broadcast") {
+      setupCanvasObserver("obs-canvas", () => {
+        if (lastKnownBroadcast) renderBroadcastCanvas("obs-canvas", lastKnownBroadcast);
+      });
     }
 
     window.addEventListener("resize", () => {
-      if (role === "player" && lastKnownView) {
-        renderPlayerCanvas(lastKnownView);
-      } else if (role === "director" && lastKnownBroadcast) {
-        renderBroadcastCanvas("director-canvas", lastKnownBroadcast);
-      } else if (role === "broadcast" && lastKnownBroadcast) {
-        renderBroadcastCanvas("obs-canvas", lastKnownBroadcast);
+      if (role === "player") {
+        const c = document.getElementById("player-canvas");
+        if (c && syncCanvasBitmapSize(c) && lastKnownView) {
+          renderPlayerCanvas(lastKnownView);
+        }
+      } else if (role === "director") {
+        const c = document.getElementById("director-canvas");
+        if (c && syncCanvasBitmapSize(c) && lastKnownBroadcast) {
+          renderBroadcastCanvas("director-canvas", lastKnownBroadcast);
+        }
+      } else if (role === "broadcast") {
+        const c = document.getElementById("obs-canvas");
+        if (c && syncCanvasBitmapSize(c) && lastKnownBroadcast) {
+          renderBroadcastCanvas("obs-canvas", lastKnownBroadcast);
+        }
       }
     });
   }
