@@ -42,6 +42,19 @@ Frecuencias 3×3 (arriba a abajo, izquierda a derecha):
 
 El sector central concentra 33 % y la columna central 71 %. Existe sesgo espacial asociado al margen interior y a la factibilidad de entradas distantes repartidas por los bordes; la selección aleatoria entre candidatos válidos no equivale a una distribución uniforme por sectores. No se forzó igualdad ni se relajaron conectividad, mínimo de 40, ausencia de cuello común o tolerancia 30 %. Calibración humana y posibles ponderaciones por región quedan pendientes de aprobación.
 
+## Estabilidad visual del canvas (KEL-005-B)
+
+Para erradicar el defecto de retroalimentación donde el canvas aumentaba progresivamente de tamaño y se desplazaba hacia abajo con cada tick WebSocket, se implementó una arquitectura desacoplada:
+
+1. **Aislamiento dimensional CSS estricto**: Cada `.canvas-wrapper` opera con dimensiones delimitadas (`position: relative; overflow: hidden; width: 100%; height: 100%; min-width: 0; min-height: 0;`). El elemento `<canvas>` se posiciona de forma absoluta (`position: absolute; top: 0; left: 0; width: 100%; height: 100%;`), saliendo completamente del flujo normal de maquetación CSS. Esto imposibilita físicamente que el tamaño del bitmap altere las dimensiones medidas de su contenedor.
+2. **Sincronización desacoplada con ResizeObserver**: La resolución interna del bitmap (`canvas.width`, `canvas.height`) se actualiza exclusivamente cuando el contenedor cambia de tamaño de forma real (detectado mediante `ResizeObserver` y al transicionar vistas). Los mensajes WebSocket entrantes (`player.view`, `broadcast.state`) nunca mutan ni reinician las dimensiones del canvas.
+3. **Casillas 1:1 y centrado exacto**: `calculateViewport()` calcula el tamaño entero óptimo de celda `cellSize` mediante `Math.floor(Math.min(availW / cols, availH / rows))` y centra el laberinto (`offsetX`, `offsetY`), garantizando celdas estrictamente cuadradas tanto en pantallas Ceibal (1366 × 768) como en transmisiones OBS (1920 × 1080).
+4. **Prueba de regresión automatizada en navegador real**: `npm run test:canvas-stability` lanza una partida local con tres participantes simulados en Microsoft Edge headless mediante Chrome DevTools Protocol (CDP), verificando:
+   - Cero variaciones en `canvas.width`, `canvas.height`, `container.clientWidth`, `container.clientHeight` y `getBoundingClientRect()` durante 30 segundos continuos de ticks de juego.
+   - Encuadre y dimensiones 100% estables tras movimientos sucesivos.
+   - Estabilidad completa en la vista OBS 16:9.
+   - Adaptación limpia ante redimensionamiento de ventana sin deriva acumulativa posterior.
+
 ## Verificación y dependencias
 
 Ejecutar typecheck, lint, test, build, format:check y npm audit. Las pruebas automatizadas en `tests/beta-interfaces.test.ts` y `tests/beta-protocol-client.test.ts` comprueban 3 y 6 jugadores, privacidad estricta de las vistas privadas, movimientos simultáneos monótonos, cuenta regresiva, temporizador, victoria al alcanzar a Kevin, expiración de tiempo sin ganador, reconexión con sesiones persistidas y rechazo de acciones no autorizadas.

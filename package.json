@@ -14,6 +14,7 @@
   "scripts": {
     "start:local": "tsx apps/server-local/src/index.ts",
     "smoke:local": "tsx scripts/local-smoke.ts",
+    "test:canvas-stability": "tsx scripts/test-canvas-stability.ts",
     "dev": "npm --workspace @kevin/web run dev",
     "preview": "npm --workspace @kevin/web run preview",
     "typecheck": "tsc --noEmit",
