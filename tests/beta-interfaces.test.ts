@@ -1,8 +1,11 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { WebSocket } from "ws";
 import { once } from "node:events";
+import { createContext, runInContext } from "node:vm";
 import { startLocalServer } from "../apps/server-local/src/server.js";
+import { browserClient } from "../apps/server-local/src/pages.js";
 import type { ServerMessage } from "../packages/protocol/src/index.js";
+import type { PrivateView } from "@kevin/game-core";
 import type { Maze } from "../packages/maze-engine/src/index.js";
 
 const testMaze: Maze = {
@@ -486,5 +489,319 @@ describe("KEL-005 — Pruebas de integración de interfaces multijugador", () =>
     player.send({ type: "room.create" });
     const err2 = await player.wait("error", player.messages.length - 1);
     expect(err2.code).toBe("FORBIDDEN");
+  });
+
+  it("calcula correctamente el porcentaje de exploración en el HUD sin depender de propiedades inexistentes en PrivateView (regresión)", async () => {
+    const app = await setupTestApp();
+    const director = await app.createDirector();
+    const p1 = await app.createPlayer("Tester");
+    await app.createPlayer("P2");
+    await app.createPlayer("P3");
+
+    director.send({ type: "admin.start" });
+    await until(() =>
+      p1.messages.some(
+        (m) => m.type === "match.status" && m.status.phase === "countdown",
+      ),
+    );
+    app.setTime(3000);
+    await until(() =>
+      p1.messages.some(
+        (m) => m.type === "match.status" && m.status.phase === "running",
+      ),
+    );
+
+    // Movimiento inicial para generar un mensaje player.view real desde el servidor
+    app.advanceTime(200);
+    p1.send({ type: "player.move", direction: "right", sequence: 0 });
+    await until(() =>
+      p1.messages.some(
+        (m) => m.type === "player.view" && m.view.position.column === 1,
+      ),
+    );
+
+    const realView = p1.messages
+      .filter((m) => m.type === "player.view")
+      .at(-1)!.view;
+
+    // 1. Confirmar que el contrato PrivateView del servidor NO incluye exploredPercent
+    expect(
+      "exploredPercent" in (realView as unknown as Record<string, unknown>),
+    ).toBe(false);
+
+    // 2. Ejecutar el script del cliente en un entorno simulado de navegador
+    interface MockElement {
+      textContent: string;
+      hidden: boolean;
+      value?: string;
+      width?: number;
+      height?: number;
+      style?: Record<string, string>;
+      parentElement?: { clientWidth: number; clientHeight: number };
+      getContext?: () => Record<string, () => void>;
+      appendChild?: () => void;
+      replaceChildren?: () => void;
+      addEventListener?: () => void;
+    }
+
+    const clientElements: Record<string, MockElement> = {
+      "hud-explored-pct": { textContent: "", hidden: false },
+      "hud-pos": { textContent: "", hidden: false },
+      "kevin-seen-alert": { textContent: "", hidden: true },
+      "status-banner": { textContent: "", hidden: false },
+      "conn-dot": { textContent: "", hidden: false },
+      "phase-badge": { textContent: "", hidden: false },
+      "timer-display": { textContent: "", hidden: false },
+      "countdown-overlay": { textContent: "", hidden: true },
+      "countdown-number": { textContent: "", hidden: false },
+      "player-join-screen": { textContent: "", hidden: false },
+      "player-lobby-screen": { textContent: "", hidden: true },
+      "player-game-view": { textContent: "", hidden: true },
+      "player-finished-overlay": { textContent: "", hidden: true },
+      "player-canvas": {
+        textContent: "",
+        hidden: false,
+        width: 0,
+        height: 0,
+        getContext: () => ({
+          fillRect() {},
+          beginPath() {},
+          arc() {},
+          fill() {},
+          stroke() {},
+          strokeRect() {},
+          fillText() {},
+        }),
+        parentElement: { clientWidth: 800, clientHeight: 500 },
+      },
+      "participants-list": {
+        textContent: "",
+        hidden: false,
+        appendChild() {},
+        replaceChildren() {},
+      },
+      "connected-count-badge": { textContent: "", hidden: false },
+    };
+
+    interface MockWsInstance {
+      readyState: number;
+      onopen: (() => void) | null;
+      onclose: (() => void) | null;
+      onmessage: ((ev: { data: string }) => void) | null;
+      onerror: (() => void) | null;
+      sent: string[];
+      send(data: string): void;
+    }
+
+    let clientWs: MockWsInstance | null = null;
+    function createMockWs(): MockWsInstance {
+      const instance: MockWsInstance = {
+        readyState: 1,
+        onopen: null,
+        onclose: null,
+        onmessage: null,
+        onerror: null,
+        sent: [],
+        send(data: string) {
+          instance.sent.push(data);
+        },
+      };
+      clientWs = instance;
+      return instance;
+    }
+
+    const mockSessionStore = new Map<string, string>();
+    const mockWindow: Record<string, unknown> = {
+      addEventListener() {},
+      location: {
+        pathname: "/play",
+        host: "127.0.0.1:3000",
+        protocol: "http:",
+        hash: "",
+      },
+      history: { replaceState() {} },
+      sessionStorage: {
+        getItem(k: string) {
+          return mockSessionStore.get(k) ?? null;
+        },
+        setItem(k: string, v: string) {
+          mockSessionStore.set(k, v);
+        },
+        removeItem(k: string) {
+          mockSessionStore.delete(k);
+        },
+      },
+      document: {
+        getElementById(id: string): MockElement {
+          if (!clientElements[id]) {
+            clientElements[id] = {
+              textContent: "",
+              hidden: true,
+              value: "",
+              style: {},
+              appendChild() {},
+              addEventListener() {},
+            };
+          }
+          const el = clientElements[id];
+          if (!el.addEventListener) {
+            el.addEventListener = () => {};
+          }
+          if (el.value === undefined) {
+            el.value = "";
+          }
+          return el;
+        },
+        querySelectorAll() {
+          return [];
+        },
+        addEventListener() {},
+        readyState: "complete",
+      },
+      WebSocket: createMockWs,
+      setTimeout(fn: () => void) {
+        fn();
+        return 1;
+      },
+      clearTimeout() {},
+      Math,
+      Array,
+      Object,
+      JSON,
+      String,
+      Boolean,
+      Number,
+    };
+    mockWindow.window = mockWindow;
+    mockWindow.self = mockWindow;
+    mockWindow.globalThis = mockWindow;
+
+    createContext(mockWindow);
+    runInContext(browserClient, mockWindow);
+    const activeWs = clientWs as MockWsInstance | null;
+    if (activeWs && activeWs.onopen) activeWs.onopen();
+
+    // 3. Despachar el mensaje player.view real recibido del servidor
+    activeWs?.onmessage?.({
+      data: JSON.stringify({
+        protocolVersion: 1,
+        messageId: "srv-view-1",
+        type: "player.view",
+        view: realView,
+      }),
+    });
+
+    const expectedPct =
+      (
+        (realView.explored.length / (realView.columns * realView.rows)) *
+        100
+      ).toFixed(1) + "%";
+
+    const hudPct = clientElements["hud-explored-pct"]!;
+    expect(hudPct.textContent).toBe(expectedPct);
+    expect(hudPct.textContent).not.toBe("NaN%");
+    expect(hudPct.textContent).not.toBe("undefined%");
+
+    // 4. Protección frente a división por cero con dimensiones vacías
+    const emptyView: PrivateView = {
+      ...realView,
+      columns: 0,
+      rows: 0,
+      explored: [],
+      visible: [],
+    };
+    activeWs?.onmessage?.({
+      data: JSON.stringify({
+        protocolVersion: 1,
+        messageId: "srv-view-empty",
+        type: "player.view",
+        view: emptyView,
+      }),
+    });
+    expect(hudPct.textContent).toBe("0.0%");
+  });
+
+  it("verifica que el script cliente accede exclusivamente a propiedades declaradas en el protocolo", () => {
+    // Comprobamos que el cliente nunca asuma 'exploredPercent' directamente sobre 'view'
+    expect(browserClient).not.toContain("view.exploredPercent");
+    expect(browserClient).not.toContain("view.positions");
+    expect(browserClient).not.toContain("view.rivals");
+    expect(browserClient).not.toContain("view.players");
+
+    // Comprobamos que sí calcula el porcentaje mediante explored.length y el producto de columnas y filas
+    expect(browserClient).toContain("view.explored");
+    expect(browserClient).toContain("view.columns");
+    expect(browserClient).toContain("view.rows");
+  });
+
+  it("completa el ciclo de vida continuo: ingreso, espera, inicio, movimientos, encuentro con Kevin, fin y nueva partida", async () => {
+    const app = await setupTestApp();
+    const director = await app.createDirector();
+    const obs = await app.createBroadcast();
+
+    // 1. Ingreso de 3 jugadores a la sala
+    const p1 = await app.createPlayer("Ana");
+    const p2 = await app.createPlayer("Beto");
+    const p3 = await app.createPlayer("Carla");
+
+    expect(p2.joined.matchId).toBe(p1.joined.matchId);
+    expect(p3.joined.matchId).toBe(p1.joined.matchId);
+
+    // En espera: 3 participantes conectados
+    const initialStatus = p1.messages.find((m) => m.type === "match.status");
+    expect(
+      initialStatus?.type === "match.status" && initialStatus.status.phase,
+    ).toBe("waiting");
+
+    // 2. Inicio de carrera por el director -> fase countdown
+    director.send({ type: "admin.start" });
+    await until(() =>
+      p1.messages.some(
+        (m) => m.type === "match.status" && m.status.phase === "countdown",
+      ),
+    );
+
+    // 3. Cuenta regresiva 3 segundos -> fase running
+    app.setTime(3000);
+    await until(() =>
+      p1.messages.some(
+        (m) => m.type === "match.status" && m.status.phase === "running",
+      ),
+    );
+
+    // 4. Movimientos coordinados en carrera
+    for (let step = 0; step < 5; step++) {
+      app.advanceTime(200);
+      p1.send({ type: "player.move", direction: "right", sequence: step });
+      if (step < 4) {
+        await until(() =>
+          p1.messages.some(
+            (m) =>
+              m.type === "player.view" && m.view.position.column === step + 1,
+          ),
+        );
+      }
+    }
+
+    // 5. Encuentro físico con Kevin en (5, 0) -> victoria de Ana (p1)
+    const finishedP1 = await p1.wait("match.finished");
+    expect(finishedP1.status.phase).toBe("finished");
+    expect(finishedP1.status.winnerId).toBe(p1.joined.participantId);
+
+    // OBS y los demás participantes reflejan la finalización
+    const obsState = obs.messages
+      .filter((m) => m.type === "broadcast.state")
+      .at(-1)!;
+    expect(obsState.state.summary.phase).toBe("finished");
+    expect(obsState.state.summary.winnerId).toBe(p1.joined.participantId);
+
+    // 6. Director reinicia la partida con room.create
+    const markerNewMatch = p1.messages.length;
+    director.send({ type: "room.create" });
+
+    const resetStatus = await p1.wait("match.status", markerNewMatch);
+    expect(resetStatus.status.phase).toBe("waiting");
+    expect(resetStatus.status.matchId).not.toBe(p1.joined.matchId);
+    expect(resetStatus.status.participants).toHaveLength(0);
   });
 });

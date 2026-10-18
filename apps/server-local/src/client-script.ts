@@ -455,7 +455,10 @@ export const browserClient = `(() => {
   }
 
   function updatePlayerHud(view) {
-    setText("hud-explored-pct", (view.exploredPercent * 100).toFixed(1) + "%");
+    const totalCells = (view.columns || 0) * (view.rows || 0);
+    const exploredCount = Array.isArray(view.explored) ? view.explored.length : 0;
+    const exploredRatio = totalCells > 0 ? exploredCount / totalCells : 0;
+    setText("hud-explored-pct", (exploredRatio * 100).toFixed(1) + "%");
     setText("hud-pos", "(" + view.position.column + ", " + view.position.row + ")");
     const kevinAlert = document.getElementById("kevin-seen-alert");
     if (kevinAlert) {
