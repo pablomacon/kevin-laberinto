@@ -10,7 +10,20 @@ Cada personaje tiene una linterna circular de radio inicial 4; las paredes no bl
 
 Fases: sala de espera, cuenta regresiva de 3 segundos, carrera, y finalización. La carrera dura inicialmente 240 segundos, configurable. Una desconexión dispone de 30 segundos provisionales para reconectar. El servidor decide movimientos, reloj, colisiones y ganador; al agotarse el tiempo no hay ganador por encuentro y se muestran estadísticas de progreso.
 
-La vista de dirección y OBS podrá presentar el estado completo para relato y transmisión, sin reutilizar la visibilidad restringida del participante.
+La vista de dirección y OBS presenta el estado completo para relato y transmisión,
+sin reutilizar la visibilidad restringida del participante. Ambas requieren
+capacidades distintas generadas por el servidor local.
+
+## Generación actual
+
+El generador DFS rasterizado usa una semilla y validación BFS. Para la beta, Kevin
+debe estar a un mínimo de 40 pasos de cada entrada y la diferencia relativa entre
+la mayor y menor distancia no puede superar 30 %. Las seis entradas se distribuyen
+entre los bordes, se detectan cuellos de botella comunes y se elige de forma
+determinista entre un grupo de posiciones válidas. Los valores no garantizan por sí
+solos equidad o dificultad humana: el sesgo espacial medido sigue pendiente de
+calibración. Los diagnósticos históricos que usan tolerancia 15 % la configuran de
+forma explícita; no describen el predeterminado de beta.
 
 ## Propuestas futuras, no aprobadas para la primera versión
 

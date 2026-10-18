@@ -12,4 +12,9 @@
 | KevinObjective   | Objetivo inmóvil de la modalidad inicial y posición válida.             |
 | MatchResult      | Resultado final, ganador opcional y métricas de progreso.               |
 
-El estado temporal contiene conexiones, fase activa, posiciones y reloj de una partida; en la primera versión reside en memoria. Persisten potencialmente usuarios, resultados, semillas/configuraciones y estadísticas, pero no se implementa almacenamiento en esta misión. Una `GuestIdentity` no requiere `User`.
+El estado temporal contiene conexiones, fase activa, posiciones y reloj de una
+partida; en la beta local reside sólo en memoria. Reiniciar el proceso o crear una
+nueva partida descarta sesiones, exploración y resultados. Usuarios, resultados,
+semillas/configuraciones y estadísticas podrían persistir en una evolución futura,
+pero no existe almacenamiento ni cuentas en la versión actual. Una `GuestIdentity`
+no requiere `User`.
