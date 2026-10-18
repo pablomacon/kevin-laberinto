@@ -1,17 +1,37 @@
-# Protocolo WebSocket inicial
+# Protocolo WebSocket
 
-La implementación de beta 0.1 está especificada en [BETA_PROTOCOL.md](BETA_PROTOCOL.md). Ese contrato y los tipos de `packages/protocol` prevalecen sobre esta propuesta histórica.
+Este documento conserva el contexto de la propuesta inicial. El contrato normativo
+e implementado de beta 0.1 está en [BETA_PROTOCOL.md](BETA_PROTOCOL.md) y en
+`packages/protocol/src/index.ts`; prevalece sobre cualquier ejemplo histórico de
+esta página.
 
-Todos los mensajes transportan `protocolVersion: 1` y `messageId`. El cliente añade una secuencia monotónica a `player.move`; el servidor conserva la última aceptada por conexión/participante y descarta duplicados. Los contratos exactos están en `@kevin/protocol`.
+## Estado actual
 
-| Ámbito                       | Mensajes                                                                      |
-| ---------------------------- | ----------------------------------------------------------------------------- |
-| Público para el participante | `player.join`, `player.move`, `player.view`, `match.status`, `match.finished` |
-| Exclusivo del administrador  | `admin.start`, `admin.pause`                                                  |
-| Dirección/OBS                | `broadcast.state`                                                             |
+Todos los mensajes usan `protocolVersion: 1`, `messageId` y `type`. La conexión
+WebSocket está en `/ws` y comparte origen con el servidor HTTP local. El servidor
+rechaza JSON inválido, campos no permitidos, mensajes superiores a 4096 bytes y
+frecuencias superiores a 80 mensajes por segundo.
 
-`player.view` es privado: contiene sólo lo visible para quien lo recibe. `broadcast.state` tendrá autorización separada y puede incluir estado completo. `match.status` y `match.finished` no exponen posiciones ocultas.
+| Ámbito                    | Mensajes implementados                                                           |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| Acceso                    | `room.access`, `room.accessed`                                                   |
+| Jugador                   | `player.join`, `player.reconnect`, `player.move`, `player.joined`, `player.view` |
+| Partida                   | `match.status`, `match.finished`                                                 |
+| Dirección                 | `admin.start`, `room.create`                                                     |
+| Dirección/OBS autorizados | `broadcast.state`                                                                |
+| Errores                   | `error`                                                                          |
 
-Una **identidad** identifica a invitado o futuro usuario; una **sesión** representa su continuidad lógica en una partida; una **conexión** es un WebSocket temporal asociado a una sesión. Al reconectar dentro del plazo, el cliente presenta su token de sesión (mecanismo concreto pendiente) y sustituye la conexión sin crear participante nuevo. Aún no hay autenticación.
+`admin.pause` fue parte de la propuesta inicial y **no está implementado**. No se
+deben construir clientes nuevos a partir de ese mensaje.
 
-Errores se responden como `error` con código estable y mensaje legible, por ejemplo versión incompatible, sesión inválida, movimiento duplicado o acción no autorizada. El servidor es la única fuente de aceptación, idempotencia y estado.
+Un participante es una presencia en la carrera; una sesión es su continuidad
+reconectable y una conexión es un WebSocket temporal. El `reconnectToken` permite
+recuperar una sesión dentro de 30 segundos. No existen cuentas ni autenticación de
+usuario. Director y OBS se autorizan con capacidades independientes generadas por
+el servidor al arrancar; conocer una ruta sin su token no concede privilegios.
+
+El servidor es la única fuente de aceptación, idempotencia, tiempo y estado. Una
+vista `player.view` es privada y nunca contiene mapa completo, semilla o posiciones
+rivales. `broadcast.state` contiene el mapa completo y sólo puede enviarse a
+Director u OBS autorizados. Los detalles de secuencias, reconexión y errores están
+en el contrato normativo.

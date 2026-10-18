@@ -40,7 +40,7 @@ En la sección **1. Generación interactiva** del panel lateral puedes configura
 - **Columnas y Filas:** dimensiones de la matriz (`>= 7` en cada eje; valor estándar `80 × 45`, proporción `16:9`).
 - **Participantes:** cantidad de entradas entre `3` y `6` (`J1` a `J6`).
 - **Densidad de conexiones adicionales:** porcentaje de paredes internas adicionales abiertas entre nodos lógicos vecinos (predeterminado `14 %`).
-- **Tolerancia de distancias:** cota máxima permitida para `(máxima − mínima) / máxima` entre las distancias BFS desde las entradas hasta Kevin (predeterminado `15 %`).
+- **Tolerancia de distancias:** cota máxima permitida para `(máxima − mínima) / máxima` entre las distancias BFS desde las entradas hasta Kevin (predeterminado de beta `30 %`; los diagnósticos históricos configuran `15 %` de forma explícita).
 
 La generación se ejecuta únicamente mediante una acción explícita al pulsar **Generar laberinto** (o **Nueva semilla**), utilizando directamente `generateMaze(config)`.
 
@@ -118,7 +118,7 @@ La sección **5. Estadísticas del laberinto** presenta directamente las métric
 - **Dimensiones y Semilla:** tamaño exacto `columnas × filas` y semilla reproducible.
 - **Número de entradas y Coordenadas de Kevin:** posiciones en convención `(columna, fila)` con origen `(0, 0)` en la esquina superior izquierda.
 - **Distancias BFS por entrada hacia Kevin:** gráfico comparativo y valores mínimo, medio y máximo en pasos ortogonales.
-- **Diferencia relativa de distancias:** $\frac{\text{máxima} - \text{mínima}}{\text{máxima}}$, comparada contra la tolerancia configurada (por defecto `15 %`).
+- **Diferencia relativa de distancias:** $\frac{\text{máxima} - \text{mínima}}{\text{máxima}}$, comparada contra la tolerancia configurada (el motor de beta usa `30 %` por defecto; el laboratorio puede probar otras configuraciones válidas).
 - **Porcentaje de suelo transitable:** proporción de casillas `"floor"` respecto del total de la matriz.
 - **Callejones sin salida (`deadEnds`):** casillas transitables de grado 1.
 - **Bifurcaciones (`junctions`):** casillas transitables de grado $\ge 3$.
