@@ -12,7 +12,7 @@ import {
   type MatchConfig,
 } from "@kevin/game-core";
 import { parseClientMessage, type ServerMessage } from "@kevin/protocol";
-import { page, browserClient } from "./pages.js";
+import { page, browserClient, browserStyles } from "./pages.js";
 
 export interface ServerOptions {
   port?: number;
@@ -112,6 +112,11 @@ export async function startLocalServer(options: ServerOptions = {}) {
     if (path === "/beta-client.js") {
       res.setHeader("Content-Type", "text/javascript; charset=utf-8");
       res.end(browserClient);
+      return;
+    }
+    if (path === "/beta.css") {
+      res.setHeader("Content-Type", "text/css; charset=utf-8");
+      res.end(browserStyles);
       return;
     }
     if (path === "/health") {
